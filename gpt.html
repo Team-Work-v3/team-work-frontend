@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить мероприятие</title>
+    <style>
+        /* Немного стилей для лучшего отображения ошибок */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"] { /* Обновлено для type="tel" */
+            width: 300px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        span.error-message { /* Класс для сообщений об ошибках */
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block; /* Чтобы ошибка была на новой строке */
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Добавить новое мероприятие:</h1>
+
+<!--
+  Исправления в HTML:
+  1. Добавлен атрибут 'onsubmit="return validateForm()"' к тегу <form>.
+     Это означает, что при попытке отправить форму будет вызвана функция validateForm().
+     Если функция вернет 'false', отправка формы будет отменена.
+  2. Изменен 'type="phone"' на 'type="tel"' для поля телефона.
+     'type="tel"' - это семантически правильный тип для телефонных номеров,
+     он может улучшить пользовательский опыт на мобильных устройствах (например, вызывает цифровую клавиатуру).
+  3. Изменен 'type="button"' на 'type="submit"' для кнопки.
+     Кнопка с 'type="submit"' автоматически вызывает событие 'onsubmit' формы.
+  4. Удален 'onclick="valid()"' с кнопки, так как валидация теперь обрабатывается через 'onsubmit' формы.
+  5. Добавлены обертки <div> для каждого поля, чтобы улучшить структуру и облегчить стилизацию.
+  6. Добавлены классы 'error-message' к <span> для ошибок, чтобы можно было стилизовать их отдельно.
+-->
+<form id="myForm" onsubmit="return validateForm()">
+  <div>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name">
+    <span id="nameError" class="error-message"></span>
+  </div>
+
+  <div>
+    <label for="number">Номер:</label>
+    <input type="number" id="number" name="number">
+    <span id="numberError" class="error-message"></span>
+  </div>
+
+  <div>
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone"> <!-- ИЗМЕНЕНО: type="tel" -->
+    <span id="phoneError" class="error-message"></span>
+  </div>
+
+  <button type="submit">Добавить</button> <!-- ИЗМЕНЕНО: type="submit", удален onclick -->
+</form>
+
+<script>
+  // Здесь будет ваш JavaScript код валидации
+  // Оборачиваем весь скрипт в событие DOMContentLoaded, чтобы убедиться,
+// что HTML-элементы полностью загружены до того, как скрипт попытается к ним обратиться.
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Получаем ссылку на форму по ее ID
+  const myForm = document.getElementById("myForm");
+
+  // Привязываем функцию валидации к событию 'submit' формы.
+  // Это предпочтительный способ, так как он позволяет отменить отправку формы.
+  myForm.addEventListener('submit', function(event) {
+    // Вызываем нашу функцию валидации
+    const isValid = validateForm();
+
+    // Если функция validateForm() вернула false (то есть есть ошибки валидации),
+    // мы отменяем стандартное действие отправки формы.
+    if (!isValid) {
+      event.preventDefault(); // Предотвращает перезагрузку страницы или отправку формы
+    }
+    // Если isValid равно true, форма будет отправлена обычным способом.
+  });
+
+  // Основная функция валидации формы
+  function validateForm() {
+    // 1. Получаем ссылки на элементы ввода
+    const nameInput = document.getElementById("name");
+    const numberInput = document.getElementById("number");
+    const phoneInput = document.getElementById("phone");
+
+    // 2. Получаем ссылки на элементы для вывода сообщений об ошибках
+    const nameError = document.getElementById("nameError");
+    const numberError = document.getElementById("numberError");
+    const phoneError = document.getElementById("phoneError");
+
+    // 3. Очищаем все предыдущие сообщения об ошибках перед новой проверкой
+    nameError.innerHTML = "";
+    numberError.innerHTML = "";
+    phoneError.innerHTML = "";
+
+    // 4. Флаг, который будет отслеживать, валидна ли вся форма
+    let formIsValid = true; // Изначально считаем форму валидной
+
+    // --- Валидация поля "Имя" ---
+    // Метод .trim() удаляет пробельные символы с обоих концов строки.
+    // Это гарантирует, что поле не состоит только из пробелов.
+    if (nameInput.value.trim() === "") {
+      nameError.innerHTML = "Имя обязательно для заполнения."; // Устанавливаем сообщение об ошибке
+      formIsValid = false; // Устанавливаем флаг в false, так как есть ошибка
+    } else if (nameInput.value.trim().length < 2) {
+      nameError.innerHTML = "Имя должно содержать не менее 2 символов.";
+      formIsValid = false;
+    } else if (!/^[а-яА-ЯёЁa-zA-Z\s]+$/.test(nameInput.value.trim())) {
+      // Регулярное выражение для проверки, что имя содержит только буквы и пробелы
+            nameError.innerHTML = "Имя может содержать только буквы и пробелы.";
+      formIsValid = false;
+    }
+
+
+    // --- Валидация поля "Номер" ---
+    // Получаем значение и удаляем пробелы
+    const numberValue = numberInput.value.trim();
+
+    if (numberValue === "") {
+      numberError.innerHTML = "Номер обязателен для заполнения.";
+      formIsValid = false;
+    } else if (isNaN(numberValue)) {
+      // isNaN (is Not a Number) проверяет, является ли значение НЕ числом.
+      // Хотя input type="number" уже предотвращает ввод букв, это дополнительная проверка.
+      numberError.innerHTML = "Номер должен быть числом.";
+      formIsValid = false;
+    } else if (parseInt(numberValue) <= 0) {
+      // Проверяем, что номер положительный (если это требование).
+      numberError.innerHTML = "Номер должен быть положительным числом.";
+      formIsValid = false;
+    } else if (!Number.isInteger(parseFloat(numberValue))) {
+        // Проверяем, является ли число целым
+        numberError.innerHTML = "Номер должен быть целым числом.";
+        formIsValid = false;
+    }
+
+
+    // --- Валидация поля "Телефон" ---
+    const phoneValue = phoneInput.value.trim();
+
+    if (phoneValue === "") {
+      phoneError.innerHTML = "Телефон обязателен для заполнения.";
+      formIsValid = false;
+    } else {
+      // Используем регулярное выражение для проверки формата телефона.
+      // Это регулярное выражение достаточно универсально:
+      // ^ - начало строки
+      // \+? - опциональный знак плюс в начале
+      // \d - любая цифра (0-9)
+      // {10,15} - от 10 до 15 цифр (обычная длина телефонных номеров)
+      // $ - конец строки
+      // Вы можете изменить это регулярное выражение, чтобы оно соответствовало
+      // более строгим требованиям (например, для российских номеров: /^(\+7|8)\d{10}$/)
+      const phoneRegex = /^\+?\d{10,15}$/;
+
+      if (!phoneRegex.test(phoneValue)) {
+        phoneError.innerHTML = "Неверный формат телефона. Пример: +79001234567 (10-15 цифр, опционально с '+')";
+        formIsValid = false;
+      }
+    }
+
+    // 5. Возвращаем итоговый флаг валидности формы
+    return formIsValid;
+  }
+});
+</script>
+
+</body>
+</html>

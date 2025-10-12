@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration for the event</title>
+</head>
+<body>
+    <h1>Регестрация на мероприятие </h1>
+
+
+<form id="myForm" onsubmit="return validateForm()">
+  <div>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name">
+    <span id="nameError" class="error-message"></span>
+  </div>
+
+  <div>
+    <label for="number">Фамилия:</label>
+    <input type="number" id="number" name="number">
+    <span id="numberError" class="error-message"></span>
+  </div>
+
+  <div>
+    <label for="number">Почта:</label>
+    <input type="number" id="number" name="number">
+    <span id="numberError" class="error-message"></span>
+  </div>
+
+  <div>
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone">
+    <span id="phoneError" class="error-message"></span>
+  </div>
+
+    <label for="vehicle1"> Вы разрешаеть обработку личных данных</label><br>
+    
+  <button type="submit">Добавить</button> 
+</form>
+</body>
+</html>
