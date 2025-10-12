@@ -5,31 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/admin-events.css">
+    <script src="./src/js/admin-events.js" defer></script>
     <title>Admin events</title>
 </head>
 
 <body>
     <section class="events-container">
         <button class="add-event-button" id="add-event-button">Add event</button>
-        <div class="event-container">
-            <span class="name-event">Name event</span>
-            <div class="buttons-event">
-                <button class="button-event" id="edit-event-button">Edit</button>
-                <button class="button-event" id="delete-event-button">Delete</button>
+        <div class="event-container" data-id="1">
+            <div class="event-visible-inforamtion">
+                <div class="elements-event">
+                    <span class="arrow-event" id="arrow-event" data-id="1">⯆</span>
+                    <span class="name-event">Name event</span>
+                </div>
+                <div class="buttons-event">
+                    <button class="button-event" id="edit-event-button">Edit</button>
+                    <button class="button-event" id="delete-event-button">Delete</button>
+                </div>
+            </div>
+            <div class="event-invisible-inforamtion" id="invisible-information-1">
+                <span class="information-event">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam</span>
+                <!-- In the future, this div is going img -->
+                <div class="picture-event"></div>
             </div>
         </div>
-        <div class="event-container">
-            <span class="name-event">Name event</span>
-            <div class="buttons-event">
-                <button class="button-event" id="edit-event-button">Edit</button>
-                <button class="button-event" id="delete-event-button">Delete</button>
+
+        <div class="event-container" data-id="2">
+            <div class="event-visible-inforamtion">
+                <div class="elements-event">
+                    <span class="arrow-event" id="arrow-event" data-id="2">⯆</span>
+                    <span class="name-event">Name event</span>
+                </div>
+                <div class="buttons-event">
+                    <button class="button-event" id="edit-event-button">Edit</button>
+                    <button class="button-event" id="delete-event-button">Delete</button>
+                </div>
             </div>
-        </div>
-        <div class="event-container">
-            <span class="name-event">Name event</span>
-            <div class="buttons-event">
-                <button class="button-event" id="edit-event-button">Edit</button>
-                <button class="button-event" id="delete-event-button">Delete</button>
+            <div class="event-invisible-inforamtion" id="invisible-information-2">
+                <span class="information-event">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam, possimus tempore, dolores culpa animi sit id ipsa sapiente corporis enim reiciendis. Dolores tempore nihil quos aliquid fuga quae ratione!Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam</span>
+                <!-- In the future, this div is going img -->
+                <div class="picture-event"></div>
             </div>
         </div>
     </section>

@@ -18,20 +18,59 @@ body {
 .add-event-button {
     padding: 10px 20px;
     align-self: flex-end;
+    cursor: pointer;
 }
 
 .event-container {
     width: 100%;
-    height: 60px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
+    gap: 10px;
+    padding: 10px 0;
 }
 
 .event-container:first-of-type {
     border-top: 1px solid black;
     margin-top: 20px;
+}
+
+.event-visible-inforamtion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.event-invisible-inforamtion {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.information-event {
+    width: 50%;
+}
+
+.picture-event {
+    width: 30%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-color: antiquewhite;
+}
+
+.elements-event {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow-event {
+    cursor: pointer;
+    user-select: none;
 }
 
 .name-event {}
@@ -43,4 +82,5 @@ body {
 
 .button-event {
     padding: 10px 20px;
+    cursor: pointer;
 }
