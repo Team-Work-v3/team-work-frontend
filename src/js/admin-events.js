@@ -37,10 +37,10 @@ function RenderEvents(data) {
     Object.values(data).forEach(events => {
         Object.values(events).forEach(event => {
             const html = `
-                <div class="event-container" id="event-container" data-id="${event.id}">
+                <div class="event-container" id="event-container" data-event-id="${event.id}">
                     <div class="event-visible-information">
                         <div class="elements-event">
-                            <span class="arrow-event" id="arrow-event" data-id="${event.id}">⯆</span>
+                            <span class="arrow-event" id="arrow-event" data-event-id="${event.id}">⯆</span>
                             <span class="name-event">${event.name}</span>
                         </div>
                         <div class="buttons-event">
@@ -72,7 +72,7 @@ function OpenEvent() {
 
     arrows.forEach(arrow => {
         arrow.addEventListener("click", () => {
-            const invisibleInformation = document.getElementById(`invisible-information-${arrow.getAttribute("data-id")}`);
+            const invisibleInformation = document.getElementById(`invisible-information-${arrow.getAttribute("data-event-id")}`);
 
             if (invisibleInformation.style.display === "flex") {
                 arrow.innerHTML = "⯆";
