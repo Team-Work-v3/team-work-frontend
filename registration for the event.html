@@ -8,35 +8,128 @@
 <body>
     <h1>Регестрация на мероприятие </h1>
 
-
 <form id="myForm" onsubmit="return validateForm()">
-  <div>
-    <label for="name">Имя:</label>
-    <input type="text" id="name" name="name">
-    <span id="nameError" class="error-message"></span>
-  </div>
+    <div>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" maxlength="50">
+        <span id="nameError" class="error-message"></span>
+    </div>
 
-  <div>
-    <label for="number">Фамилия:</label>
-    <input type="number" id="number" name="number">
-    <span id="numberError" class="error-message"></span>
-  </div>
+    <div>
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" maxlength="50"> 
+        <span id="surnameError" class="error-message"></span> 
+    </div>
 
-  <div>
-    <label for="number">Почта:</label>
-    <input type="number" id="number" name="number">
-    <span id="numberError" class="error-message"></span>
-  </div>
+    <div>
+        <label for="email">Почта:</label>
+        <input type="email" id="email" name="email" maxlength="100"> 
+        <span id="emailError" class="error-message"></span> 
+    </div>
 
-  <div>
-    <label for="phone">Телефон:</label>
-    <input type="tel" id="phone" name="phone">
-    <span id="phoneError" class="error-message"></span>
-  </div>
+    <div>
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" maxlength="20">
+        <span id="phoneError" class="error-message"></span>
+    </div>
 
-    <label for="vehicle1"> Вы разрешаеть обработку личных данных</label><br>
-    
-  <button type="submit">Добавить</button> 
+    <div>
+        <input type="checkbox" id="agree" name="agree">
+        <label for="agree">Я даю согласие на обработку персональных данных</label>
+        <span id="agreeError" class="error-message"></span>
+    </div>
+
+    <button type="submit">Купить билет</button>
 </form>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const myForm = document.getElementById("myForm");
+
+        
+        myForm.addEventListener('submit', function(event) {
+            const isValid = validateForm();
+
+            if (!isValid) {
+                event.preventDefault(); 
+            }
+        });
+
+        function validateForm() {
+           
+            const nameInput = document.getElementById("name");
+            const surnameInput = document.getElementById("surname");
+            const emailInput = document.getElementById("email");
+            const phoneInput = document.getElementById("phone");
+            const agreeCheckbox = document.getElementById("agree");
+
+           
+            const nameError = document.getElementById("nameError");
+            const surnameError = document.getElementById("surnameError");
+            const emailError = document.getElementById("emailError");
+            const phoneError = document.getElementById("phoneError");
+            const agreeError = document.getElementById("agreeError");
+
+            
+            nameError.innerHTML = "";
+            surnameError.innerHTML = "";
+            emailError.innerHTML = "";
+            phoneError.innerHTML = "";
+            agreeError.innerHTML = "";
+
+            let formIsValid = true; 
+
+            
+            if (nameInput.value.trim() === "") {
+                nameError.innerHTML = "Имя обязательно для заполнения.";
+                formIsValid = false;
+            } else if (nameInput.value.length > 50) {
+                nameError.innerHTML = "Имя не может быть длиннее 50 символов.";
+                formIsValid = false;
+            }
+
+           
+            if (surnameInput.value.trim() === "") {
+                surnameError.innerHTML = "Фамилия обязательна для заполнения.";
+                formIsValid = false;
+            } else if (surnameInput.value.length > 50) {
+                surnameError.innerHTML = "Фамилия не может быть длиннее 50 символов.";
+                formIsValid = false;
+            }
+                        
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+            if (emailInput.value.trim() === "") {
+                emailError.innerHTML = "Почта обязательна для заполнения.";
+                formIsValid = false;
+            } else if (!emailRegex.test(emailInput.value)) {
+                emailError.innerHTML = "Неверный формат почты.";
+                formIsValid = false;
+            } else if (emailInput.value.length > 100) {
+                emailError.innerHTML = "Длина почты не может превышать 100 символов.";
+                formIsValid = false;
+            }
+
+          
+            const phoneRegex = /^\+?\d{10,15}$/; 
+            if (phoneInput.value.trim() === "") {
+                phoneError.innerHTML = "Телефон обязателен для заполнения.";
+                formIsValid = false;
+            } else if (!phoneRegex.test(phoneInput.value)) {
+                phoneError.innerHTML = "Неверный формат телефона (например, +79001234567).";
+                formIsValid = false;
+            } else if (phoneInput.value.length > 20) {
+                phoneError.innerHTML = "Длина телефона не может превышать 20 символов.";
+                formIsValid = false;
+            }
+
+          
+            if (!agreeCheckbox.checked) {
+                agreeError.innerHTML = "Необходимо согласиться на обработку персональных данных.";
+                formIsValid = false;
+            }
+
+            return formIsValid; 
+        }
+    });
+</script>
 </body>
 </html>
