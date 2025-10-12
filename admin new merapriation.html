@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new merapristion</title>
+    <style type='text/css' rel=stylesheet lang=css>
+        div, button{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="min">
+            <a href="#">Мероприятия </a>
+            <a href="#">Участники</a>
+            <a href="#">Категории</a>
+            <a href="#">Теги</a>
+            <a href="#">Аналитика</a>
+        </div>
+    <div>
+    <h1>Добавить новое мероприятие:</h1>
+<form id="myForm" onsubmit=" validateForm">
+  <label for="name">Имя:</label>
+  <input type="text" id="name" name="name">
+  <span id="nameError"></span>
+  <label for="namber">Номер:</label>
+  <input type="namber" id="namber" name="namber">
+  <span id="namberError"></span>
+  <label for="telefon">Телефон:</label>
+  <input type="telefon" id="telefon" name="telefon">
+  <span id="telefonError"></span>
+  <button onclick="validateForm" type="button">Добавить</button>
+</form>
+<script>
+  function validateForm() {
+   
+    let name = document.getElementById("name");
+    let namber = document.getElementById("namber");
+    let telefon = document.getElementById("telefomn");
+    
+    let nameError = document.getElementById("nameError");
+    let namberError = document.getElementById("namberError");
+    let telefonError = document.getElementById("telefonError");
+  
+    nameError.innerHTML = "";
+     namberError.innerHTML = "";
+      telefonError.innerHTML = "";
+   
+    let valid = true;
+    
+    if (name.value == "") {
+     
+      nameError.innerHTML = "Name is required";
+      valid = false;
+    }
+
+     if (namber.value == ""){
+        namber.innerHTML = "Number is required";
+      valid = false;
+     } else if (!namber.value.includes("1,2,3,4,5,6,7,8,9,0")){
+        telefonError.innerHTML = "Number is invalid";
+      valid = false;
+     }
+
+    if (telefon.value == "") {
+      
+      telefon.innerHTML = "Phone namber is required";
+      valid = false;
+    } else if (!telefon.value.includes("+")) {
+      
+      namberError.innerHTML = "Phone namber is invalid";
+      valid = false;
+    }
+    
+    return valid;
+  }
+</script>        
+     
+</div>
+</body>
+</html>
