@@ -37,14 +37,14 @@ body {
     margin-top: 20px;
 }
 
-.event-visible-inforamtion {
+.event-visible-information {
     width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
 
-.event-invisible-inforamtion {
+.event-invisible-information {
     width: 100%;
     display: none;
     justify-content: space-between;
