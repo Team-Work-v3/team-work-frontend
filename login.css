@@ -20,6 +20,8 @@ p {
   color: white
 }
 
+/* Белый цвет тега p делает текст невидимым */
+
 button {
   border: none;
   padding: 10px 20px;
