@@ -14,7 +14,7 @@ function clear_login_message() {
 //функция проверки логина при потере фокуса
 function validate_login() {
     let value = login.value;
-    let login_regex = /^[\wа-яА-Я]{5,50}$/;
+    let login_regex = /^[\wа-яА-Я]{2,50}$/;
 
     //если длина value() введенного поля меньше 2
     if (value.length < 2) {
@@ -31,7 +31,7 @@ function validate_login() {
         check_login.innerHTML = 'Логин принят';
         check_login.style.color = 'green';
     }
-    //если не соответствует шаблону
+    //если не соответствует шаблону  
     else {
         check_login.innerHTML = 'Используй только буквы, цифры и _';
         check_login.style.color = 'red';
