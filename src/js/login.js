@@ -14,14 +14,14 @@ function clear_login_message() {
 //функция проверки логина при потере фокуса
 function validate_login() {
     let value = login.value;
-    let login_regex = /^[\wа-яА-Я]{5,20}$/;
+    let login_regex = /^[\wа-яА-Я]{2,50}$/;
 
-    //если длина value() введенного поля меньше 5
+    //если длина value() введенного поля меньше 2
     if (value.length < 2) {
         check_login.innerHTML = 'Слишком короткий логин';
         check_login.style.color = 'red';
     }
-    //если длина больше 20
+    //если длина больше 50
     else if (value.length > 50) {
         check_login.innerHTML = 'Слишком длинный логин';
         check_login.style.color = 'red';
@@ -31,7 +31,7 @@ function validate_login() {
         check_login.innerHTML = 'Логин принят';
         check_login.style.color = 'green';
     }
-    //если не соответствует шаблону
+    //если не соответствует шаблону  
     else {
         check_login.innerHTML = 'Используй только буквы, цифры и _';
         check_login.style.color = 'red';
