@@ -1,119 +1,130 @@
-/* КОД ПОДПИСАН И ОПТИМИЗИРОВАН ПРИ ПОМОЩИ GPT */
-
 /* Основные настройки для html и body */
 html, body {
-  margin: 0; /* Убираем внешние отступы */
-  padding: 0; /* Убираем внутренние отступы */
-  width: 100%; /* Занимаем всю ширину экрана */
-  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-  font-family: Inter, sans-serif; /* Основной шрифт */
+  margin: 0; 
+  padding: 0;
+  width: 100%; 
+  overflow-x: hidden; 
+  font-family: Inter, sans-serif;
 }
 
 /* Шапка сайта */
 header {
-  width: 100%; /* Адаптивная ширина */
-  height: 66px; /* Фиксированная высота шапки */
-  background-color: #FEFEFE; /* Цвет фона */
-  display: flex; /* Горизонтальное выравнивание содержимого */
-  align-items: center; /* Центрирование по вертикали */
-  padding-left: 30px; /* Отступ слева */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Тень снизу */
+  width: 100%; 
+  height: 66px; 
+  background-color: #FEFEFE;
+  display: flex; 
+  align-items: center; 
+  padding-left: 30px; 
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /*  Название в шапке */
 .header-name {
-  font-weight: 600; /* Жирный текст */
-  font-size: 16px; /* Размер шрифта */
-  color: #333; /* Цвет текста */
+  font-weight: 600; 
+  font-size: 16px;
+  color: #333;
 }
 
 /*  Основной контейнер: левая и правая части */
 main {
-  display: flex; /* Горизонтальное расположение секций */
-  width: 100%; /* Занимает всю ширину экрана */
+  display: flex;
+  width: 100%; 
 }
 
 /*  Левая панель с навигацией */
 .left-categories {
-  width: 381px; /* Фиксированная ширина */
-  min-width: 300px; /* Минимальная ширина для адаптации */
-  background-color: #FFFFFF; /* Белый фон */
-  padding-top: 30px; /* Отступ сверху */
+  width: 381px; 
+  height: max-content;
+  background-color: #FFFFFF;
   box-shadow: 1px 0 4px rgba(0, 0, 0, 0.05); /* Тень справа */
 }
 
 /* Контейнер для пунктов меню */
 .nav-menu {
+
   display: flex;
-  flex-direction: column; /* Вертикальное расположение */
-  gap: 20px; /* Отступ между пунктами */
-  padding-left: 30px; /* Отступ слева */
+  flex-direction: column;
+  gap: 20px; 
 }
 
 /*  Один пункт меню */
 .nav-item {
-  display: flex; /* Горизонтальное расположение иконки и текста */
-  align-items: center; /* Центрирование по вертикали */
-  gap: 15px; /* Отступ между иконкой и текстом */
-  padding: 10px; /* Внутренние отступы */
-  border-radius: 8px; /* Скругление углов */
-  transition: background-color 0.3s ease; /* Плавный hover */
+  height: 100%;
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  border-radius: 8px; 
+  transition: background-color 0.3s ease; 
+  position: relative;
+  height: 124px;
+  width: 381px;
+}
+
+.hover-triangle{
+  position: absolute;
+  right: 0; /* прижимаем к правому краю родителя */
+  top: 50%; /* вертикальное центрирование */
+  transform: translateY(-50%);
+  pointer-events: none; 
 }
 
 /*  Hover-эффект для пункта меню */
 .nav-item:hover {
-  background-color: #f0f0f0; /* Светлый фон при наведении */
+  background-color: #f0f0f0; 
 }
+
 
 /*  Круглая иконка слева от текста */
 .choose-event-circle {
   width: 40px;
   height: 40px;
-  border-radius: 18px; /* Почти круглая форма */
-  background-color: #CACACA; /* Серый фон */
-  flex-shrink: 0; /* Не сжимается при нехватке места */
+  border-radius: 18px; 
+  background-color: #CACACA; 
+  flex-shrink: 0;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 /* Текст пункта меню */
 .choose-event-text {
   font-weight: 600;
   font-size: 24px;
-  text-decoration: none; /* Без подчёркивания */
+  text-decoration: none;
   color: #333;
 }
 
 /*  Правая панель с событиями */
 .right-events {
-  flex: 1; /* Занимает всё оставшееся пространство */
+  flex: 1; 
   display: flex;
-  flex-direction: column; /* Вертикальное расположение */
-  align-items: flex-end; /* Выравнивание по правому краю */
+  flex-direction: column;
+  align-items: flex-end;
   gap: 12px; /* Отступ между блоками */
-  padding: 20px; /* Внутренние отступы */
+  padding: 20px;
+  
 }
 
-/* ➕ Контейнер для кнопки "Добавить" */
 .right-add {
-  align-self: flex-end; /* Прижимаем к правому краю */
+  align-self: flex-end; 
 }
 
 /*  Кнопка "Добавить" */
 .right-add-btn {
-  padding: 6px 12px; /* Внутренние отступы */
+  padding: 6px 12px;
 }
 
 /*  Одна строка события */
 .event-change {
-  display: flex; /* Горизонтальное расположение кнопок */
-  justify-content: space-between; /* Равномерное распределение */
-  width: 100%; /* Занимает всю ширину родителя */
-  gap: 10px; /* Отступ между кнопками */
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%; 
+  gap: 10px;
 }
 
 /*  Кнопки внутри строки события */
 .right-name,
 .right-edit,
 .right-delete {
-  flex: 1; /* Все кнопки равной ширины */
-  padding: 6px; /* Внутренние отступы */
+  flex: 1; 
+  padding: 6px;
 }
