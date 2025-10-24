@@ -59,12 +59,12 @@ main {
   height: 124px;
   width: 381px;
 }
-
+/* ТРЕУГОЛЬНИК SVG */
 .hover-triangle{
   position: absolute;
-  right: 0; /* прижимаем к правому краю родителя */
-  top: 50%; /* вертикальное центрирование */
-  transform: translateY(-50%);
+  right: 0; 
+  /* top: 50%; 
+  transform: translateY(-50%); */
   pointer-events: none; 
 }
 
