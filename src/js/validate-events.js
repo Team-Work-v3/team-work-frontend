@@ -24,14 +24,18 @@ function DescriptionValidate(element) {
     }
 
     errorText.style.display = "none";
+
+    // обрезание лишнего, 
+    // html теги: br, strong, em, ul, ol, li
 }
 
 function DateValidate(element) {
-
+    // не раньше текущей даты и начало и окончание,  
+    // проверка мероприятий в том же месте
 }
 
 function TimeValidate(element) {
-
+    // формат НН:ММ, хз надо ли, тк норм инпут
 }
 
 function LocationValidate(element) {
@@ -46,6 +50,8 @@ function LocationValidate(element) {
     }
 
     errorText.style.display = "none";
+
+    // проверка через гео
 }
 
 function PriceValidate(element) {
@@ -61,6 +67,8 @@ function PriceValidate(element) {
 
     errorText.style.display = "none";
     element.value = Number(value).toFixed(2);
+
+    // валидация валют
 }
 
 function SeatsValidate(element) {
@@ -82,7 +90,7 @@ function ImagesValidate(element) {
     const files = element.files;
     const errorText = document.getElementById("imagesError");
 
-    if (!files || files.length === 0) {
+    if (!files || files.length === 0 || files.length > 10) {
         errorText.style.display = "block";
         return;
     }
