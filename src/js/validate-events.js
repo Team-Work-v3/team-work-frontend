@@ -76,3 +76,49 @@ function SeatsValidate(element) {
 
     errorText.style.display = "none";
 }
+
+function ImagesValidate(element) {
+    const maxSize = 5 * 1024 * 1024;
+    const files = element.files;
+    const errorText = document.getElementById("imagesError");
+
+    if (!files || files.length === 0) {
+        errorText.style.display = "block";
+        return;
+    }
+
+    Array.from(files).forEach(file => {
+        if (!file) {
+            errorText.style.display = "block";
+            return;
+        }
+
+        const allowedTypes = ["image/png", "image/jpeg", "image/webp"];
+
+        if (!allowedTypes.includes(file.type)) {
+            errorText.style.display = "block";
+            return;
+        }
+
+        if (file.size > maxSize) {
+            errorText.style.display = "block";
+            return;
+        }
+
+        const img = new Image();
+
+        img.onload = () => {
+            if (img.width < 800 && img.height < 600) {
+                errorText.style.display = "block";
+                return;
+            }
+
+            errorText.style.display = "none";
+        }
+        img.onerror = () => {
+            errorText.style.display = "block";
+            return;
+        }
+        img.src = URL.createObjectURL(file);
+    });
+}

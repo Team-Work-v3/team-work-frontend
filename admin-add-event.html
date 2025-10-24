@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/admin-add-and-edit-event.css">
+    <link rel="stylesheet" href="./src/css/admin-add-event.css">
     <script src="./src/js/validate-events.js" defer></script>
     <title>Add event</title>
 </head>
@@ -20,11 +20,11 @@
         <span class="error-event" id="descriptionError">Неправильно введено поле</span><br>
 
         <label for="date">Дата</label><br>
-        <input type="date" name="" id="date">
+        <input type="date" name="" id="date" onblur="DateValidate(this)">
         <span class="error-event" id="dateError">Неправильно введено поле</span><br>
 
         <label for="time">Время</label><br>
-        <input type="time" name="" id="time">
+        <input type="time" name="" id="time" onblur="TimeValidate(this)">
         <span class="error-event" id="timeError">Неправильно введено поле</span><br>
 
         <label for="location">Местоположение</label><br>
@@ -38,6 +38,10 @@
         <label for="seats">Количество мест</label><br>
         <input type="number" name="" id="seats" onblur="SeatsValidate(this)">
         <span class="error-event" id="seatsError">Неправильно введено поле</span><br>
+
+        <label for="images">Фоторгафии</label><br>
+        <input type="file" multiple accept=".png,.jpeg,.webp" name="" id="images" onchange="ImagesValidate(this)">
+        <span class="error-event" id="imagesError">Неправильный формат фотографий</span><br>
 
         <button type="button" onclick="window.location.href = './admin-events.html'">Отмена</button>
         <button type="submit">Создать</button>
