@@ -1,0 +1,70 @@
+:root {
+    --width: calc(1920px - 370px * 2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.greeting {
+    width: 100%;
+    height: 110vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.greeting::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./23737a474197f58916e11b3ccefa38b0e48b4c93.jpg");
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1000;
+}
+
+.greeting::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(242, 242, 242, 1) 0%, rgba(255, 255, 255, 0) 20%);
+    pointer-events: none;
+    z-index: -999;
+}
+
+.wrapper {
+    width: var(--width);
+}
+
+.greeting-iteen {
+    margin-top: 30px;
+}
+
+.greeting-texts {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 161px;
+}
+
+.greeting-heading {
+    font-size: 64px;
+}
+
+.greeting-text {
+    font-size: 32px;
+    margin-top: 15px;
+}
