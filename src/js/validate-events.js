@@ -31,7 +31,6 @@ function DescriptionValidate(element) {
 
 function DateValidate(element) {
     // не раньше текущей даты и начало и окончание,  
-    // проверка мероприятий в том же месте
 }
 
 function TimeValidate(element) {
@@ -41,16 +40,17 @@ function TimeValidate(element) {
 function LocationValidate(element) {
     const value = element.value;
     const valid = value.length < 2 || value.length > 100;
-
+    
     const errorText = document.getElementById("locationError");
-
+    
     if (valid) {
         errorText.style.display = "block";
         return;
     }
-
+    
     errorText.style.display = "none";
-
+    
+    // проверка мероприятий в том же месте
     // проверка через гео
 }
 
@@ -103,6 +103,8 @@ function ImagesValidate(element) {
 
         const allowedTypes = ["image/png", "image/jpeg", "image/webp"];
 
+        console.log(file.type)
+
         if (!allowedTypes.includes(file.type)) {
             errorText.style.display = "block";
             return;
@@ -116,7 +118,7 @@ function ImagesValidate(element) {
         const img = new Image();
 
         img.onload = () => {
-            if (img.width < 800 && img.height < 600) {
+            if (img.width < 800 || img.height < 600) {
                 errorText.style.display = "block";
                 return;
             }
