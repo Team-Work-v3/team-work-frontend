@@ -7,21 +7,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="src/css/index.css">
     <script src="src/js/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <!-- нет информации -->
     </header>
     <main>
-        <nav class="main-head-name">
-            <div class="main-text">
-                <p>Мероприятия</p>
-            </div>
-            <div>
-                <input type="text" id="search">
-                <button class="main-filter">Фильтр</button>
-                <button class="main-sorting">Сортировка</button>
-            </div>
+<nav class="main-head-name">
+  <div class="main-text">
+    <p class="main-text-event">Мероприятия</p>
+    <div class="search-block">
+      <div class="fix-div">
+        <img src="src/img/Ellipse7.png" alt="Поиск" class="search-icon">
+        <input type="text" id="search" class="search" placeholder="Поиск">
+      </div>
+    </div>
+  </div>
+
+  <div class="buttons-block">
+    <div class="fix-div">
+      <img src="src/img/Ellipse7.png" alt="Фильтр" class="search-icon">
+      <button class="main-filter">Фильтр</button>
+    </div>
+
+    <div class="fix-div">
+      <img src="src/img/Ellipse7.png" alt="Сортировка" class="search-icon">
+      <button class="main-sorting">Сортировка</button>
+      <img src="src/img/Ellipse7.png" alt="Сортировка" class="search-icon-reverse">
+    </div>
+  </div>
+</nav>
+
+
         </nav>
         <section class="main-events">
             <article class="event-item">
