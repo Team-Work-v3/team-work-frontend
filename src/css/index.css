@@ -1,0 +1,127 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-events {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* две колонки */
+  gap: 20px; /* отступ между карточками */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 580px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Левая часть */
+.event-left {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Верхняя часть слева */
+.event-left-up {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/* Название */
+.event-name {
+  width: 100%;
+  font-family: "Unbounded-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  margin: 0 0 8px 0;
+  padding: 0;
+  text-transform: lowercase;
+  
+}
+
+/* Маленькие прямоугольники */
+.special {
+  font-family: "Unbounded-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 4px 10px;
+  border: 1px solid #C7C7C7;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Статус регистрации — поднят вверх */
+.special-status {
+  order: -1;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* Нижняя часть */
+.event-left-down {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.event-cost {
+  font-family: "Unbounded-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.event-btn {
+  width: 174px;
+  height: 48px;
+  font-size: 20px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  background-color: #982520;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+/* Правая часть */
+.event-img {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Изображение */
+.event-img-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
