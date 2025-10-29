@@ -13,9 +13,10 @@ a {
 .main-head-name {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  /* padding-right: 18px; */
 }
 
 /* === Левая часть: большой заголовок "Мероприятия" === */
@@ -75,7 +76,7 @@ a {
   gap: 12px;
   align-items: center;
   margin-top: 84px;
-  margin-right: 10px;
+  margin-right: 19px;
 }
 
 /* === Универсальная обёртка для иконки + кнопки, обеспечивает выравнивание === */
@@ -110,16 +111,16 @@ a {
  /* некоректное */
 }
 
-
-
 /* === Секция с карточками мероприятий: сетка 2 колонки === */
 .main-events {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: repeat(2, 1fr); /* две колонки */
-  gap: 20px; /* отступ между карточками */
+  gap: 20px; /*отступ между карточками*/
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
+  justify-content: start;
 }
 
 
