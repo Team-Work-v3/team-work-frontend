@@ -1,0 +1,130 @@
+/* Основные настройки для html и body */
+html, body {
+  margin: 0; 
+  padding: 0;
+  width: 100%; 
+  overflow-x: hidden; 
+  font-family: Inter, sans-serif;
+}
+
+/* Шапка сайта */
+header {
+  width: 100%; 
+  height: 66px; 
+  background-color: #FEFEFE;
+  display: flex; 
+  align-items: center; 
+  padding-left: 30px; 
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*  Название в шапке */
+.header-name {
+  font-weight: 600; 
+  font-size: 16px;
+  color: #333;
+}
+
+/*  Основной контейнер: левая и правая части */
+main {
+  display: flex;
+  width: 100%; 
+}
+
+/*  Левая панель с навигацией */
+.left-categories {
+  width: 381px; 
+  height: max-content;
+  background-color: #FFFFFF;
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.05); /* Тень справа */
+}
+
+/* Контейнер для пунктов меню */
+.nav-menu {
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+/*  Один пункт меню */
+.nav-item {
+  height: 100%;
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  border-radius: 8px; 
+  transition: background-color 0.3s ease; 
+  position: relative;
+  height: 124px;
+  width: 381px;
+}
+/* ТРЕУГОЛЬНИК SVG */
+.hover-triangle{
+  position: absolute;
+  right: 0; 
+  /* top: 50%; 
+  transform: translateY(-50%); */
+  pointer-events: none; 
+}
+
+/*  Hover-эффект для пункта меню */
+.nav-item:hover {
+  background-color: #f0f0f0; 
+}
+
+
+/*  Круглая иконка слева от текста */
+.choose-event-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 18px; 
+  background-color: #CACACA; 
+  flex-shrink: 0;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Текст пункта меню */
+.choose-event-text {
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+  color: #333;
+}
+
+/*  Правая панель с событиями */
+.right-events {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px; /* Отступ между блоками */
+  padding: 20px;
+  
+}
+
+.right-add {
+  align-self: flex-end; 
+}
+
+/*  Кнопка "Добавить" */
+.right-add-btn {
+  padding: 6px 12px;
+}
+
+/*  Одна строка события */
+.event-change {
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%; 
+  gap: 10px;
+}
+
+/*  Кнопки внутри строки события */
+.right-name,
+.right-edit,
+.right-delete {
+  flex: 1; 
+  padding: 6px;
+}
