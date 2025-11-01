@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration for the event</title>
+    <script src="src/js/registration_for_the_event.js" defer></script>
+</head>
+<body>
+    <h1>Регестрация на мероприятие </h1>
+
+<form id="myForm" onsubmit="return validateForm()">
+    <div>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" maxlength="50">
+        <span id="nameError" class="error-message"></span>
+    </div>
+
+    <div>
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" maxlength="50"> 
+        <span id="surnameError" class="error-message"></span> 
+    </div>
+
+    <div>
+        <label for="email">Почта:</label>
+        <input type="email" id="email" name="email" maxlength="100"> 
+        <span id="emailError" class="error-message"></span> 
+    </div>
+
+    <div>
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" maxlength="20">
+        <span id="phoneError" class="error-message"></span>
+    </div>
+
+    <div>
+        <input type="checkbox" id="agree" name="agree">
+        <label for="agree">Я даю согласие на обработку персональных данных</label>
+        <span id="agreeError" class="error-message"></span>
+    </div>
+
+    <button type="submit">Купить билет</button>
+</form>
+</body>
+</html>
