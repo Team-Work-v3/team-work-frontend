@@ -1,4 +1,5 @@
-/* Основные настройки для html и body */
+/* шрифт inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 html, body {
   margin: 0; 
   padding: 0;
@@ -20,9 +21,14 @@ header {
 
 /*  Название в шапке */
 .header-name {
-  font-weight: 600; 
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
   font-size: 16px;
-  color: #333;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+
 }
 
 /*  Основной контейнер: левая и правая части */
@@ -33,7 +39,7 @@ main {
 
 /*  Левая панель с навигацией */
 .left-categories {
-  width: 381px; 
+  width: 300px; 
   height: max-content;
   background-color: #FFFFFF;
   box-shadow: 1px 0 4px rgba(0, 0, 0, 0.05); /* Тень справа */
@@ -44,7 +50,6 @@ main {
 
   display: flex;
   flex-direction: column;
-  gap: 20px; 
 }
 
 /*  Один пункт меню */
@@ -53,26 +58,31 @@ main {
   display: flex; 
   align-items: center; 
   gap: 15px; 
-  border-radius: 8px; 
   transition: background-color 0.3s ease; 
   position: relative;
-  height: 124px;
-  width: 381px;
+  width: 300px;
+  height: 80px;
+  opacity: 1;
+  z-index: 0;
+
 }
 /* ТРЕУГОЛЬНИК SVG */
 .hover-triangle{
   position: absolute;
   right: 0; 
-  /* top: 50%; 
-  transform: translateY(-50%); */
   pointer-events: none; 
+  z-index: 1;
+  
 }
 
 /*  Hover-эффект для пункта меню */
 .nav-item:hover {
-  background-color: #f0f0f0; 
+  background-color:rgba(230, 230, 230, 1); 
 }
 
+.nav-item:hover .hover-triangle path {
+  fill: #F6F6F6;
+}
 
 /*  Круглая иконка слева от текста */
 .choose-event-circle {
@@ -87,10 +97,15 @@ main {
 
 /* Текст пункта меню */
 .choose-event-text {
-  font-weight: 600;
-  font-size: 24px;
   text-decoration: none;
-  color: #333;
+  color: #000000;
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
 }
 
 /*  Правая панель с событиями */
@@ -101,7 +116,7 @@ main {
   align-items: flex-end;
   gap: 12px; /* Отступ между блоками */
   padding: 20px;
-  
+  background-color: #F6F6F6;
 }
 
 .right-add {
