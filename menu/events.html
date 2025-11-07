@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/css/main-admin.css">
-    <script src="src/js/events.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/css/main-admin.css">
+  <link rel="stylesheet" href="src/css/events.css">
+  <script src="src/js/events.js"></script>
 </head>
+
 <body>
-    <header>
-        <p class="header-name">ITeen Academy</p>
-    </header>
-    <main>
+  <header>
+    <p class="header-name">ITeen Academy</p>
+  </header>
+  <main>
     <section class="left-categories">
       <nav class="nav-menu">
         <div class="nav-item">
           <div class="choose-event-circle"></div>
           <a href="" class="choose-event-text">Мероприятия</a>
           <svg class="hover-triangle" width="23" height="36" viewBox="0 0 23 36" xmlns="http://www.w3.org/2000/svg">
-              <path d="M23 36.1704V1.10275V0L0 18.0852L23 36.1704Z" fill="white" fill-opacity="1" />
+            <path d="M23 36.1704V1.10275V0L0 18.0852L23 36.1704Z" fill="white" fill-opacity="1" />
           </svg>
         </div>
         <div class="nav-item">
@@ -51,45 +54,26 @@
         </div>
       </nav>
     </section>
-    <form>
-          <section class="events-container">
-        <button class="add-event-button" id="add-event-button" onclick="window.location.href = './admin-add-event.html'">Add event</button>
+    <section class="right-events">
+      <div class="up-menu">
+        <h1 class="up-menu-name">Управление мероприятиями</h1>
+        <div class="fix-div">
+          <input type="text" class="up-menu-search" placeholder="Поиск">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" fill="none">
+            <path
+              d="M16 16L11 11M1 6.83333C1 7.59938 1.15088 8.35792 1.44404 9.06565C1.73719 9.77339 2.16687 10.4164 2.70854 10.9581C3.25022 11.4998 3.89328 11.9295 4.60101 12.2226C5.30875 12.5158 6.06729 12.6667 6.83333 12.6667C7.59938 12.6667 8.35792 12.5158 9.06565 12.2226C9.77339 11.9295 10.4164 11.4998 10.9581 10.9581C11.4998 10.4164 11.9295 9.77339 12.2226 9.06565C12.5158 8.35792 12.6667 7.59938 12.6667 6.83333C12.6667 6.06729 12.5158 5.30875 12.2226 4.60101C11.9295 3.89328 11.4998 3.25022 10.9581 2.70854C10.4164 2.16687 9.77339 1.73719 9.06565 1.44404C8.35792 1.15088 7.59938 1 6.83333 1C6.06729 1 5.30875 1.15088 4.60101 1.44404C3.89328 1.73719 3.25022 2.16687 2.70854 2.70854C2.16687 3.25022 1.73719 3.89328 1.44404 4.60101C1.15088 5.30875 1 6.06729 1 6.83333Z"
+              stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+
+      </div>
+      <div class="add-menu">
+        <button class="add-menu-btn">Добавить</button>
+      </div>
+      <div></div>
     </section>
-        <label for="name">Название мероприятия</label><br>
-        <input type="text" name="" id="name" onblur="NameValidate(this)">
-        <span class="error-event" id="nameError">Неправильно введено поле</span><br>
-
-        <label for="description">Описание мероприятия</label><br>
-        <textarea type="text" name="" id="description" onblur="DescriptionValidate(this)"></textarea>
-        <span class="error-event" id="descriptionError">Неправильно введено поле</span><br>
-
-        <label for="date">Дата</label><br>
-        <input type="date" name="" id="date" onblur="DateValidate(this)">
-        <span class="error-event" id="dateError">Неправильно введено поле</span><br>
-
-        <label for="time">Время</label><br>
-        <input type="time" name="" id="time" onblur="TimeValidate(this)">
-        <span class="error-event" id="timeError">Неправильно введено поле</span><br>
-
-        <label for="location">Местоположение</label><br>
-        <input type="text" name="" id="location" onblur="LocationValidate(this)">
-        <span class="error-event" id="locationError">Неправильно введено поле</span><br>
-
-        <label for="price">Цена</label><br>
-        <input type="number" name="" id="price" onblur="PriceValidate(this)">
-        <span class="error-event" id="priceError">Неправильно введено поле</span><br>
-
-        <label for="seats">Количество мест</label><br>
-        <input type="number" name="" id="seats" onblur="SeatsValidate(this)">
-        <span class="error-event" id="seatsError">Неправильно введено поле</span><br>
-
-        <label for="images">Фоторгафии</label><br>
-        <input type="file" multiple accept=".png,.jpeg,.webp,.jpg" name="" id="images" onchange="ImagesValidate(this)">
-        <span class="error-event" id="imagesError">Неправильный формат фотографий</span><br>
-
-        <button type="button" onclick="window.location.href = './admin-events.html'">Отмена</button>
-        <button type="submit">Создать</button>
-    </form>
-    </main>
+  </main>
 </body>
+
 </html>

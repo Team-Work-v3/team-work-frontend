@@ -109,38 +109,38 @@ main {
 
 }
 
-/*  Правая панель с событиями */
+ /* Правая панель с событиями
 .right-events {
   flex: 1; 
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 12px; /* Отступ между блоками */
-  padding: 20px;
+  align-items: flex-end; */
+  /* gap: 12px; Отступ между блоками */
+  /* padding: 20px;
   background-color: #F6F6F6;
-}
+} */
 
-.right-add {
+/* .right-add {
   align-self: flex-end; 
-}
+} */
 
 /*  Кнопка "Добавить" */
-.right-add-btn {
+/* .right-add-btn {
   padding: 6px 12px;
-}
+} */
 
 /*  Одна строка события */
-.event-change {
+/* .event-change {
   display: flex; 
   justify-content: space-between; 
   width: 100%; 
   gap: 10px;
-}
+} */
 
 /*  Кнопки внутри строки события */
-.right-name,
+/* .right-name,
 .right-edit,
 .right-delete {
   flex: 1; 
   padding: 6px;
-}
+} */
