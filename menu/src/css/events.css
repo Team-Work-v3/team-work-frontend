@@ -38,12 +38,11 @@
 }
 
 .up-menu-search {
-    width: 490px;
+    width: 450px;
     height: 56px;
-    padding: 0 16px;
+    padding: 0 0 0 40px; /* ← тут ключевой момент */
     font-size: 16px;
     border: 2px solid #ccc;
-    border-radius: 8px;
     font-family: Inter;
     font-weight: 400;
     font-size: 16px;
@@ -57,14 +56,7 @@
     width: 15px;
     height: 15px;
     pointer-events: none;
-    transform: translateY(-50%);
-    top: 50%;
 }
-
-.up-menu-search::placeholder {
-  text-indent: 24px; /* сдвигаем только плейсхолдер */
-}
-
 
 .add-menu {
     display: flex;
