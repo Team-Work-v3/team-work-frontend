@@ -3,10 +3,6 @@
     margin: 0;
 }
 
-body {
-    margin: 2% 10%;
-}
-
 .events-container {
     width: 100%;
     display: flex;
