@@ -256,6 +256,8 @@ a {
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0;
+    display: flex;
+    position: relative;
 }
 
 /* === Само изображение: занимает весь контейнер, обрезается при необходимости === */
@@ -263,4 +265,21 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.event-img-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 5%, rgba(252, 247, 248, 0) 30%);
+}
+
+.event-img-text {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: #FFFFFF;
+    font-size: 16px;
 }

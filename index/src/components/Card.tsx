@@ -8,7 +8,7 @@ export default function Card({ data }: ICard) {
                     <h3 className="event-name unbounded-bold">{data.name}</h3>
                     <p className="special unbounded-regular">{data.date}</p>
                     <p className="special unbounded-regular">{data.time}</p>
-                    <p className="special unbounded-regular">{data.registration === true ? "Идет регистрация" : "Закрыто"}</p>
+                    <p className="special unbounded-regular">Мастер-класс</p>
                 </div>
                 <div className="event-left-down">
                     <h4 className="event-cost unbounded-regular">{data.price} BYN</h4>
@@ -16,7 +16,9 @@ export default function Card({ data }: ICard) {
                 </div>
             </div>
             <div className="event-img">
-                <img src="./test.jpg" alt="" srcSet="" className="event-img-img" min-width="236px" height="236px" />
+                <div className="event-img-gradient"></div>
+                <img src="./test.jpg" alt="" srcSet="" className="event-img-img" />
+                <span className="event-img-text unbounded-regular">{data.registration === true ? "Идет регистрация" : "Закрыто"}</span>
             </div>
         </article>
     );
