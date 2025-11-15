@@ -21,4 +21,4 @@ jobs:
           LOGIN: ${{ secrets.LOGIN }} 
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-            "LOGIN" "cd /home/TeamWork/www/ && git pull origin main"
+            "$LOGIN" "cd /home/TeamWork/www/ && git pull origin main"
