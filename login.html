@@ -5,19 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
     <title>Document</title>
 </head>
 
 <body>
     <form action="" method="post">
-        <label for="login">логин</label>
+        <h1>АВТОРИЗАЦИЯ</h1>
+        <label for="login"><p>логин</p></label>
         <input type="text" name="login" id="login" maxlength="256">
         <p id="check_login">.</p>
-        <label for="password">пароль</label>
-        <input type="text" name="password" id="password" maxlength="256">
+        <label for="password"><p>пароль</p></label>
+        <input type="password" name="password" id="password" maxlength="256">
         <p id="check_password">.</p>
-        <label for="password">запомнить на устройстве</label>
-        <input type="checkbox" name="device" id="device">
+        <div class="divade-block">
+            <input type="checkbox" name="device" id="device">
+            <label for="password"><p>запомнить на устройстве</p></label>
+        
+        </div>
         <button id="button">отправить</button>
     </form>
     <script src="src/js/login.js"></script>
