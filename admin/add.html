@@ -56,35 +56,35 @@
         <button class="add-event-button" id="add-event-button" onclick="window.location.href = './admin-add-event.html'">Add event</button>
     </section>
         <label for="name">Название мероприятия</label><br>
-        <input type="text" name="" id="name" onblur="NameValidate(this)">
+        <input type="text" name="name-event" id="name" onblur="NameValidate(this)">
         <span class="error-event" id="nameError">Неправильно введено поле</span><br>
 
         <label for="description">Описание мероприятия</label><br>
-        <textarea type="text" name="" id="description" onblur="DescriptionValidate(this)"></textarea>
+        <textarea type="text" name="description-event" id="description" onblur="DescriptionValidate(this)"></textarea>
         <span class="error-event" id="descriptionError">Неправильно введено поле</span><br>
 
         <label for="date">Дата</label><br>
-        <input type="date" name="" id="date" onblur="DateValidate(this)">
+        <input type="date" name="date-event" id="date" onblur="DateValidate(this)">
         <span class="error-event" id="dateError">Неправильно введено поле</span><br>
 
         <label for="time">Время</label><br>
-        <input type="time" name="" id="time" onblur="TimeValidate(this)">
+        <input type="time" name="time-event" id="time" onblur="TimeValidate(this)">
         <span class="error-event" id="timeError">Неправильно введено поле</span><br>
 
         <label for="location">Местоположение</label><br>
-        <input type="text" name="" id="location" onblur="LocationValidate(this)">
+        <input type="text" name="location-event" id="location" onblur="LocationValidate(this)">
         <span class="error-event" id="locationError">Неправильно введено поле</span><br>
 
         <label for="price">Цена</label><br>
-        <input type="number" name="" id="price" onblur="PriceValidate(this)">
+        <input type="number" name="price-event" id="price" onblur="PriceValidate(this)">
         <span class="error-event" id="priceError">Неправильно введено поле</span><br>
 
         <label for="seats">Количество мест</label><br>
-        <input type="number" name="" id="seats" onblur="SeatsValidate(this)">
+        <input type="number" name="seats-event" id="seats" onblur="SeatsValidate(this)">
         <span class="error-event" id="seatsError">Неправильно введено поле</span><br>
 
         <label for="images">Фоторгафии</label><br>
-        <input type="file" multiple accept=".png,.jpeg,.webp,.jpg" name="" id="images" onchange="ImagesValidate(this)">
+        <input type="file" multiple accept=".png,.jpeg,.webp,.jpg" name="images-events" id="images" onchange="ImagesValidate(this)">
         <span class="error-event" id="imagesError">Неправильный формат фотографий</span><br>
 
         <button type="button" onclick="window.location.href = './admin-events.html'">Отмена</button>
