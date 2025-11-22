@@ -51,10 +51,7 @@
         </div>
       </nav>
     </section>
-    <form>
-          <section class="events-container">
-        <button class="add-event-button" id="add-event-button" onclick="window.location.href = './admin-add-event.html'">Add event</button>
-    </section>
+    <form method="post">
         <label for="name">Название мероприятия</label><br>
         <input type="text" name="name-event" id="name" onblur="NameValidate(this)">
         <span class="error-event" id="nameError">Неправильно введено поле</span><br>
@@ -87,8 +84,8 @@
         <input type="file" multiple accept=".png,.jpeg,.webp,.jpg" name="images-events" id="images" onchange="ImagesValidate(this)">
         <span class="error-event" id="imagesError">Неправильный формат фотографий</span><br>
 
-        <button type="button" onclick="window.location.href = './admin-events.html'">Отмена</button>
-        <button type="submit">Создать</button>
+        <button type="button" onclick="window.location.href = '/admin/events'">Отмена</button>
+        <input type="submit" value="Создать">
     </form>
     </main>
 </body>
