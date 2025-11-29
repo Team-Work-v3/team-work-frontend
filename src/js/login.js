@@ -28,8 +28,8 @@ function validate_login() {
     }
     //если соответствует шаблону
     else if (login_regex.test(value)) {
-        check_login.innerHTML = 'Логин принят';
-        check_login.style.color = 'green';
+        check_login.innerHTML = '';
+        check_login.style.color = '';
     }
     //если не соответствует шаблону  
     else {
@@ -64,8 +64,8 @@ function validate_password() {
     }
     //если соответствует шаблону
     else if (password_regex.test(value)) {
-        check_password.innerHTML = 'Пароль принят';
-        check_password.style.color = 'green';
+        check_password.innerHTML = '';
+        check_password.style.color = '';
     }
     //если не соответствует шаблону
     else {
