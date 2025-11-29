@@ -1,0 +1,37 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.add-event{
+    text-align: center;
+    width: 100%;
+}
+
+.add-event-nameDiv{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.h1{
+
+}
+.add-event-blocks{
+    display: flex;
+}
+
+.add-event-firstBlock{
+    width: 50%;
+}
+.add-event-secondBlock{
+    width: 50%;
+}
+
+.add-events-buttons{
+    display: flex;
+    justify-content: flex-start;
+}
