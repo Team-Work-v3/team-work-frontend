@@ -1,16 +1,17 @@
-async () => {
-    RenderEvents(await getEvents());
-}
+// async function getEvents() {
+//     const response = await fetch("http://62.109.16.129:5000/api/getEvents");
+//     const events = await response.json();
+//     console.log(events.events);
 
-async function getEvents() {
-    const response = await fetch("http://62.109.16.129:5000/api/getEvents");
-    const events = await response.json();
-    console.log(events.events);
-    return events.events;
-}
 
-function RenderEvents(data) {
+// }
+
+async function RenderEvents(data) {
     const container = document.querySelector(".events-container");
+
+    const response = await fetch("http://62.109.16.129:5000/api/getEvents");
+    const data = await response.json();
+    console.log(data.events);
 
     if (!container) {
         console.error("No data");
