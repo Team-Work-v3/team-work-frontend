@@ -32,7 +32,7 @@ async function RenderEvents() {
                             <span>${event.is_active === 1 ? "Активно" : "Неактивно"}</span>
                         </div>
                         <!-- In the future, this div is going img -->
-                        <div class="picture-event"></div>
+                        <img alt="picture" src="${event.images_events}" class="picture-event">
                     </div>
                 </div>
             `;
