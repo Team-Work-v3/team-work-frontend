@@ -1,4 +1,6 @@
-RenderEvents(getEvents());
+async () => {
+    RenderEvents(await getEvents());
+}
 
 async function getEvents() {
     const response = await fetch("http://62.109.16.129:5000/api/getEvents");
