@@ -6,7 +6,7 @@
 
 // }
 
-async function RenderEvents(data) {
+async function RenderEvents() {
     const container = document.querySelector(".events-container");
 
     const response = await fetch("http://62.109.16.129:5000/api/getEvents");
