@@ -25,9 +25,9 @@
             <label for="password"><p>запомнить на устройстве</p></label>
 
         </div>
-
-        <label id="error"><p>Неверный логин или парроль</p></label>
-
+        {% if errors %}
+            <label id="error"><p>Неверный логин или парроль</p></label>
+        {% endif %}
         <button id="button">отправить</button>
     </form>
     <script src="/src/js/login.js"></script>
