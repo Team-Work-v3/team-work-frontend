@@ -22,7 +22,7 @@ async function RenderEvents() {
                             <span class="name-event">${event.name_event}</span>
                         </div>
                         <div class="buttons-event">
-                            <button class="button-event" id="edit-event-button" onclick="window.location.href = 'admin-edit-event.html'">Edit</button>
+                            <button class="button-event" id="edit-event-button" onclick="window.location.href = '/change-event/4'">Edit</button>
                             <button class="button-event" id="delete-event-button">Delete</button>
                         </div>
                     </div>
