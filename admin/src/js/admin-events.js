@@ -31,7 +31,7 @@ function RenderEvents(data) {
                     </div>
                     <div class="event-invisible-information" id="invisible-information-${event.event_id}">
                         <div>
-                            <span class="information-event">${event.location}</span>
+                            <span class="information-event">${event.location_event}</span>
                             <span>${event.is_active === 1 ? "Активно" : "Неактивно"}</span>
                         </div>
                         <!-- In the future, this div is going img -->
