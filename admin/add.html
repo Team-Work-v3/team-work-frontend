@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <!-- <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/admin/src/css/main-admin.css">
@@ -10,8 +10,17 @@
   <script src="/admin/src/js/"></script>
   <script src="/admin/src/js/validate-events.js"></script>
   <link rel="stylesheet" href="/admin/src/css/add.css">
-  <link rel="stylesheet" href="/admin/src/css/events.css">
-
+  <link rel="stylesheet" href="/admin/src/css/events.css"> 
+  ДЛЯ СЕРВЕРА -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/css/main-admin.css">
+  <script src="src/js/events.js"></script>
+  <script src="src/js/"></script>
+  <script src="src/js/validate-events.js"></script>
+  <link rel="stylesheet" href="src/css/add.css">
+  <link rel="stylesheet" href="src/css/events.css">
 </head>
 
 <body>
@@ -139,14 +148,13 @@
               </select>
               <span class="error-event" id="selectError"></span>
             </div>
-            <form action="#" method="post">
+
             <div class="add-event-blocks">
               <label for="images-events">Фотографии</label>
               <input class="input--block-btn" type="file" multiple accept=".png,.jpeg,.webp,.jpg" name="images-events"
                 id="images-events" onchange="ImagesValidate(this)">
               <span class="error-event" id="imagesError">Неправильный формат фотографий</span><br>
             </div>
-            </form>
 
             <div class="add-event-blocks">
               <label for="seats-event">Количество мест</label>
@@ -181,7 +189,7 @@
           </div>
           <div class="add-event-buttons">
             <button type="submit" id="addBtn-event">Добавить</button>
-            <form action="#" method="post"><button type="reset">Удалить</button></form> 
+            <button type="reset">Отмена</button>
           </div>
       </form>
     </section>
