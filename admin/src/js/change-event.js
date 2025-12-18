@@ -111,6 +111,7 @@
 //     }
 //     populateForm(eventData);
 // });
+
 // Получаем ID события из URL
 function getEventIdFromURL() {
     const params = new URLSearchParams(window.location.search);
@@ -137,7 +138,25 @@ async function fetchEventData(id) {
 }
 
 
-// Подставляем данные в форму (функция остается почти без изменений)
+// ======= Функция получения данных из API =======
+async function fetchEventData(id) {
+    try {
+        // Запрашиваем все события (как в вашем примере)
+        const response = await fetch("http://62.109.16.129:5000/api/getEvents");
+        const data = await response.json();
+        
+        // Ищем нужное событие в массиве data.events по ID
+        // Приводим к строке для надежности сравнения
+        const event = data.events.find(item => String(item.id) === String(id));
+        
+        return event;
+    } catch (error) {
+        console.error("Ошибка при получении данных с API:", error);
+        return null;
+    }
+}
+
+// ======= Подставляем данные в форму (без изменений) =======
 function populateForm(event) {
     if (!event) return;
 
@@ -156,7 +175,7 @@ function populateForm(event) {
     setInputValue("name-event", event.name);
     setInputValue("location-event", event.location);
     setInputValue("description-event", event.description);
-    setInputValue("date-event", event.date); // Ваша заглушка использует формат YYYY-MM-DD, который подходит для input type="date"
+    setInputValue("date-event", event.date);
     setInputValue("time-event", event.time);
     setInputValue("price-event", event.price);
     setInputValue("event-category", event.category);
@@ -166,25 +185,29 @@ function populateForm(event) {
     setInputValue("fullDescription-event", event.fullDescription);
 }
 
+// ======= Получаем ID из URL =======
+function getEventIdFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("id");
+}
 
-// Используем async/await для корректной работы с асинхронной fetchEventData
+// ======== Основная логика при загрузке страницы ========
 document.addEventListener("DOMContentLoaded", async () => {
-    // addTestData(); // Заглушка больше не нужна
     const id = getEventIdFromURL();
     
     if (!id) {
-        console.warn("ID события не найден в URL.");
+        console.error("ID события не найден в URL");
         return;
     }
 
-    // Ожидаем получение данных с API
-    const eventData = await fetchEventData(id); 
+    const eventData = await fetchEventData(id);
 
     if (!eventData) {
-        // Ошибка уже была обработана и выведено alert внутри fetchEventData
+        console.error("Событие с ID " + id + " не найдено в базе API");
         return;
     }
-    
+
     populateForm(eventData);
 });
+
 
