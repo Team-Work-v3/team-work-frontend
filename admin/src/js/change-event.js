@@ -113,10 +113,6 @@
 // });
 
 // Получаем ID события из URL
-function getEventIdFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get("id"); // например "3"
-}
 
 // Асинхронно достаём данные события по ID из API
 // Эта функция заменяет вашу getEventData(id)
@@ -196,14 +192,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const id = getEventIdFromURL();
     
     if (!id) {
-        console.error("ID события не найден в URL");
+        console.log("ID события не найден в URL");
         return;
     }
 
     const eventData = await fetchEventData(id);
 
     if (!eventData) {
-        console.error("Событие с ID " + id + " не найдено в базе API");
+        console.log("Событие с ID " + id + " не найдено в базе API");
         return;
     }
 
