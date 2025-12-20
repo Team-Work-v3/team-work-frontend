@@ -145,6 +145,7 @@ async function fetchEventData(id) {
         const response = await fetch(`http://62.109.16.129:5000/api/getEvent/${info}`);
         const data = await response.json();
         
+        console.log(data);
         // Ищем нужное событие в массиве data.events по ID
         // Приводим к строке для надежности сравнения
         const event = data.events.find(item => String(item.id) === String(id));
