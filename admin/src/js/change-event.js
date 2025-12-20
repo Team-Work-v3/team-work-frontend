@@ -150,7 +150,7 @@ async function fetchEventData(id) {
         });
         const data = await response.json();
         
-        console.log(data);
+        console.log(data);//!!!!!!!!!!!!!!!!!!!!!!!!!
         // Ищем нужное событие в массиве data.events по ID
         // Приводим к строке для надежности сравнения
         const event = data.events.find(item => String(item.id) === String(id));
