@@ -185,6 +185,24 @@ function populateForm(event) {
 function getEventIdFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get("id");
+
+    // Получаем текущий URL
+    const url = window.location.href; // Например: "http://example.com/admin/change-event/1"
+
+    // Получаем путь из URL
+    const path = window.location.pathname; // Например: "/admin/change-event/1"
+
+    // Разделяем путь по слешу '/'
+    const pathParts = path.split('/'); // Получаем массив: ["", "admin", "change-event", "1"]
+
+    // Получаем последний элемент (ID)
+    const eventId = pathParts[pathParts.length - 1]; // Или просто pathParts[3] для этого конкретного случая
+
+    console.log(eventId); // Выведет: "1"
+
+    // Если вам нужно число, а не строка
+    const eventIdNumber = parseInt(eventId, 10);
+    console.log(eventIdNumber); // Выведет: 1
 }
 
 // ======== Основная логика при загрузке страницы ========
