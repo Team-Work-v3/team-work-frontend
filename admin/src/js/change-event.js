@@ -141,6 +141,7 @@ async function fetchEventData(id) {
         const info ={
             'id':id
         }
+        info = JSON.stringify(info);
         const response = await fetch(`http://62.109.16.129:5000/api/getEvent/${info}`);
         const data = await response.json();
         
