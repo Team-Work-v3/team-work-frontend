@@ -121,7 +121,7 @@ function getEventIdFromURL() {
 // Асинхронно достаём данные события по ID из API
 // Эта функция заменяет вашу getEventData(id)
 async function fetchEventData(id) {
-    const apiUrl = `http://62.109.16.129:5000//api/getEvent/${id}`;
+    const apiUrl = `http://62.109.16.129:5000//api/getEvent/`;
 
     try {
         const response = await fetch(apiUrl);

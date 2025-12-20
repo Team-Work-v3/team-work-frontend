@@ -74,12 +74,12 @@
           </div>
         </div>
       </div>
-      <form action=/editEventsForm/{{event_id}} method="post" class="add-event-form">
+      <form action=/editEventsForm/{{event_id}} method="GET" class="add-event-form">
         <div class="add-event-firstSecondBlock">
           <div class="add-event-firstBlock">
             <div class="add-event-blocks">
               <label for="name-event">Название мероприятия</label>
-              <input class="input--block" id="name-event" name="name-event" type="text" oninput="NameValidate(this)"
+              <input class="input--block" id="name_event" name="name-event" type="text" oninput="NameValidate(this)"
                 required>
               <span class="error-event" id="nameError">Неправильно введеное поле</span><br>
             </div>
