@@ -61,7 +61,7 @@ form {
     align-items: flex-start;
 }
 
-.add-events-buttons {
+.add-event-buttons {
     display: flex;
     justify-content: flex-start;
     width: 100%;

@@ -74,3 +74,7 @@
     border: 2px solid var(--grey-stroke, #C7C7C7);
     background-color: #FFFFFF;
 }
+
+a{
+    text-decoration: none;
+}
