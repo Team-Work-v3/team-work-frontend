@@ -183,7 +183,7 @@ function populateForm(event) {
 
 // ======= Получаем ID из URL =======
 function getEventIdFromURL() {
-    const params = new URLSearchParams(window.location.search);
+    // const params = new URLSearchParams(window.location.search);
     // return params.get("id");
 
     // Получаем текущий URL
@@ -202,8 +202,8 @@ function getEventIdFromURL() {
 
     // Если вам нужно число, а не строка
     const eventIdNumber = parseInt(eventId, 10);
-    console.log(eventIdNumber); // Выведет: 1
-}
+    return eventIdNumber; // Выведет: 1
+}   
 
 // ======== Основная логика при загрузке страницы ========
 document.addEventListener("DOMContentLoaded", async () => {
