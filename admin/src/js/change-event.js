@@ -184,7 +184,7 @@ function populateForm(event) {
 // ======= Получаем ID из URL =======
 function getEventIdFromURL() {
     const params = new URLSearchParams(window.location.search);
-    return params.get("id");
+    // return params.get("id");
 
     // Получаем текущий URL
     const url = window.location.href; // Например: "http://example.com/admin/change-event/1"
