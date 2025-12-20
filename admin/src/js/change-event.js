@@ -140,10 +140,10 @@ async function fetchEventData(id) {
         // Запрашиваем все события (как в вашем примере)
         const info ={
             'id':id
-        }
-        info = JSON.stringify(info);
-        console.log(info);
-        const response = await fetch(`http://62.109.16.129:5000/api/getEvent/${info}`);
+        };
+        let inf = JSON.stringify(info);
+        console.log(inf);
+        const response = await fetch(`http://62.109.16.129:5000/api/getEvent/${inf}`);
         const data = await response.json();
         
         console.log(data);
