@@ -120,22 +120,22 @@ function getEventIdFromURL() {
 
 // Асинхронно достаём данные события по ID из API
 // Эта функция заменяет вашу getEventData(id)
-async function fetchEventData(id) {
-    const apiUrl = `http://62.109.16.129:5000//api/getEvent/`;
+// async function fetchEventData(id) {
+//     const apiUrl = `http://62.109.16.129:5000//api/getEvent/`;
 
-    try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Ошибка при получении данных с API:", error);
-        alert("Не удалось загрузить данные мероприятия с API.");
-        return null;
-    }
-}
+//     try {
+//         const response = await fetch(apiUrl);
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! status: ${response.status}`);
+//         }
+//         const data = await response.json();
+//         return data;
+//     } catch (error) {
+//         console.error("Ошибка при получении данных с API:", error);
+//         alert("Не удалось загрузить данные мероприятия с API.");
+//         return null;
+//     }
+// }
 
 
 // ======= Функция получения данных из API =======
@@ -172,17 +172,17 @@ function populateForm(event) {
         }
     };
 
-    setInputValue("name-event", event.name);
-    setInputValue("location-event", event.location);
-    setInputValue("description-event", event.description);
-    setInputValue("date-event", event.date);
-    setInputValue("time-event", event.time);
-    setInputValue("price-event", event.price);
-    setInputValue("event-category", event.category);
-    setInputValue("seats-event", event.seats);
-    setInputValue("organizers-event", event.organizers);
-    setInputValue("program-event", event.program);
-    setInputValue("fullDescription-event", event.fullDescription);
+    setInputValue("name_event", event.name);
+    setInputValue("location_event", event.location);
+    setInputValue("description_event", event.description);
+    setInputValue("date_event", event.date);
+    setInputValue("time_event", event.time);
+    setInputValue("price_event", event.price);
+    setInputValue("event_category", event.category);
+    setInputValue("seats_event", event.seats);
+    setInputValue("organizers_event", event.organizers);
+    setInputValue("program_event", event.program);
+    setInputValue("fullDescription_event", event.fullDescription);
 }
 
 // ======= Получаем ID из URL =======
