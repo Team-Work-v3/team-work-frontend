@@ -196,8 +196,8 @@ function populateForm(event) {
     setInputValue("organizers_event", event.organizers || event.Organizers);
     setInputValue("program_event", event.program || event.Program);
     setInputValue("fullDescription_event", event.fullDescription || event.FullDescription);
+    console.log(event);
 }
-
 
 // ======= Получаем ID из URL =======
 function getEventIdFromURL() {
