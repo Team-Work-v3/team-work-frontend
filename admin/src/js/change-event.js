@@ -31,7 +31,9 @@ function fillForm(data) {
     // Список ID ваших input должен совпадать с ключами в объекте API
     const fields = [
         'date_event', 'description_event', 'event_category', 
-        'location_event', 'name_event', 'price_event', 'time_event'
+        'location_event', 'name_event', 'price_event', 'time_event', 
+        'organizers_event', 'program_event', 'description_event', 
+        'fullDescription_event'
     ];
 
     fields.forEach(field => {
