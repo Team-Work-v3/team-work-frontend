@@ -170,26 +170,34 @@ function populateForm(event) {
         const el = document.getElementById(id);
         if (!el) return;
 
+        // Если значение undefined или null, ставим пустую строку
+        const safeValue = value ?? "";
+
         if (el.tagName === "SELECT") {
-            const optionExists = Array.from(el.options).some(opt => opt.value === value);
-            if (optionExists) el.value = value;
+            const optionExists = Array.from(el.options).some(opt => opt.value == safeValue);
+            if (optionExists) el.value = safeValue;
+        } else if (el.tagName === "TEXTAREA") {
+            el.value = safeValue;
         } else {
-            el.value = value ?? "";
+            el.value = safeValue;
         }
     };
 
-    setInputValue("name_event", event.name);
-    setInputValue("location_event", event.location);
-    setInputValue("description_event", event.description);
-    setInputValue("date_event", event.date);
-    setInputValue("time_event", event.time);
-    setInputValue("price_event", event.price);
-    setInputValue("event_category", event.category);
-    setInputValue("seats_event", event.seats);
-    setInputValue("organizers_event", event.organizers);
-    setInputValue("program_event", event.program);
-    setInputValue("fullDescription_event", event.fullDescription);
+    // Сопоставляем ID полей формы с ключами объекта event
+    // Если ключи в API называются иначе (например, Name с большой буквы), поправьте правую часть
+    setInputValue("name_event", event.name || event.Name);
+    setInputValue("location_event", event.location || event.Location);
+    setInputValue("description_event", event.description || event.Description);
+    setInputValue("date_event", event.date || event.Date);
+    setInputValue("time_event", event.time || event.Time);
+    setInputValue("price_event", event.price || event.Price);
+    setInputValue("event_category", event.category || event.Category);
+    setInputValue("seats_event", event.seats || event.Seats);
+    setInputValue("organizers_event", event.organizers || event.Organizers);
+    setInputValue("program_event", event.program || event.Program);
+    setInputValue("fullDescription_event", event.fullDescription || event.FullDescription);
 }
+
 
 // ======= Получаем ID из URL =======
 function getEventIdFromURL() {
