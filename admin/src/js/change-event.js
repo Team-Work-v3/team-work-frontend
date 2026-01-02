@@ -58,10 +58,7 @@ function populateForm(event) {
     setInputValue("description_event", event.description_event);
     setInputValue("date_event", event.date_event);
     setInputValue("time_event", event.time_event);
-    
-    // В вашем HTML id="price-event" (через дефис), а в данных API price_event
-    setInputValue("price-event", event.price_event); 
-    
+    setInputValue("price_event", event.price_event); 
     setInputValue("event_category", event.event_category);
     setInputValue("seats_event", event.seats_event);
     setInputValue("organizers_event", event.organizers_event);
