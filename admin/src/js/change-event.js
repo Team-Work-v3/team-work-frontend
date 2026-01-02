@@ -89,10 +89,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const eventData = await fetchEventData(id);
 
-    if (!eventData) {
-        console.log("Событие с ID " + id + " не найдено в базе API");
-        return;
-    }
+    // if (!eventData) {
+    //     console.log("Событие с ID " + id + " не найдено в базе API");
+    //     return;
+    // }
 
     populateForm(eventData);
 });
