@@ -33,7 +33,8 @@ function fillForm(data) {
         'date_event', 'description_event', 'event_category', 
         'location_event', 'name_event', 'price_event', 'time_event', 
         'organizers_event', 'program_event', 'description_event', 
-        'fullDescription_event'
+        'fullDescription_event', 'seats_event'
+
     ];
 
     fields.forEach(field => {
@@ -51,7 +52,6 @@ function fillForm(data) {
 }
 
 // Запуск для ID = 1
-fetchEventData(1);
 
 
 // ======= Получаем ID из URL =======
