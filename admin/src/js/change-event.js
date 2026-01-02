@@ -162,36 +162,74 @@ async function fetchEventData(id) {
     }
 }
 
-// ======= Подставляем данные в форму (без изменений) ======
 function populateForm(event) {
-    console.log(event)
     if (!event) return;
 
     const setInputValue = (id, value) => {
         const el = document.getElementById(id);
         if (!el) return;
 
+        let safeValue = value ?? "";
+
+        // Обработка даты: оставляем только первые 10 символов (YYYY-MM-DD)
+        if (el.type === "date" && safeValue.includes("T")) {
+            safeValue = safeValue.split("T")[0];
+        }
+
         if (el.tagName === "SELECT") {
-            const optionExists = Array.from(el.options).some(opt => opt.value === value);
-            if (optionExists) el.value = value;
+            const optionExists = Array.from(el.options).some(opt => opt.value == safeValue);
+            if (optionExists) el.value = safeValue;
         } else {
-            el.value = value ?? "";
+            el.value = safeValue;
         }
     };
-    console.log(event)
 
+    // Исправленные ID в соответствии с вашим HTML
     setInputValue("name_event", event.name);
     setInputValue("location_event", event.location);
     setInputValue("description_event", event.description);
     setInputValue("date_event", event.date);
     setInputValue("time_event", event.time);
-    setInputValue("price_event", event.price);
+    
+    // В HTML id="price-event" (через дефис), а не price_event
+    setInputValue("price-event", event.price); 
+    
     setInputValue("event_category", event.category);
     setInputValue("seats_event", event.seats);
     setInputValue("organizers_event", event.organizers);
     setInputValue("program_event", event.program);
     setInputValue("fullDescription_event", event.fullDescription);
 }
+
+
+// ======= Подставляем данные в форму (без изменений) ======
+// function populateForm(event) {
+//     if (!event) return;
+
+//     const setInputValue = (id, value) => {
+//         const el = document.getElementById(id);
+//         if (!el) return;
+
+//         if (el.tagName === "SELECT") {
+//             const optionExists = Array.from(el.options).some(opt => opt.value === value);
+//             if (optionExists) el.value = value;
+//         } else {
+//             el.value = value ?? "";
+//         }
+//     };
+
+//     setInputValue("name_event", event.name);
+//     setInputValue("location_event", event.location);
+//     setInputValue("description_event", event.description);
+//     setInputValue("date_event", event.date);
+//     setInputValue("time_event", event.time);
+//     setInputValue("price_event", event.price);
+//     setInputValue("event_category", event.category);
+//     setInputValue("seats_event", event.seats);
+//     setInputValue("organizers_event", event.organizers);
+//     setInputValue("program_event", event.program);
+//     setInputValue("fullDescription_event", event.fullDescription);
+// }
 
 // ======= Получаем ID из URL =======
 function getEventIdFromURL() {
