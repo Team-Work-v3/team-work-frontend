@@ -169,37 +169,39 @@ function populateForm(event) {
         const el = document.getElementById(id);
         if (!el) return;
 
+        // Если значение undefined/null — ставим пустую строку
         let safeValue = value ?? "";
 
-        // Обработка даты: оставляем только первые 10 символов (YYYY-MM-DD)
-        if (el.type === "date" && safeValue.includes("T")) {
+        // Если это дата, берем только часть YYYY-MM-DD (на случай ISO формата)
+        if (el.type === "date" && typeof safeValue === "string") {
             safeValue = safeValue.split("T")[0];
         }
 
         if (el.tagName === "SELECT") {
+            // Для селекта проверяем соответствие значения
             const optionExists = Array.from(el.options).some(opt => opt.value == safeValue);
-            if (optionExists) el.value = safeValue;
+            if (optionExists) {
+                el.value = safeValue;
+            }
         } else {
             el.value = safeValue;
         }
     };
 
-    // Исправленные ID в соответствии с вашим HTML
-    setInputValue("name_event", event.name);
-    setInputValue("location_event", event.location);
-    setInputValue("description_event", event.description);
-    setInputValue("date_event", event.date);
-    setInputValue("time_event", event.time);
-    
-    // В HTML id="price-event" (через дефис), а не price_event
-    setInputValue("price-event", event.price); 
-    
-    setInputValue("event_category", event.category);
-    setInputValue("seats_event", event.seats);
-    setInputValue("organizers_event", event.organizers);
-    setInputValue("program_event", event.program);
-    setInputValue("fullDescription_event", event.fullDescription);
+    // Сопоставляем ID из HTML с ключами из вашего объекта API
+    setInputValue("name_event", event.name_event);
+    setInputValue("location_event", event.location_event);
+    setInputValue("description_event", event.description_event);
+    setInputValue("date_event", event.date_event);
+    setInputValue("time_event", event.time_event);
+    setInputValue("price_event", event.price_event); 
+    setInputValue("event_category", event.event_category);
+    setInputValue("seats_event", event.seats_event);
+    setInputValue("organizers_event", event.organizers_event);
+    setInputValue("program_event", event.program_event);
+    setInputValue("fullDescription_event", event.fullDescription_event);
 }
+
 
 
 // ======= Подставляем данные в форму (без изменений) ======
