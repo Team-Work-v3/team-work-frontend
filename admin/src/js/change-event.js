@@ -135,6 +135,7 @@
 
 
 // ======= Функция получения данных из API =======
+console.log("Hello World!")
 async function fetchEventData(id) {
     try {
         // Запрашиваем все события (как в вашем примере)
@@ -196,7 +197,6 @@ function populateForm(event) {
     setInputValue("organizers_event", event.organizers || event.Organizers);
     setInputValue("program_event", event.program || event.Program);
     setInputValue("fullDescription_event", event.fullDescription || event.FullDescription);
-    console.log(event);
 }
 
 // ======= Получаем ID из URL =======
