@@ -107,7 +107,7 @@
             <div class="add-event-blocks">
               <label for="location-event">Место проведения</label>
               <input class="input--block" id="location_event" name="location_event" type="text"
-                onfocus="LocationValidate(this)">
+                oninput="LocationValidate(this)">
               <span class="error-event" id="locationError">Неправильно введено поле</span><br>
             </div>
 
@@ -150,7 +150,7 @@
             <div class="add-event-blocks">
               <label for="seats-event">Количество мест</label>
               <input class="input--block" id="seats_event" name="seats_event" type="number" min="0" step="1"
-                inputmode="numeric" onblur="SeatsValidate(this)">
+                inputmode="numeric" oninput="SeatsValidate(this)">
               <span class="error-event" id="seatsError">Неправильно введено поле</span><br>
             </div>
 
