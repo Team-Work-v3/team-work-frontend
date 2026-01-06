@@ -60,7 +60,7 @@
 
 .add-menu {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .add-menu-btn {
