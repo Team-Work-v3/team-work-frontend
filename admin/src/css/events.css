@@ -64,6 +64,7 @@
 }
 
 .add-menu-bnt{
+    margin-left: 55px;
     width: 195px;
     height: 47px;
     border: 2px solid var(--grey-stroke, #C7C7C7);
@@ -71,7 +72,6 @@
 }
 
 .add-menu-btn {
-    margin-left: 55px;
     border-width: 2px;
     font-family: Inter;
     font-weight: 600;
