@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 55px;
 }
 
 /* Заголовок */
@@ -69,22 +70,17 @@
   height: 47px;
   border: 2px solid var(--grey-stroke, #C7C7C7);
   background-color: #FFFFFF;
-  
-  /* Добавляем эти свойства для центрирования контента внутри рамки */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .add-menu-btn {
-  /* Убрали margin-left: 50px, так как центрируем через родителя */
   font-family: Inter, sans-serif;
   font-weight: 600;
   font-size: 24px;
   color: #000;
-  text-decoration: none; /* Убирает стандартное подчеркивание ссылки */
-  
-  /* Растягиваем ссылку на всю область родителя, чтобы кликалась вся кнопка */
+  text-decoration: none; 
   display: flex;
   align-items: center;
   justify-content: center;
