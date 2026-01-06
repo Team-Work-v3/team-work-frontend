@@ -64,9 +64,9 @@
 }
 
 .add-menu-bnt{
-    margin-left: 55px;
     width: 195px;
     height: 47px;
+    border: 2px solid var(--grey-stroke, #C7C7C7);
     background-color: #FFFFFF;
 }
 
