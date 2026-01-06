@@ -72,6 +72,7 @@
 }
 
 .add-menu-btn {
+    margin-left: 50%;
     border-width: 2px;
     font-family: Inter;
     font-weight: 600;
