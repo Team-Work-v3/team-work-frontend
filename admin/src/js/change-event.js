@@ -25,8 +25,8 @@ async function fetchEventData(id) {
     }
 }
 
-const url2 = `/api/editEventsForm/${inf}`;
-console.log(url2);
+// const url2 = `/api/editEventsForm/${inf}`;
+// console.log(url2);
 
 
 function fillForm(data) {
