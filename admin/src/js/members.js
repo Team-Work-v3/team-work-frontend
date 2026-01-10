@@ -59,7 +59,7 @@ RenderUsersInEvents();
                     container.innerHTML += html_center;
                     });
 
-                const html_end = ` 
+                var html_end = ` 
                                        
                                     </tbody>
                                 </table>
