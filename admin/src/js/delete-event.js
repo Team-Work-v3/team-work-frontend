@@ -18,6 +18,7 @@ async function deleteEvent(id) {
 
         if (response.ok) {
             console.log(`Событие с ID ${id} успешно удалено.`);
+            Location.reload();
         } else {
             console.error(`Ошибка при удалении события ID ${id}:`, result.message || response.statusText);
         }
