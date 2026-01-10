@@ -16,12 +16,9 @@
 }
 
 .up-menu-fix{
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    margin: 0;
-    margin-bottom: 100px;
-    margin-top: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-left: 55px;
 }
 
