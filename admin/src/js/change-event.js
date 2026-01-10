@@ -25,6 +25,10 @@ async function fetchEventData(id) {
     }
 }
 
+const url2 = `/api/editEventsForm/${inf}`;
+console.log(url2);
+
+
 function fillForm(data) {
     const fields = [
         'date_event', 'description_event', 'event_category', 
@@ -90,5 +94,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     populateForm(eventData);
 });
+
 
 
