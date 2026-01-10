@@ -37,60 +37,47 @@ main {
 
 /*  Левая панель с навигацией */
 .left-categories {
-  width: 300px; 
-  background-color: #FFFFFF;
-  min-height: 100%;
-}
+            width: 300px; 
+            background-color: #FFFFFF;
+            min-height: 100%;
+            border-right: 1px solid #eee;
+        }
 
-/* Контейнер для пунктов меню */
-.nav-menu {
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+        }
 
-  display: flex;
-  flex-direction: column;
-}
+        /* Пункт меню */
+        .nav-item {
+            height: 80px;
+            width: 300px;
+            display: flex; 
+            align-items: center; 
+            transition: background-color 0.3s ease; 
+            position: relative;
+            cursor: pointer;
+            z-index: 0;
+        }
 
-/*  Один пункт меню */
-.nav-item {
-  height: 100%;
-  display: flex; 
-  align-items: center; 
-  gap: 15px; 
-  transition: background-color 0.3s ease; 
-  position: relative;
-  width: 300px;
-  height: 80px;
-  opacity: 1;
-  z-index: 0;
+        /* Hover-эффект */
+        .nav-item:hover {
+            background-color: rgba(230, 230, 230, 1); 
+        }
 
-}
-/* ТРЕУГОЛЬНИК SVG */
-.hover-triangle{
-  position: absolute;
-  right: 0; 
-  pointer-events: none; 
-  z-index: 1;
-  
-}
-
-/*  Hover-эффект для пункта меню */
-.nav-item:hover {
-  background-color:rgba(230, 230, 230, 1); 
-}
-
-.nav-item:hover .hover-triangle path {
-  fill: #F6F6F6;
-}
-
-/*  Круглая иконка слева от текста */
-.choose-event-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 18px; 
-  background-color: #CACACA; 
-  flex-shrink: 0;
-  margin-left: 30px;
-  margin-right: 30px;
-}
+        /* Контейнер для иконки (вместо серого круга) */
+        .choose-event-circle {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            margin-left: 30px;
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Если нужен серый фон круга, раскомментируйте строку ниже: */
+            /* background-color: #CACACA; border-radius: 18px; */
+        }
 
 /* Текст пункта меню */
 .choose-event-text {
