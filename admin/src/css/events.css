@@ -13,6 +13,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.up-menu-fix{
     margin-left: 55px;
 }
 
