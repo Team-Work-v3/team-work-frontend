@@ -11,9 +11,6 @@ async function fetchEventData(id) {
             headers: {"Content-Type": "application/json"},
             body: inf
         });
-        const url2 = `/api/editEventsForm/${inf}`;
-        console.log(url2);
-        document.getElementById('formedit').action = url2;
         const data = await response.json();
         
         console.log(data);//!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -71,6 +68,9 @@ function getEventIdFromURL() {
     const eventId = pathParts[pathParts.length - 1]; // Или просто pathParts[3] для этого конкретного случая
 
     console.log(eventId); // Выведет: "1"
+    const url2 = `/api/editEventsForm/${eventId}`;
+    console.log(url2);
+    document.getElementById('formedit').action = url2;
 
     // Если вам нужно число, а не строка
     const eventIdNumber = parseInt(eventId, 10);
