@@ -1,0 +1,38 @@
+ table {
+            width: 100%;
+            border-collapse: collapse; /* Убирает двойные границы */
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* Стили для заголовков */
+        th {
+            background-color: #d9d9d9; /* Светло-серый фон заголовка */
+            color: #000;
+            font-weight: bold;
+            padding: 12px;
+            border: 1px solid #888; /* Тонкая серая граница */
+            text-align: center;
+        }
+
+        /* Стили для ячеек */
+        td {
+            padding: 10px;
+            border: 1px solid #888;
+            text-align: left;
+        }
+
+        /* Первая колонка (номер) — по центру */
+        td:first-child {
+            text-align: center;
+            width: 40px;
+        }
+
+        /* Чередование цветов строк (Зебра) */
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2; /* Цвет каждой второй строки */
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff; /* Цвет каждой первой строки */
+        }
