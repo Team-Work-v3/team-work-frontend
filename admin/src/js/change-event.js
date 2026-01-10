@@ -25,9 +25,7 @@ async function fetchEventData(id) {
     }
 }
 
-// Универсальная функция для заполнения формы
 function fillForm(data) {
-    // Список ID ваших input должен совпадать с ключами в объекте API
     const fields = [
         'date_event', 'description_event', 'event_category', 
         'location_event', 'name_event', 'price_event', 'time_event', 
@@ -43,14 +41,11 @@ function fillForm(data) {
         }
     });
 
-    // Отдельная обработка изображения, если есть <img>
     const imgElement = document.getElementById('event_image_preview');
     if (imgElement && data.images_events) {
         imgElement.src = data.images_events;
     }
 }
-
-// Запуск для ID = 1
 
 
 // ======= Получаем ID из URL =======
