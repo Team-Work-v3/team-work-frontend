@@ -11,6 +11,8 @@ async function fetchEventData(id) {
             headers: {"Content-Type": "application/json"},
             body: inf
         });
+        const url2 = `/api/editEventsForm/${inf}`;
+        console.log(url2);
         const data = await response.json();
         
         console.log(data);//!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25,8 +27,6 @@ async function fetchEventData(id) {
     }
 }
 
-// const url2 = `/api/editEventsForm/${inf}`;
-// console.log(url2);
 
 
 function fillForm(data) {
