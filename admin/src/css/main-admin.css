@@ -40,7 +40,6 @@ main {
             width: 300px; 
             background-color: #FFFFFF;
             min-height: 100%;
-            border-right: 1px solid #eee;
         }
 
         .nav-menu {
