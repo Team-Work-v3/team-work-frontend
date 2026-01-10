@@ -13,6 +13,7 @@ async function fetchEventData(id) {
         });
         const url2 = `/api/editEventsForm/${inf}`;
         console.log(url2);
+        document.getElementById('formedit').action = url2;
         const data = await response.json();
         
         console.log(data);//!!!!!!!!!!!!!!!!!!!!!!!!!
