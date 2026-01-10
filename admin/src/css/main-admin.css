@@ -78,6 +78,23 @@ main {
             /* Если нужен серый фон круга, раскомментируйте строку ниже: */
             /* background-color: #CACACA; border-radius: 18px; */
         }
+        /* Треугольник SVG (белый, появляется справа) */
+        .hover-triangle {
+            position: absolute;
+            right: 0; 
+            pointer-events: none; 
+            z-index: 1;
+            opacity: 0; /* Скрыт по умолчанию */
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-item:hover .hover-triangle {
+            opacity: 1; /* Показываем при наведении */
+        }
+
+        .nav-item:hover .hover-triangle path {
+            fill: #F6F6F6; /* Цвет фона основного контента */
+        }
 
 /* Текст пункта меню */
 .choose-event-text {
