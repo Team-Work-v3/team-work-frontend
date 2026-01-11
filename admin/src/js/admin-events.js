@@ -15,6 +15,7 @@ async function RenderEvents() {
     Object.values(data).forEach(events => {
         Object.values(events).forEach(event => {
             const html = `
+            <section class="add-event">
                 <div class="event-container" id="event-container" data-event-id="${event.event_id}">
                     <div class="event-visible-information">
                         <div class="elements-event">
@@ -28,7 +29,6 @@ async function RenderEvents() {
                     </div>
                     <div class="event-invisible-information" id="invisible-information-${event.event_id}">
                         <div>
-                        <section class="add-event">
                                     <div class="add-event-firstSecondBlock">
           <div class="add-event-firstBlock">
             <div class="add-event-blocks">
