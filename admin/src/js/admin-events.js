@@ -69,7 +69,7 @@ async function RenderEvents() {
 
             <div class="add-event-blocks">
               <label for="price-event">Цена</label>
-              <div class="price-container"></div>
+              <div class="price-container">
                 <input class="input--block" id="price_event" name="price_event" type="number" min="0" max="10000"
                   step="0.01" inputmode="decimal" oninput="PriceValidate(this)" value="${event.price_event}">
                 <select id="currency-select" class="input--block" style="width: auto; padding: 6px;" onchange="CurrencyChangeHandler()">
