@@ -17,7 +17,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    width: 95%;
+    width: 100%;
     /* margin-left: 55px;
     margin-right: 55px; */
     background-color: #F6F6F6;
@@ -178,4 +178,8 @@ label {
 .picture-event{
     width: 236px;
     height: 236px;
+}
+
+.event-invisible-information{
+    margin-left: 55px;
 }
