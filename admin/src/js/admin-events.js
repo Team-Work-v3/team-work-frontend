@@ -14,9 +14,21 @@ async function RenderEvents() {
 
     Object.values(data).forEach(events => {
         Object.values(events).forEach(event => {
-const html = `
-    <form action="#" method="POST" class="add-event-form" id="formedit">
-        <div class="add-event-firstSecondBlock">
+            const html = `
+                <div class="event-container" id="event-container" data-event-id="${event.event_id}">
+                    <div class="event-visible-information">
+                        <div class="elements-event">
+                            <span class="arrow-event" id="arrow-event" data-event-id="${event.event_id}">⯆</span>
+                            <span class="name-event">${event.name_event}</span>
+                        </div>
+                        <div class="buttons-event">
+                            <button class="button-event" id="edit-event-button" onclick="window.location.href = '/admin/change-event/${event.event_id}'">Редактировать</button>
+                            <button class="button-event" id="delete-event-button" onclick="deleteEvent(${event.event_id})">Удалить</button>
+                        </div>
+                    </div>
+                    <div class="event-invisible-information" id="invisible-information-${event.event_id}">
+                        <div>
+                                    <div class="add-event-firstSecondBlock">
           <div class="add-event-firstBlock">
             <div class="add-event-blocks">
               <label for="name-event">Название мероприятия</label>
@@ -124,9 +136,12 @@ const html = `
             <form action="#" method="post"><button type="reset">Удалить</button></form> 
           </div>
         </div>
-      </form>
-`;
-
+                        </div>
+                        <!-- In the future, this div is going img -->
+                        <img alt="picture" src="${event.images_events}" class="picture-event">
+                    </div>
+                </div>
+            `;
 
             container.innerHTML += html;
         });
