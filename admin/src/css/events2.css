@@ -173,3 +173,8 @@ label {
     display: none;
     max-width: 331px;
 }
+
+.picture-event{
+    width: 236px;
+    height: 236px;
+}
