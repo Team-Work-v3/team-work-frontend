@@ -28,6 +28,7 @@ async function RenderEvents() {
                     </div>
                     <div class="event-invisible-information" id="invisible-information-${event.event_id}">
                         <div>
+                        <section class="add-event">
                                     <div class="add-event-firstSecondBlock">
           <div class="add-event-firstBlock">
             <div class="add-event-blocks">
@@ -120,6 +121,7 @@ async function RenderEvents() {
                         <img alt="picture" src="${event.images_events}" class="picture-event">
                     </div>
                 </div>
+                </section>
             `;
 
             container.innerHTML += html;
