@@ -107,14 +107,13 @@ async function RenderEvents() {
               <input class="input--block-low" id="time_event" name="time_event" type="time" required min="09:00"
                 max="19:00" onblur="TimeValidate(this)" value="${event.time_event}">
             </div>
-
+            <img alt="picture" src="${event.images_events}" class="picture-event">
             </div>
           </div>
           <div class="add-event-secondBlock">
           </div>
         </div>
                         </div>
-                        <img alt="picture" src="${event.images_events}" class="picture-event">
                     </div>
                 </div>
                 </section>
