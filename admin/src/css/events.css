@@ -97,3 +97,176 @@
 a{
     text-decoration: none;
 }
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    background-color: #F6F6F6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.add-event {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    margin-left: 55px;
+    background-color: #F6F6F6;
+}
+
+form {
+    width: 100%;
+}
+
+.add-upMenu {
+    flex-basis: 100%;
+}
+
+.add-event-nameDiv {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.add-event-blocks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-event-firstSecondBlock {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.add-event-firstBlock {
+    width: 35%;
+}
+
+.add-event-secondBlock {
+    width: 65%;
+}
+
+.add-event-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add-event-buttons {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-basis: 100%;
+}
+
+/* Стили для объектов */
+
+.add-event-name {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 36px;
+}
+
+.input--block {
+    width: 331px;
+    height: 44px;
+    border-width: 3px;
+    border: 3px solid var(--grey-stroke, #00000036)
+}
+
+#organizers_event{
+    width: 700px;
+    height: 150px;
+}
+
+#program_event, #fullDescription_event{
+    width: 700px;
+    height: 350px;
+}
+
+.input--block-low{
+    width: 201px;
+    height: 44px;
+    border-width: 3px;
+    border: 3px solid var(--grey-stroke, #00000036)
+}
+
+.input--block-btn::file-selector-button{
+    border-width: 2px;
+    width: 153px;
+    height: 39px;
+    border: 2px solid var(--grey-stroke, #00000036);
+    background-color: white;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.input--block-select{
+    width: 185px;
+    height: 44px;
+    border-width: 3px;
+    border: 3px solid var(--grey-stroke, #00000036)
+}
+
+
+
+#organizers-event {
+    width: 700px;
+    height: 150px;
+}
+
+#program-event,
+#fullDescription-event {
+    width: 700px;
+    height: 377px;
+}
+
+;
+
+#images-events {
+    width: 153px;
+    height: 39px;
+    border-width: 3px;
+}
+
+button {
+    border-width: 2px;
+    padding-top: 9px;
+    padding-right: 39px;
+    padding-bottom: 9px;
+    padding-left: 39px;
+    border: 2px solid var(--grey-stroke, #00000036);
+    background-color: white;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 37px; /* ПОБОЧКА */
+}
+
+#addBtn-event{
+    margin-right: 8px;
+}
+
+label {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 22px;
+    margin-bottom: 3px;
+}
+.error-event{
+    color: red;
+    display: none;
+    max-width: 331px;
+}
