@@ -89,7 +89,7 @@ form {
     height: 150px;
 }
 
-#program_event #fullDescription_event{
+#program_event, #fullDescription_event{
     width: 700px;
     height: 350px;
 }
