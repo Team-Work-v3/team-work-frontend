@@ -120,20 +120,25 @@ form {
     border: 3px solid var(--grey-stroke, #00000036)
 }
 
+#fullDescription-event{
+    width: 936px;
+    height: 280px;
+}
 
+#description_event{
+    width: 936px;
+    height: 203px;
+}
+
+#program-event{
+    width: 936px;
+    height: 319px;
+}
 
 #organizers-event {
     width: 700px;
-    height: 150px;
+    height: 121px;
 }
-
-#program-event,
-#fullDescription-event {
-    width: 700px;
-    height: 377px;
-}
-
-;
 
 #images-events {
     width: 153px;
