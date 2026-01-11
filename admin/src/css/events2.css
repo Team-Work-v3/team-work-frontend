@@ -87,12 +87,17 @@ form {
 
 #organizers_event{
     width: 936px;
-    height: 150px;
+    height: 121px;
 }
 
-#program_event, #fullDescription_event{
+#program_event{
     width: 936px;
-    height: 350px;
+    height: 319px;
+}
+
+#fullDescription_event{
+    width: 936px;
+    height: 280px;
 }
 
 .input--block-low{
