@@ -108,17 +108,6 @@ async function RenderEvents() {
             </div>
 
             </div>
-
-            <form action="#" method="post">
-            <div class="add-event-blocks">
-              <label for="images-events">Фотографии</label>
-              <input class="input--block-btn" type="file" multiple accept=".png,.jpeg,.webp,.jpg" name="images-events"
-                id="images-events" onchange="ImagesValidate(this)">
-            </div>
-            </form>
-
-
-
           </div>
           <div class="add-event-secondBlock">
           </div>
