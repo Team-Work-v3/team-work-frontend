@@ -201,3 +201,40 @@ label {
     display: none;
     max-width: 331px;
 }
+
+/* Контейнер для всех блоков (add-event-firstBlock) */
+.add-event-firstBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Создаем две равные колонки */
+    gap: 15px; /* Отступ между полями */
+    width: 100%;
+}
+
+/* По умолчанию все блоки занимают обе колонки (друг под другом) */
+.add-event-blocks {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Последние 6 блоков занимают только 1 колонку, вставая в два столбика */
+.add-event-blocks:nth-last-child(-n+6) {
+    grid-column: span 1;
+}
+
+/* Стили для самих input, чтобы они занимали всю ширину своего блока */
+.input--block, 
+.input--block-select, 
+.input--block-low,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+/* Исправление для блока цены, чтобы select и input были в строку внутри своей колонки */
+.price-container {
+    display: flex;
+    gap: 5px;
+}
+
