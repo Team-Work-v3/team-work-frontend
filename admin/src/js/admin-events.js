@@ -112,10 +112,6 @@ async function RenderEvents() {
           </div>
           <div class="add-event-secondBlock">
           </div>
-          <div class="add-event-buttons">
-            <button type="submit" id="addBtn-event">Изменить</button>
-            <form action="#" method="post"><button type="reset">Удалить</button></form> 
-          </div>
         </div>
                         </div>
                         <img alt="picture" src="${event.images_events}" class="picture-event">
