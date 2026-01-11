@@ -11,6 +11,9 @@
     align-items: center;
 }
 
+.add-event{
+    width: 100%;
+}
 .add-event-button {
     padding: 10px 20px;
     align-self: flex-end;
