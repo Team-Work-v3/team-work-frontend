@@ -23,13 +23,13 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #8E8E8E;
+    border-bottom: 1px solid black;
     gap: 10px;
     padding: 10px 0;
 }
 
 .event-container:first-of-type {
-    border-top: 1px solid #8E8E8E;
+    border-top: 1px solid black;
     margin-top: 20px;
 }
 
