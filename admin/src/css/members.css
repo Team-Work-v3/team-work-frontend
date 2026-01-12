@@ -79,7 +79,8 @@
 }
 
 .participants-table {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     border-collapse: collapse;
 }
 
@@ -98,4 +99,16 @@
 
 .participants-table tr:nth-child(even) {
     background-color: #efefef;
+}
+.event-title{
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+
+.event-container h2{
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: #666;
 }
