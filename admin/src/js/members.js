@@ -64,7 +64,7 @@ RenderUsersInEvents();
                 container.innerHTML += (html_center_head + center + html_end);
                 }
                 else{
-                    container.innerHTML += '<h2>На это мероприятие ещё никто не зарегистировался</h2>';
+                    container.innerHTML += '<h2 class="container--h2">На это мероприятие ещё никто не зарегистировался</h2>';
                 }
                     
                     
