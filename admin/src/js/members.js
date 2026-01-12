@@ -24,11 +24,10 @@ RenderUsersInEvents();
                                 </div>
                             </div>
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
-                            var html_center_head = "";
-                            var center = "";
-                            var html_end = "";
+
+                        container.innerHTML += html_start;
                         if(event.users.length > 0){
-                        html_center_head += `
+                         var html_center_head = `
                                  <table class="participants-table">
                                     <thead>
                                         <tr>
@@ -41,7 +40,7 @@ RenderUsersInEvents();
                                     </thead>
                                     <tbody>`;
                                         
-                        center = ""; 
+                        var center = ""; 
                         var count = 0;
                         Object.values(event.users).forEach(user => {
                             count++;
@@ -56,22 +55,22 @@ RenderUsersInEvents();
                     center += html_center;
                     });
 
-                html_end = ` 
+                var html_end = ` 
                                        
                                     </tbody>
                                 </table></div>
                          
                     `;
-                var in_container = (html_center_head + center + html_end);
+                container.innerHTML += (html_center_head + center + html_end);
                 }
                 else{
-                    var in_container =  '<h2 class="container--h2">На это мероприятие ещё никто не зарегистировался</h2>';
+                    container.innerHTML += '<h2 class="container--h2">На это мероприятие ещё никто не зарегистировался</h2>';
                 }
-                    var in_endend = ' </div>';    
+                    
+                    
+                    container.innerHTML +=' </div>';    
                  });
             });
-
-                    container.innerHTML =(html_start + in_container + in_endend); //!!!!!!!!!
 
             OpenUsers();
         }
