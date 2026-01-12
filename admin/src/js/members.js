@@ -16,8 +16,6 @@ RenderUsersInEvents();
                 Object.values(events).forEach(event => {
                     const html_start = `
 
-
-
                         <div class="event-container" id="event-container" data-event-id="${event.event_id}">
                             <div class="event-visible-information">
                                 <div class="elements-event">
@@ -28,7 +26,7 @@ RenderUsersInEvents();
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
                         container.innerHTML += html_start;
                         if(event.users){
-                         const html_center_head = `
+                         var html_center_head = `
                                  <table class="participants-table">
                                     <thead>
                                         <tr>
@@ -44,7 +42,7 @@ RenderUsersInEvents();
                         container.innerHTML += html_center_head;
                         
                         Object.values(event.users).forEach(user => {
-                        const html_center = `
+                        var html_center = `
                         
                              <tr>
                                 <td>1</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td><button>Отменить</button></td>
@@ -58,7 +56,7 @@ RenderUsersInEvents();
                 var html_end = ` 
                                        
                                     </tbody>
-                                </table>
+                                </table></div>
                            
                     `;
                 }
@@ -68,7 +66,7 @@ RenderUsersInEvents();
                     
                     
                     container.innerHTML += html_end;
-                    container.innerHTML +=' </div>                        </div>';    
+                    container.innerHTML +=' </div>';    
                  });
             });
 
