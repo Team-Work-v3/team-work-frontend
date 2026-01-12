@@ -24,6 +24,7 @@ RenderUsersInEvents();
                                 </div>
                             </div>
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
+                            console.log(event.users.length);
                         container.innerHTML += html_start;
                         if(event.users.length > 0){
                          var html_center_head = `
