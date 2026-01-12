@@ -24,10 +24,11 @@ RenderUsersInEvents();
                                 </div>
                             </div>
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
-                            // console.log(event.users.length);
-                        container.innerHTML += html_start;
+                            var html_center_head = "";
+                            var center = "";
+                            var html_end = "";
                         if(event.users.length > 0){
-                         var html_center_head = `
+                        html_center_head += `
                                  <table class="participants-table">
                                     <thead>
                                         <tr>
@@ -40,7 +41,7 @@ RenderUsersInEvents();
                                     </thead>
                                     <tbody>`;
                                         
-                        var center = ""; 
+                        center = ""; 
                         var count = 0;
                         Object.values(event.users).forEach(user => {
                             count++;
@@ -55,22 +56,22 @@ RenderUsersInEvents();
                     center += html_center;
                     });
 
-                var html_end = ` 
+                html_end = ` 
                                        
                                     </tbody>
                                 </table></div>
                          
                     `;
-                container.innerHTML += (html_center_head + center + html_end);
+                var in_container = (html_center_head + center + html_end);
                 }
                 else{
-                    container.innerHTML += '<h2 class="container--h2">На это мероприятие ещё никто не зарегистировался</h2>';
+                    var in_container =  '<h2 class="container--h2">На это мероприятие ещё никто не зарегистировался</h2>';
                 }
-                    
-                    
-                    container.innerHTML +=' </div>';    
+                    var in_endend = ' </div>';    
                  });
             });
+
+                    container.innerHTML =(html_start + in_container + in_endend); //!!!!!!!!!
 
             OpenUsers();
         }
