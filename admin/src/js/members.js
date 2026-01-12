@@ -40,12 +40,14 @@ RenderUsersInEvents();
                                     </thead>
                                     <tbody>`;
                                         
-                        var center = "";
+                        var center = ""; 
+                        var count = 0;
                         Object.values(event.users).forEach(user => {
+                            count++;
                         var html_center = `
                         
                              <tr>
-                                <td>1</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td><button>Отменить</button></td>
+                                <td>${count}</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td><button>Отменить</button></td>
                                 </tr>          
                                        
                         `;
