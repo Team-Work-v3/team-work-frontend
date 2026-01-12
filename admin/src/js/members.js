@@ -14,7 +14,7 @@ RenderUsersInEvents();
 
             Object.values(data).forEach(events => {
                 Object.values(events).forEach(event => {
-                    const html_start = `
+                    var html_start = `
 
                         <div class="event-container" id="event-container" data-event-id="${event.event_id}">
                             <div class="event-visible-information">
@@ -25,7 +25,7 @@ RenderUsersInEvents();
                             </div>
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
                         container.innerHTML += html_start;
-                        if(event.users){
+                        if(event.users.length > 0){
                          var html_center_head = `
                                  <table class="participants-table">
                                     <thead>
