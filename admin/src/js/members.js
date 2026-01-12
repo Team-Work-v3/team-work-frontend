@@ -40,8 +40,7 @@ RenderUsersInEvents();
                                     </thead>
                                     <tbody>`;
                                         
-                        container.innerHTML += html_center_head;
-                        
+                        var center = "";
                         Object.values(event.users).forEach(user => {
                         var html_center = `
                         
@@ -51,22 +50,22 @@ RenderUsersInEvents();
                                        
                         `;
 
-                    container.innerHTML += html_center;
+                    center += html_center;
                     });
 
                 var html_end = ` 
                                        
                                     </tbody>
                                 </table></div>
-                           
+                         
                     `;
+                container.innerHTML += (html_center_head + center + html_end);
                 }
                 else{
                     container.innerHTML += '<h2>На это мероприятие ещё никто не зарегистировался</h2>';
                 }
                     
                     
-                    container.innerHTML += html_end;
                     container.innerHTML +=' </div>';    
                  });
             });
