@@ -15,10 +15,6 @@ RenderUsersInEvents();
             Object.values(data).forEach(events => {
                 Object.values(events).forEach(event => {
                     const html_start = `
-                     <div class="event-header">
-                        <span class="arrow">▲</span>
-                        <span class="event-title">Мероприятие 1</span>
-                    </div>
 
 
 
@@ -26,7 +22,7 @@ RenderUsersInEvents();
                             <div class="event-visible-information">
                                 <div class="elements-event">
                                     <span class="arrow-event arrow" id="arrow-event" data-event-id="${event.event_id}">⯆</span>
-                                    <span class="name-event event-title">${event.name_event}</span>
+                                    <span class="name-event event-title">${event.event_name}</span>
                                 </div>
                             </div>
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
