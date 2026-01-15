@@ -29,7 +29,6 @@ async function RenderEvents() {
                     </div>
                     <div class="event-invisible-information" id="invisible-information-${event.event_id}">
                         <div>
-                                    <div class="add-event-firstSecondBlock">
           <div class="add-event-firstBlock">
             <div class="add-event-blocks">
               <label for="name-event">Название мероприятия</label>
@@ -107,7 +106,9 @@ async function RenderEvents() {
               <input class="input--block-low" id="time_event" name="time_event" type="time" required min="09:00"
                 max="19:00" onblur="TimeValidate(this)" value="${event.time_event}">
             </div>
+            <div class="second-part"
             <img alt="picture" src="${event.images_events}" class="picture-event">
+            </div>
             </div>
           </div>
           <div class="add-event-secondBlock">
