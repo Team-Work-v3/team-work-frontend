@@ -192,8 +192,10 @@ label {
 }
 
 .picture-event{
-    height: 319px;
+    background-color: antiquewhite;
     width: auto;
+    max-width: none;
+    object-fit: contain;
 }
 
 .event-invisible-information{
