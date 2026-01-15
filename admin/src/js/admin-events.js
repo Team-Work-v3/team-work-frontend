@@ -38,7 +38,7 @@ async function RenderEvents() {
             </div>
 
                         <div id="special">
-                        <div class="add-event-blocks>
+                        <div class="add-event-blocks">
               <label for="fullDescription-event" class="add-event-name">Описание мероприятия (полное)</label>
               <textarea class="input--block" id="fullDescription_event" name="fullDescriptionevent" rows="" type="text"
                 oninput="fullDescriptionValidate(this)">${event.fullDescription_event}</textarea>
