@@ -46,6 +46,7 @@ async function RenderEvents() {
                         <div class="add-event-blocks">
                             <label for="fullDescription-event">Описание мероприятия (полное)</label>
                             <img alt="picture" src="${event.images_events}" class="picture-event">
+                            </div>
                         </div>
                             
             </div>
