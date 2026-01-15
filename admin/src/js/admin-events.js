@@ -42,8 +42,11 @@ async function RenderEvents() {
               <label for="fullDescription-event">Описание мероприятия (полное)</label>
               <textarea class="input--block" id="fullDescription_event" name="fullDescriptionevent" rows="" type="text"
                 oninput="fullDescriptionValidate(this)">${event.fullDescription_event}</textarea>
-                        </div>
+                        
+                        <div class="add-event-blocks">
+                            <label for="fullDescription-event">Описание мероприятия (полное)</label>
                             <img alt="picture" src="${event.images_events}" class="picture-event">
+                        </div>
                             
             </div>
 
