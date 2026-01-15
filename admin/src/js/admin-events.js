@@ -1,20 +1,20 @@
 RenderEvents();
 
 async function RenderEvents() {
-    const container = document.querySelector(".events-container");
+  const container = document.querySelector(".events-container");
 
-    const response = await fetch("http://62.109.16.129:5000/api/getEvents");
-    const data = await response.json();
-    console.log(data.events);
+  const response = await fetch("http://62.109.16.129:5000/api/getEvents");
+  const data = await response.json();
+  console.log(data.events);
 
-    if (!container) {
-        console.error("No data");
-        return;
-    }
+  if (!container) {
+    console.error("No data");
+    return;
+  }
 
-    Object.values(data).forEach(events => {
-        Object.values(events).forEach(event => {
-            const html = `
+  Object.values(data).forEach(events => {
+    Object.values(events).forEach(event => {
+      const html = `
             <section class="add-event">
                 <div class="event-container" id="event-container" data-event-id="${event.event_id}">
                     <div class="event-visible-information">
@@ -125,34 +125,34 @@ async function RenderEvents() {
                 </section>
             `;
 
-            container.innerHTML += html;
-        });
+      container.innerHTML += html;
     });
+  });
 
-    OpenEvent();
+  OpenEvent();
 }
 
 function OpenEvent() {
-    const arrows = document.querySelectorAll("#arrow-event");
-    const invisibleInformations = document.querySelectorAll(".event-invisible-information");
+  const arrows = document.querySelectorAll("#arrow-event");
+  const invisibleInformations = document.querySelectorAll(".event-invisible-information");
 
-    arrows.forEach(arrow => {
-        arrow.addEventListener("click", () => {
-            const invisibleInformation = document.getElementById(`invisible-information-${arrow.getAttribute("data-event-id")}`);
+  arrows.forEach(arrow => {
+    arrow.addEventListener("click", () => {
+      const invisibleInformation = document.getElementById(`invisible-information-${arrow.getAttribute("data-event-id")}`);
 
-            if (invisibleInformation.style.display === "flex") {
-                arrow.innerHTML = "⯆";
-                invisibleInformation.style.display = "none";
-                return;
-            }
+      if (invisibleInformation.style.display === "flex") {
+        arrow.innerHTML = "⯆";
+        invisibleInformation.style.display = "none";
+        return;
+      }
 
-            invisibleInformations.forEach(information => {
-                information.style.display = "none";
-                arrows.forEach(arrow => arrow.innerHTML = "⯆");
-            });
+      invisibleInformations.forEach(information => {
+        information.style.display = "none";
+        arrows.forEach(arrow => arrow.innerHTML = "⯆");
+      });
 
-            invisibleInformation.style.display = "flex";
-            arrow.innerHTML = "⯅";
-        });
+      invisibleInformation.style.display = "flex";
+      arrow.innerHTML = "⯅";
     });
+  });
 }

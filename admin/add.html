@@ -151,10 +151,10 @@
               <label for="event-category">Категория</label>
               <select id="event-category" name="event_category" class="input--block-select"
                 oninput="CategoryValidate(this)">
-                <option value="">Выберите категорию</option>
-                <option value=".">option 1</option>
-                <option value=".">option 2</option>
-                <option value=".">option 3</option>
+                <option value="." selected>Выберите категорию</option>
+                <option value="1">урок</option>
+                <option value="2">мастер-класс</option>
+                <option value="3">лекция</option>
               </select>
               <span class="error-event" id="selectError"></span>
             </div>
@@ -200,7 +200,7 @@
           </div>
           <div class="add-event-buttons">
             <button type="submit" id="addBtn-event">Добавить</button>
-            <form action="/api/deleteEvent" method="post"><button type="reset">Удалить</button></form> 
+            <form action="/api/deleteEvent" method="post"><button type="reset">Очистить</button></form> 
           </div>
       </form>
     </section>
