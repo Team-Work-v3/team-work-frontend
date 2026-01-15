@@ -29,6 +29,7 @@ async function RenderEvents() {
                     </div>
                     <div class="event-invisible-information" id="invisible-information-${event.event_id}">
                         <div>
+                                    <div class="add-event-firstSecondBlock">
           <div class="add-event-firstBlock">
             <div class="add-event-blocks">
               <label for="name-event">Название мероприятия</label>
@@ -40,6 +41,7 @@ async function RenderEvents() {
               <label for="fullDescription-event">Описание мероприятия (полное)</label>
               <textarea class="input--block" id="fullDescription_event" name="fullDescriptionevent" rows="" type="text"
                 oninput="fullDescriptionValidate(this)">${event.fullDescription_event}</textarea>
+                            <img alt="picture" src="${event.images_events}" class="picture-event">
             </div>
 
             <div class="add-event-blocks">
@@ -114,9 +116,6 @@ async function RenderEvents() {
                         </div>
                     </div>
                 </div>
-            <div class="second-part"
-            <img alt="picture" src="${event.images_events}" class="picture-event">
-            </div>
                 </section>
             `;
 
