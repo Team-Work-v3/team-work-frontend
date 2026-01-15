@@ -193,3 +193,10 @@ label {
 .event-invisible-information{
     margin-left: 55px;
 }
+
+.event-container{
+    width: 70%;
+}
+.second-part{
+    width: 30%;
+}
