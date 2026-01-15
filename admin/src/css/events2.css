@@ -62,6 +62,12 @@ form {
     align-items: flex-start;
 }
 
+#special{
+  display: flex;            /* Включает гибкую верстку */
+  align-items: flex-start;  /* Выравнивает элементы по верхнему краю */
+  gap: 20px;                /* Устанавливает расстояние между textarea и img */
+}
+
 .add-event-buttons {
     display: flex;
     justify-content: flex-start;
