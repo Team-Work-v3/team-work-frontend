@@ -79,11 +79,6 @@ async function RenderEvents() {
               <div class="price-container">
                 <input class="input--block" id="price_event" name="price_event" type="number" min="0" max="10000"
                   step="0.01" inputmode="decimal" oninput="PriceValidate(this)" value="${event.price_event}">
-                <select id="currency-select" class="input--block" style="width: auto; padding: 6px;" onchange="CurrencyChangeHandler()">
-                  <option value="RUB" ${event.currency === 'RUB' ? 'selected' : ''}>BYN</option>
-                  <option value="USD" ${event.currency === 'USD' ? 'selected' : ''}>USD</option>
-                  <option value="EUR" ${event.currency === 'EUR' ? 'selected' : ''}>EUR</option>
-                </select>
               </div>
 
             <div class="add-event-blocks">
