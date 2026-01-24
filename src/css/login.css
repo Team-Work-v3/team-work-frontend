@@ -34,8 +34,11 @@ h1{
 
 label{
   display: flex;
-  text-align: center;
   flex-direction: row;
+  justify-content: space-between;
+}
+label span{
+  width: 50%;
 }
 
 input {
