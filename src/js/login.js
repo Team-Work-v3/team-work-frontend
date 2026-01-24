@@ -20,15 +20,15 @@ function validate_login() {
     //если длина value() введенного поля меньше 2
     if (value.length < 2) {
         check_login.innerHTML = 'Слишком короткий логин';
-        check_login.style.color = 'red';
-        login.style.borderColor = 'red';
+        check_login.style.color = '#982520';
+        login.style.borderColor = '#982520';
 
     }
     //если длина больше 50
     else if (value.length > 50) {
         check_login.innerHTML = 'Слишком длинный логин';
-        check_login.style.color = 'red';
-        login.style.borderColor = 'red';
+        check_login.style.color = '#982520';
+        login.style.borderColor = '#982520';
     }
     //если соответствует шаблону
     else if (login_regex.test(value)) {
@@ -39,7 +39,7 @@ function validate_login() {
     //если не соответствует шаблону  
     else {
         check_login.innerHTML = 'Используй только буквы, цифры и _';
-        check_login.style.color = 'red';
+        check_login.style.color = '#982520';
         login.style.borderColor = 'red';
     }
 }
@@ -61,14 +61,14 @@ function validate_password() {
     //если длина value(=содержимого) не меньше 3
     if (value.length < 6) {
         check_password.innerHTML = 'Слишком короткий пароль';
-        check_password.style.color = 'red';
-        password.style.borderColor = 'red';
+        check_password.style.color = '#982520';
+        password.style.borderColor = '#982520';
     }
     //если длина больше 30
     else if (value.length > 30) {
         check_password.innerHTML = 'Слишком длинный пароль';
-        check_password.style.color = 'red';
-        password.style.borderColor = 'red';
+        check_password.style.color = '#982520';
+        password.style.borderColor = '#982520';
     }
     //если соответствует шаблону
     else if (password_regex.test(value)) {
@@ -79,7 +79,7 @@ function validate_password() {
     //если не соответствует шаблону
     else {
         check_password.innerHTML = 'Используй допустимые символы';
-        check_password.style.color = 'red';
-        password.style.borderColor = 'red';
+        check_password.style.color = '#982520';
+        password.style.borderColor = '#982520';
     }
 }
