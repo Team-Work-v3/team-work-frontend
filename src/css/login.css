@@ -48,14 +48,15 @@ label span{
 input {
   border: 0px solid white;
   width: 420px;
-  height: 25px;
+  /* height: 25px; */
   /* padding: 15px 20px; */
   display: block;
   /* box-sizing: border-box; */
   margin-bottom: 10px;
   background-color:#F2F2F2;
   padding: 20px;
-
+  font-size: 24px;
+  
 }
 
 #check_password, #check_login{

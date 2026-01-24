@@ -2,6 +2,7 @@
 let correct_login = ''; //backend
 let correct_password = ''; //backend
 
+
 //Привязываем события ФОКУСА и ПОТЕРИ ФОКУСА к полю ЛОГИНА
 login.addEventListener('focus', clear_login_message);
 login.addEventListener('blur', validate_login);
@@ -20,21 +21,26 @@ function validate_login() {
     if (value.length < 2) {
         check_login.innerHTML = 'Слишком короткий логин';
         check_login.style.color = 'red';
+        login.style.borderColor = 'red';
+
     }
     //если длина больше 50
     else if (value.length > 50) {
         check_login.innerHTML = 'Слишком длинный логин';
         check_login.style.color = 'red';
+        login.style.borderColor = 'red';
     }
     //если соответствует шаблону
     else if (login_regex.test(value)) {
         check_login.innerHTML = '';
         check_login.style.color = '';
+        login.style.borderColor = 'white';
     }
     //если не соответствует шаблону  
     else {
         check_login.innerHTML = 'Используй только буквы, цифры и _';
         check_login.style.color = 'red';
+        login.style.borderColor = 'red';
     }
 }
 
@@ -56,20 +62,24 @@ function validate_password() {
     if (value.length < 6) {
         check_password.innerHTML = 'Слишком короткий пароль';
         check_password.style.color = 'red';
+        password.style.borderColor = 'red';
     }
     //если длина больше 30
     else if (value.length > 30) {
         check_password.innerHTML = 'Слишком длинный пароль';
         check_password.style.color = 'red';
+        password.style.borderColor = 'red';
     }
     //если соответствует шаблону
     else if (password_regex.test(value)) {
         check_password.innerHTML = '';
         check_password.style.color = '';
+        password.style.borderColor = 'white';
     }
     //если не соответствует шаблону
     else {
         check_password.innerHTML = 'Используй допустимые символы';
         check_password.style.color = 'red';
+        password.style.borderColor = 'red';
     }
 }
