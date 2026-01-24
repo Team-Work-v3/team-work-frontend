@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 body{
   margin: 0px;
   padding: 0px;
@@ -55,6 +57,11 @@ input {
 
 #check_password, #check_login{
   color: #FFFFFF;
+  text-align: right;
+  font-family: Inter;
+  font-weight: 200;
+  font-style: Extra Light;
+  font-size: 15px;
 }
 /* Белый цвет тега p делает текст невидимым */
 
