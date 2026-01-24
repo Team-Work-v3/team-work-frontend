@@ -12,7 +12,8 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 500px;
+  width: 580px;
+  height: 528px;
   margin: 13% auto;
   padding: 20px;
   border: 0px solid;
@@ -24,12 +25,16 @@ h1{
   font-weight: 600;
   font-style: Semi Bold;
   font-size: 48px;
-  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0%;
+  
 }
 
 input {
   border: 0px solid;
-  padding: 15px 20px;
+  width: 460px;
+  height: 65px;
+  /* padding: 15px 20px; */
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -49,7 +54,6 @@ p {
   font-size: 15px;
   line-height: 100%;
   letter-spacing: 0%;
-  
 }
 
 .divade-block{
@@ -64,8 +68,10 @@ p {
 
 
 button {
+  width: 460px;
+  height: 76px;
   border: none;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   margin: 10px 0;
   cursor: pointer;
   background-color:#982520 ;
