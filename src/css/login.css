@@ -46,7 +46,9 @@ label span{
 }
 
 input {
-  border: 0px solid white;
+  border-width: 0px;
+  border-color: white;
+  border-style: solid;
   width: 420px;
   /* height: 25px; */
   /* padding: 15px 20px; */
@@ -55,7 +57,7 @@ input {
   margin-bottom: 10px;
   background-color:#F2F2F2;
   padding: 20px;
-  font-size: 24px;
+  font-size:  20px;
   
 }
 
