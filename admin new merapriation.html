@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new merapristion</title>
+    <style type='text/css' rel=stylesheet lang=css>
+        div, button{
+            margin: 20px;
+        }
+         /* Немного стилей для лучшего отображения ошибок */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"] { /* Обновлено для type="tel" */
+            width: 300px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        span.error-message { /* Класс для сообщений об ошибках */
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block; /* Чтобы ошибка была на новой строке */
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+       
+
+<body>
+
+<h1>Добавить новое Участника:</h1>
+
+
+<form id="myForm" onsubmit="return validateForm()">
+  <div>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name">
+    <span id="nameError" class="error-message"></span>
+  </div>
+
+  <div>
+    <label for="number">Номер:</label>
+    <input type="number" id="number" name="number">
+    <span id="numberError" class="error-message"></span>
+  </div>
+
+  <div>
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone">
+    <span id="phoneError" class="error-message"></span>
+  </div>
+
+  <button type="submit">Добавить</button> 
+</form>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const myForm = document.getElementById("myForm");
+    const nameInput = document.getElementById("name");
+    const numberInput = document.getElementById("number");
+    const phoneInput = document.getElementById("phone");
+
+    // Функция для добавления класса к элементу
+    function addClass(element, className) {
+      if (element && element.classList) {
+        element.classList.add(className);
+      }
+    }
+
+    // Функция для удаления класса из элемента
+    function removeClass(element, className) {
+      if (element && element.classList) {
+        element.classList.remove(className);
+      }
+    }
+
+    // Событие focus для поля имени
+    nameInput.addEventListener('focus', function() {
+      addClass(nameInput, 'focused'); // Добавляем класс 'focused' при получении фокуса
+    });
+
+    // Событие blur для поля имени
+    nameInput.addEventListener('blur', function() {
+      removeClass(nameInput, 'focused'); // Удаляем класс 'focused' при потере фокуса
+      validateField(nameInput); // Валидируем поле при потере фокуса
+    });
+
+    // Событие focus для поля номера
+    numberInput.addEventListener('focus', function() {
+      addClass(numberInput, 'focused');
+    });
+
+    // Событие blur для поля номера
+    numberInput.addEventListener('blur', function() {
+      removeClass(numberInput, 'focused');
+      validateField(numberInput);
+    });
+
+    // Событие focus для поля телефона
+    phoneInput.addEventListener('focus', function() {
+      addClass(phoneInput, 'focused');
+    });
+
+    // Событие blur для поля телефона
+    phoneInput.addEventListener('blur', function() {
+      removeClass(phoneInput, 'focused');
+      validateField(phoneInput);
+    });
+
+    // Упрощенная функция валидации одного поля
+    function validateField(inputElement) {
+      const fieldId = inputElement.id; // Получаем ID поля
+      const value = inputElement.value.trim(); // Получаем и очищаем значение поля
+
+      // Получаем элемент для отображения ошибки (например, nameError, numberError и т.д.)
+      const errorElement = document.getElementById(fieldId + 'Error');
+
+      let isValid = true; // Предполагаем, что поле валидно
+      errorElement.innerHTML = ''; // Очищаем предыдущие ошибки
+
+      // Выполняем валидацию в зависимости от ID поля
+      if (fieldId === 'name') {
+        if (value === "") {
+          errorElement.innerHTML = "Имя обязательно для заполнения.";
+          isValid = false;
+                  } else if (value.length < 2) {
+          errorElement.innerHTML = "Имя должно содержать не менее 2 символов.";
+          isValid = false;
+        } else if (!/^[а-яА-ЯёЁa-zA-Z\s.-]+$/.test(value)) {
+          errorElement.innerHTML = "Имя может содержать только буквы, пробелы, дефисы и точки.";
+          isValid = false;
+        }
+      } else if (fieldId === 'number') {
+        if (value === "") {
+          errorElement.innerHTML = "Номер обязателен для заполнения.";
+          isValid = false;
+        } else if (isNaN(value)) {
+          errorElement.innerHTML = "Номер должен быть числом.";
+          isValid = false;
+        } else if (!Number.isInteger(parseFloat(value))) {
+          errorElement.innerHTML = "Номер должен быть целым числом.";
+          isValid = false;
+        } else if (parseInt(value) <= 0) {
+          errorElement.innerHTML = "Номер должен быть положительным числом.";
+          isValid = false;
+        }
+      } else if (fieldId === 'phone') {
+        if (value === "") {
+          errorElement.innerHTML = "Телефон обязателен для заполнения.";
+          isValid = false;
+        } else {
+          const phoneRegex = /^\+?\d{10,15}$/;
+          if (!phoneRegex.test(value)) {
+            errorElement.innerHTML = "Неверный формат телефона. Пример: +79001234567";
+            isValid = false;
+          }
+        }
+      }
+
+      // Возвращаем результат валидации
+      return isValid;
+    }
+
+    // Перехватываем событие submit для валидации всех полей формы
+    myForm.addEventListener('submit', function(event) {
+      let formIsValid = true;
+
+      // Валидируем каждое поле и обновляем флаг formIsValid
+      formIsValid = validateField(nameInput) && formIsValid;
+      formIsValid = validateField(numberInput) && formIsValid;
+      formIsValid = validateField(phoneInput) && formIsValid;
+
+      // Предотвращаем отправку формы, если есть ошибки
+      if (!formIsValid) {
+        event.preventDefault();
+      }
+    });
+
+    function addClass(element, className) {
+      if (element && element.classList) {
+        element.classList.add(className);
+      }
+    }
+    function removeClass(element, className) {
+      if (element && element.classList) {
+        element.classList.remove(className);
+      }
+    }
+
+  });
+
+
+
+
+
+
+
+
+
+
+
+//document.addEventListener('DOMContentLoaded', function() {
+  //const myForm = document.getElementById("myForm");
+  //myForm.addEventListener('submit', function(event) {
+   
+    //const isValid = validateForm();
+    //if (!isValid) {
+     // event.preventDefault(); 
+    //}
+  //});
+
+  
+  //function validateForm() {
+  
+    //const nameInput = document.getElementById("name");
+    //const numberInput = document.getElementById("number");
+    //const phoneInput = document.getElementById("phone");
+
+ 
+    //const nameError = document.getElementById("nameError");
+    //const numberError = document.getElementById("numberError");
+    //const phoneError = document.getElementById("phoneError");
+
+  
+    //nameError.innerHTML = "";
+    //numberError.innerHTML = "";
+    //phoneError.innerHTML = "";
+
+    
+    //let formIsValid = true; 
+
+
+    //if (nameInput.value.trim() === "") {
+      //nameError.innerHTML = "Имя обязательно для заполнения.";
+      //formIsValid = false;
+    //} else if (nameInput.value.trim().length < 2) {
+      //nameError.innerHTML = "Имя должно содержать не менее 2 символов.";
+      //formIsValid = false;
+    //} else if (!/^[а-яА-ЯёЁa-zA-Z\s]+$/.test(nameInput.value.trim())) {
+     
+         //   nameError.innerHTML = "Имя может содержать только буквы и пробелы.";
+     // formIsValid = false;
+    //}
+
+
+
+   // const numberValue = numberInput.value.trim();
+
+    //if (numberValue === "") {
+      //numberError.innerHTML = "Номер обязателен для заполнения.";
+     // formIsValid = false;
+   // } else if (isNaN(numberValue)) {
+     // numberError.innerHTML = "Номер должен быть числом.";
+      //formIsValid = false;
+    //} else if (parseInt(numberValue) <= 0) {
+   
+      //numberError.innerHTML = "Номер должен быть положительным числом.";
+      //formIsValid = false;
+    //} else if (!Number.isInteger(parseFloat(numberValue))) {
+      
+        //numberError.innerHTML = "Номер должен быть целым числом.";
+        //formIsValid = false;
+    //}
+
+
+    
+    //const phoneValue = phoneInput.value.trim();
+
+    //if (phoneValue === "") {
+      //phoneError.innerHTML = "Телефон обязателен для заполнения.";
+      //formIsValid = false;
+    //} else {
+      // const phoneRegex = /^\+?\d{10,15}$/;
+
+      //if (!phoneRegex.test(phoneValue)) {
+        //phoneError.innerHTML = "Неверный формат телефона. Пример: +79001234567 (10-15 цифр, опционально с '+')";
+        //formIsValid = false;
+     // }
+   // }
+
+    // 5. Возвращаем итоговый флаг валидности формы
+   // return formIsValid;
+  //}
+//});
+</script>
+</div>
+</body>
+</html>

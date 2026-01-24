@@ -1,0 +1,77 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-image: url(/src/img/306cd8091e6ccd8c82d59e4ca676cba2c7a735ea.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  margin: 13% auto;
+  padding: 20px;
+  border: 0px solid;
+  background-color: #FFFFFF;
+}
+
+h1{
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 48px;
+  text-align: center;
+}
+
+input {
+  border: 0px solid;
+  padding: 15px 20px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-color:#F2F2F2;
+}
+
+#check_password, #check_login{
+  color: #FFFFFF;
+}
+/* Белый цвет тега p делает текст невидимым */
+
+p {
+  font-family: Inter;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  
+}
+
+.divade-block{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.divade-block input{
+  width: 5%;
+  margin-bottom: 0;
+}
+
+
+button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  background-color:#982520 ;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  color: #FFFFFF;
+}

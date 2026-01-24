@@ -1,0 +1,76 @@
+
+.right-events {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Верхняя панель с заголовком и поиском */
+.up-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Заголовок */
+.up-menu-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 100px;
+    margin-top: 37px;
+}
+
+/* Поисковая строка */
+.fix-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-height: 56px;
+    margin-top: 31px;
+    margin-right: 55px;
+    margin-bottom: 100px;
+}
+
+.up-menu-search {
+    width: 450px;
+    height: 56px;
+    padding: 0 0 0 40px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    color: #8E8E8E;
+    background-color: #F2F2F2;
+}
+
+.search-icon {
+    position: absolute;
+    left: 19px;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+}
+
+.add-menu {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.add-menu-btn {
+    margin-left: 55px;
+    width: 195px;
+    height: 47px;
+    border-width: 2px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    border: 2px solid var(--grey-stroke, #C7C7C7);
+    background-color: #FFFFFF;
+}
