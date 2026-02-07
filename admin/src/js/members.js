@@ -14,6 +14,9 @@ RenderUsersInEvents();
 
             Object.values(data).forEach(events => {
                 Object.values(events).forEach(event => {
+
+                    var content = '';
+                    var inner_content = '';
                     var html_start = `
 
                         <div class="event-container" id="event-container" data-event-id="${event.event_id}">
@@ -44,15 +47,13 @@ RenderUsersInEvents();
                         var count = 0;
                         Object.values(event.users).forEach(user => {
                             count++;
-                        var html_center = `
+                        center += `
                         
                              <tr>
                                 <td>${count}</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td><button>Отменить</button></td>
                                 </tr>          
                                        
                         `;
-
-                    center += html_center;
                     });
 
                 var html_end = ` 
@@ -61,15 +62,17 @@ RenderUsersInEvents();
                                 </table></div>
                          
                     `;
-                container.innerHTML += (html_center_head + center + html_end);
+                 inner_content += (html_center_head + center + html_end);
                 }
                 else{
-                    container.innerHTML += '<h2 class="container--h2">На это мероприятие ещё никто не зарегистировался</h2>';
+                    inner_content += '<h2 class="container--h2">На это мероприятие ещё никто не зарегистировался</h2>';
                 }
                     
-                    
-                    container.innerHTML +=' </div>';    
+                    content = html_start + inner_content +' </div>'
+                    container.innerHTML += content;    
                  });
+
+                //  container.innerHTML += content;
             });
 
             OpenUsers();
