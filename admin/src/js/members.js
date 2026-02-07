@@ -28,7 +28,6 @@ RenderUsersInEvents();
                             </div>
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
 
-                        container.innerHTML += html_start;
                         if(event.users.length > 0){
                          var html_center_head = `
                                  <table class="participants-table">
