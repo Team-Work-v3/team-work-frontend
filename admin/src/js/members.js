@@ -59,7 +59,7 @@ RenderUsersInEvents();
                 var html_end = ` 
                                        
                                     </tbody>
-                                </table></div>
+                                </table>
                          
                     `;
                  inner_content += (html_center_head + center + html_end);
