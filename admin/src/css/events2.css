@@ -180,6 +180,7 @@ form {
     font-size: 16px;
     gap: 10px;
     color: #000000;
+    margin-right:25px;
 }
 
 #addBtn-event{
