@@ -71,13 +71,13 @@
 
 .add-menu-bnt {
   margin-left: 55px;
-  width: 195px;
+  /* width: 195px;
   height: 47px;
   border: 2px solid var(--grey-stroke, #C7C7C7);
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .add-menu-btn {
@@ -86,7 +86,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 163px;
+  width: 118px;
   height: 39px;
   border: 0px solid ;
   background-color: #982520;
