@@ -172,7 +172,7 @@ form {
 #delete-event-button {
     width: 107px;
     height: 39px;
-    border: 2px solid grey stroke;
+    border: 2px solid grey;
     background-color: #FFFFFF;
     font-family: Inter;
     font-weight: 600;
