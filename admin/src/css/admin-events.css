@@ -8,8 +8,12 @@
     font-weight: 500;
     font-style: Medium;
     font-size: 24px;
-    leading-trim: NONE;
     line-height: 100%;
+}
+
+.arrow-event{
+    border: 2px solid grey;
+    margin-left: 25px;
 }
 
 .events-container {
