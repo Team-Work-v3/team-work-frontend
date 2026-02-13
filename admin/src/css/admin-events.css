@@ -13,9 +13,6 @@
 
 .add-event{
     width: 100%;
-    background-color: #FFFFFF;
-    margin-left: 55px;
-    margin-right: 55px;
 }
 .add-event-button {
     padding: 10px 20px;
@@ -29,9 +26,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #8E8E8E;
     gap: 10px;
     padding: 10px 0;
+    background-color: #FFFFFF;
+    margin-left: 55px;
+    margin-right: 55px;
 }
 
 .event-container:first-of-type {
