@@ -117,7 +117,7 @@ async function RenderEvents() {
                         </div>
                     </div>
                 </div>
-                </section><div class="last-div"></div>
+                </section>
             `;
 
       container.innerHTML += html;
