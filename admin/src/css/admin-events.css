@@ -14,8 +14,8 @@
 .add-event{
     width: 100%;
     background-color: #FFFFFF;
-    padding-left: 55px;
-    padding-right: 55px;
+    margin: 55px;
+    margin-right: 55px;
 }
 .add-event-button {
     padding: 10px 20px;
