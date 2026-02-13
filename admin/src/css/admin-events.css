@@ -31,11 +31,12 @@
     background-color: #FFFFFF;
     margin-left: 55px;
     margin-right: 55px;
+    height: 89px;
 }
 
 .event-container:first-of-type {
-    border-top: 1px solid #8E8E8E;
-    margin-top: 20px;
+    /* border-top: 1px solid #8E8E8E; */
+    /* margin-top: 20px; */
 }
 
 .event-visible-information {
