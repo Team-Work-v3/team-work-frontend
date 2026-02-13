@@ -31,6 +31,7 @@
     background-color: #FFFFFF;
     margin-left: 55px;
     margin-right: 55px;
+    min-height: 89px;
 }
 
 .event-container:first-of-type {
