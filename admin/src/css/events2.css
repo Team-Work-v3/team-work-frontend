@@ -157,17 +157,27 @@ form {
     border-width: 3px;
 }
 
-button {
-    border-width: 2px;
-    padding-top: 9px;
-    padding-right: 39px;
-    padding-bottom: 9px;
-    padding-left: 39px;
-    border: 2px solid var(--grey-stroke, #00000036);
-    background-color: white;
+#edit-event-button {
+    width: 163px;
+    height: 39px;
+    background-color: #982520;
     font-family: Inter;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 16px;
+    gap: 10px;
+    color: #FFFFFF;
+}
+
+#delete-event-button {
+    width: 107px;
+    height: 39px;
+    border: 2px solid grey stroke;
+    background-color: #982520;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 10px;
+    color: #000000;
 }
 
 #addBtn-event{
