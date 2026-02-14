@@ -1,103 +1,70 @@
-RenderUsersInEvents();
+async function RenderUsersInEvents() {
+    const container = document.querySelector(".events-list");
+    if (!container) return;
 
-        async function RenderUsersInEvents() {
-            const container = document.querySelector(".events-list");
+    try {
+        const response = await fetch("http://62.109.16.129");
+        const data = await response.json();
+        
+        // Очищаем контейнер перед рендером
+        container.innerHTML = "";
 
-            const response = await fetch("http://62.109.16.129:5000/api/getUsersInEvents");
-            const data = await response.json();
-            console.log(data.events);
+        // Проверяем, где лежат события (обычно в data.events)
+        const eventsArray = data.events || Object.values(data)[0];
 
-            if (!container) {
-                console.error("No data");
-                return;
+        eventsArray.forEach(event => {
+            // 1. Формируем начало карточки
+            let html = `
+                <div class="event-container" data-event-id="${event.event_id}">
+                    <div class="event-visible-information">
+                        <div class="elements-event">
+                            <span class="arrow-event arrow" data-event-id="${event.event_id}">⯆</span>
+                            <span class="name-event event-title">${event.event_name}</span>
+                        </div>
+                    </div>
+                    <div class="event-invisible-information" id="invisible-information-${event.event_id}" style="display:none;">
+            `;
+
+            // 2. Формируем контент (таблица или заглушка)
+            if (event.users && event.users.length > 0) {
+                let rows = "";
+                event.users.forEach((user, index) => {
+                    rows += `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>${user.full_name}</td>
+                            <td>${user.email}</td>
+                            <td>${user.phone_number}</td>
+                            <td><button class="btn-cancel">Отменить</button></td>
+                        </tr>`;
+                });
+
+                html += `
+                    <table class="participants-table">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Имя фамилия</th>
+                                <th>Email</th>
+                                <th>Телефон</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>${rows}</tbody>
+                    </table>`;
+            } else {
+                html += '<h2 class="container--h2">На это мероприятие ещё никто не зарегистрировался</h2>';
             }
 
-            Object.values(data).forEach(events => {
-                Object.values(events).forEach(event => {
+            // 3. Закрываем теги и добавляем в DOM
+            html += `</div></div>`;
+            container.innerHTML += html;
+        });
 
-                    var content = '';
-                    var inner_content = '';
-                    var html_start = `
+        // После того как всё отрисовали — вешаем клики
+        OpenUsers();
 
-                        <div class="event-container" id="event-container" data-event-id="${event.event_id}">
-                            <div class="event-visible-information">
-                                <div class="elements-event">
-                                    <span class="arrow-event arrow" id="arrow-event" data-event-id="${event.event_id}">⯆</span>
-                                    <span class="name-event event-title">${event.event_name}</span>
-                                </div>
-                            </div>
-                            <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
-
-                        if(event.users.length > 0){
-                         var html_center_head = `
-                                 <table class="participants-table">
-                                    <thead>
-                                        <tr>
-                                            <th>№</th>
-                                            <th>Имя фамилия</th>
-                                            <th>Электронная почта</th>
-                                            <th>Номер телефона</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>`;
-                                        
-                        var center = ""; 
-                        var count = 0;
-                        Object.values(event.users).forEach(user => {
-                            count++;
-                        center += `
-                        
-                             <tr>
-                                <td>${count}</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td><button>Отменить</button></td>
-                                </tr>          
-                                       
-                        `;
-                    });
-
-                var html_end = ` 
-                                       
-                                    </tbody>
-                                </table>
-                         
-                    `;
-                 inner_content += (html_center_head + center + html_end);
-                }
-                else{
-                    inner_content += '<h2 class="container--h2">На это мероприятие ещё никто не зарегистировался</h2>';
-                }
-                    
-                    content = html_start + inner_content +' </div> </div>';
-                    container.innerHTML += content;    
-                 });
-
-                //  container.innerHTML += content;
-            });
-
-            OpenUsers();
-        }
-
-        function OpenUsers() {
-            const arrows = document.querySelectorAll("#arrow-event");
-            const invisibleInformations = document.querySelectorAll(".event-invisible-information");
-
-            arrows.forEach(arrow => {
-                arrow.addEventListener("click", () => {
-                    const invisibleInformation = document.getElementById(`invisible-information-${arrow.getAttribute("data-event-id")}`);
-
-                    if (invisibleInformation.style.display === "flex") {
-                        arrow.innerHTML = "⯆";
-                        invisibleInformation.style.display = "none";
-                        return;
-                    }
-
-                    invisibleInformations.forEach(information => {
-                        information.style.display = "none";
-                        arrows.forEach(arrow => arrow.innerHTML = "⯆");
-                    });
-
-                    invisibleInformation.style.display = "flex";
-                    arrow.innerHTML = "⯅";
-                });
-            });
-        }
+    } catch (error) {
+        console.error("Ошибка загрузки пользователей:", error);
+    }
+}
