@@ -62,15 +62,21 @@ function fillForm(data, data_cat) {
     }
 
     const catElement = document.querySelector('#event_category');
+    if (!catElement || !data_cat) return;
     console.log(data_cat);
+    catElement.innerHTML = "";
     data_cat.forEach( cat =>
         {
-             if (cat['category_id'] == fields['event_category'] ) {
-                catElement.innerHTML += "<option selected value="+ cat['category_id']+">"+ cat['category_name']+"</option>";
-            }
-            else{
-                catElement.innerHTML += "<option value="+ cat['category_id']+">"+ cat['category_name']+"</option>";
-            }
+            const isSelected = (cat['category_id'] == data['event_category']) ? "selected" : "";
+
+            // 2. Используем шаблонную строку для чистоты кода
+            catElement.innerHTML += `<option value="${cat['category_id']}" ${isSelected}>${cat['category_name']}</option>`;
+            //  if (cat['category_id'] == fields['event_category'] ) {
+            //     catElement.innerHTML += "<option selected value="+ cat['category_id']+">"+ cat['category_name']+"</option>";
+            // }
+            // else{
+            //     catElement.innerHTML += "<option value="+ cat['category_id']+">"+ cat['category_name']+"</option>";
+            // }
             
         }
     ) 
