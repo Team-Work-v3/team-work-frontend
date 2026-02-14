@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const eventData = await fetchEventData();
 
-    populateForm(eventData);
+    // populateForm(eventData);
 });
 
 
