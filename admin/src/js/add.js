@@ -1,4 +1,4 @@
-async function fetchEventData(id) {
+async function fetchEventData() {
     try {
         let cat = JSON.stringify();
         console.log(cat);
@@ -38,7 +38,7 @@ function fillForm(data, data_cat) {
 document.addEventListener("DOMContentLoaded", async () => {
    
 
-    const eventData = await fetchEventData(id);
+    const eventData = await fetchEventData();
 
     populateForm(eventData);
 });
