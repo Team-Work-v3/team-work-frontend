@@ -65,7 +65,7 @@ function fillForm(data, data_cat) {
     console.log(data_cat);
     data_cat.forEach( cat =>
         {
-            catElement.innerHTML = "<option value="+ cat['category_id']+" selected>"+ cat['category_name']+"</option>";
+            catElement.innerHTML += "<option value="+ cat['category_id']+" selected>"+ cat['category_name']+"</option>";
         }
     ) 
     //  if (imgElement && data.images_events) {
