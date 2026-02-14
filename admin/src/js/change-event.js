@@ -65,12 +65,16 @@ function fillForm(data, data_cat) {
     console.log(data_cat);
     data_cat.forEach( cat =>
         {
-            catElement.innerHTML += "<option value="+ cat['category_id']+" selected>"+ cat['category_name']+"</option>";
+             if (cat['category_id'] == fields['event_category'] ) {
+                catElement.innerHTML += "<option selected value="+ cat['category_id']+" selected>"+ cat['category_name']+"</option>";
+            }
+            else{
+                catElement.innerHTML += "<option value="+ cat['category_id']+" selected>"+ cat['category_name']+"</option>";
+            }
+            
         }
     ) 
-    //  if (imgElement && data.images_events) {
-    //     imgElement.src = data.images_events;
-    // }
+    
 }
 
 
