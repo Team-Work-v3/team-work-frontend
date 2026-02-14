@@ -7,6 +7,11 @@ async function RenderEvents() {
   const data = await response.json();
   console.log(data.events);
 
+    // --- НОВОЕ: Получаем категории ---
+  const catResponse = await fetch("http://62.109.16.129:5000/api/getCategory");
+  const catData = await catResponse.json();
+  const allCategories = catData.category; // Массив всех категорий
+
   if (!container) {
     console.error("No data");
     return;
@@ -14,6 +19,11 @@ async function RenderEvents() {
 
   Object.values(data).forEach(events => {
     Object.values(events).forEach(event => {
+      let categoryOptionsHtml = "";
+      allCategories.forEach(cat => {
+          const isSelected = (cat.category_id == event.event_category) ? "selected" : "";
+          categoryOptionsHtml += `<option value="${cat.category_id}" ${isSelected}>${cat.category_name}</option>`;
+      });
       const html = `
             <section class="add-event">
                 <div class="event-container" id="event-container" data-event-id="${event.event_id}">
@@ -81,13 +91,12 @@ async function RenderEvents() {
                   step="0.01" inputmode="decimal" oninput="PriceValidate(this)" value="${event.price_event}">
               </div>
 
-            <div class="add-event-blocks">
-              <label for="event-category">Категория</label>
-              <select id="event_category" name="event_category" class="input--block-select"
-                oninput="CategoryValidate(this)">
-                <option value="">Выберите категорию</option>
-              </select>
-            </div>
+<div class="add-event-blocks">
+  <label for="event-category">Категория</label> 
+  <select id="event_category" name="event_category" class="input--block-select" disabled>
+    ${categoryOptionsHtml}
+  </select>
+</div>
 
             <div class="add-event-blocks">
               <label for="seats-event">Количество мест</label>

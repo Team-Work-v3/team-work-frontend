@@ -12,10 +12,10 @@ async function addCategorySelection() {
         });
 
         if (response.ok) {
-            console.log("Категория успешно сохранена");
+            console.log("успешно");
         }
     } catch (error) {
-        console.error("Ошибка при отправке категории:", error);
+        console.error("печально:", error);
     }
 }
 
