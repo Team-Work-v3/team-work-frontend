@@ -27,7 +27,7 @@ async function fetchEventData(id) {
         });
         
         const data_cat = await response_cat.json();
-        const event_cat = data_cat; 
+        const event_cat = data_cat['category']; 
 
         if (event) {
             fillForm(event, event_cat);
