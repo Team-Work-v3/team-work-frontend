@@ -85,7 +85,7 @@ async function RenderEvents() {
               <label for="event-category">Категория</label> 
               <select id="event_category" name="event_category" class="input--block-select"
                 oninput="CategoryValidate(this)">
-                <option value="">Выберите категорию</option>
+                <option value="${catElement}"></option>
               </select>
             </div>
 
