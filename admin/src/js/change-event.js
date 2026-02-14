@@ -11,13 +11,26 @@ async function fetchEventData(id) {
             headers: {"Content-Type": "application/json"},
             body: inf
         });
+        
         const data = await response.json();
         
         console.log(data);//!!!!!!!!!!!!!!!!!!!!!!!!!
         const event = data; 
 
+
+        let cat = JSON.stringify(info);
+        console.log(cat);
+        const response_cat = await fetch(`http://195.2.79.241:5000/api_app/categories`, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: cat
+        });
+        
+        const data_cat = await response_cat.json();
+        const event_cat = data_cat; 
+
         if (event) {
-            fillForm(event);
+            fillForm(event, event_cat);
         }
 
     } catch (error) {
@@ -27,7 +40,7 @@ async function fetchEventData(id) {
 
 
 
-function fillForm(data) {
+function fillForm(data, data_cat) {
     const fields = [
         'date_event', 'description_event', 'event_category', 
         'location_event', 'name_event', 'price_event', 'time_event', 
@@ -47,6 +60,16 @@ function fillForm(data) {
     if (imgElement && data.images_events) {
         imgElement.src = data.images_events;
     }
+
+    const catElement = document.querySelector('#event_category');
+    data_cat.forEach( cat =>
+        {
+            catElement.innerHTML = ` <option value='' selected> {cat}</option>`;
+        }
+    ) 
+    //  if (imgElement && data.images_events) {
+    //     imgElement.src = data.images_events;
+    // }
 }
 
 
