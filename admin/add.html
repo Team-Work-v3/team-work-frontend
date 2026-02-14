@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/admin/src/css/main-admin.css">
   <script src="/admin/src/js/"></script>
   <script src="/admin/src/js/validate-events.js"></script>
+  <script src="/admin/src/js/add.js"></script>
   <link rel="stylesheet" href="/admin/src/css/add.css">
   <link rel="stylesheet" href="/admin/src/css/events.css">
 
@@ -136,22 +137,22 @@
                 <!-- oninput используется для валидации в реальном времени при вводе цифр -->
                 <input class="input--block" id="price_event" name="price_event" type="number" min="0" max="10000"
                   step="0.01" inputmode="decimal" oninput="PriceValidate(this)">
-                <!-- onchange вызывает функцию конвертации и валидации -->
+                <!-- onchange вызывает функцию конвертации и валидации
                 <select id="currency-select" class="input--block" style="width: auto; padding: 6px;"
                   onchange="CurrencyChangeHandler()">
                   <option value="RUB">RUB</option>
                   <option value="USD">USD</option>
                   <option value="EUR">EUR</option>
-                </select>
+                </select> -->
               </div>
               <span class="error-event" id="priceError">Неправильно введено поле</span><br>
             </div>
 
             <div class="add-event-blocks">
               <label for="event-category">Категория</label>
-              <select id="event-category" name="event_category" class="input--block-select"
+              <select id="event_category" name="event_category" class="input--block-select"
                 oninput="CategoryValidate(this)">
-                <option value="." selected>Выберите категорию</option>
+                <option value="" selected>Выберите категорию</option>
                 <option value="1">урок</option>
                 <option value="2">мастер-класс</option>
                 <option value="3">лекция</option>
