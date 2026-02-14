@@ -18,7 +18,7 @@ async function fetchEventData(id) {
         const event = data; 
 
 
-        let cat = JSON.stringify(info);
+        let cat = JSON.stringify();
         console.log(cat);
         const response_cat = await fetch(`http://62.109.16.129:5000/api/getCategory`, {
             method: "GET",
