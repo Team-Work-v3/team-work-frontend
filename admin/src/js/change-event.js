@@ -21,7 +21,7 @@ async function fetchEventData(id) {
         let cat = JSON.stringify(info);
         console.log(cat);
         const response_cat = await fetch(`http://62.109.16.129:5000/api/getCategory`, {
-            method: "POST",
+            method: "GET",
             headers: {"Content-Type": "application/json"},
             body: cat
         });
