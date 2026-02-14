@@ -64,7 +64,7 @@ function fillForm(data, data_cat) {
     const catElement = document.querySelector('#event_category');
     data_cat.forEach( cat =>
         {
-            catElement.innerHTML = ` <option value='' selected> {cat}</option>`;
+            catElement.innerHTML = "<option value='' selected>"+ {cat}+"</option>";
         }
     ) 
     //  if (imgElement && data.images_events) {
