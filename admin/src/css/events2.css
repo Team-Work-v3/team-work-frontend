@@ -86,7 +86,7 @@ form {
 
 .input--block {
     width: 385px;
-    height: 47px;
+    min-height: 47px;
     background-color: #F2F2F2;
     border: 0px solid;
 }
@@ -198,7 +198,7 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea{
+.input--block, textarea{
     font-family: Inter;
     font-weight: 400;
     font-style: Regular;
