@@ -92,18 +92,23 @@ form {
 }
 
 #organizers_event{
-    width: 936px;
-    height: 121px;
+    width: 1035px;
+    min-height: 64px;
 }
 
 #program_event{
-    width: 936px;
-    height: 319px;
+    width: 1035px;
+    height: 404px;
 }
 
 #fullDescription_event{
-    width: 936px;
-    height: 280px;
+    width: 1035px;
+    height: 172px;
+}
+
+#Description_event{
+    width: 1035px;
+    height: 98px;
 }
 
 .input--block-low{

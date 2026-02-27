@@ -95,22 +95,22 @@ async function RenderEvents() {
 
                 <div class="add-event-blocks">
                     <label>Описание мероприятия (полное)</label>
-                    <textarea class="input--block" oninput="fullDescriptionValidate(this)">${event.fullDescription_event}</textarea>
+                    <textarea class="input--block" id="fullDescription_event" oninput="fullDescriptionValidate(this)">${event.fullDescription_event}</textarea>
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Описание мероприятия (краткое)</label>
-                    <textarea class="input--block" rows="3" oninput="DescriptionValidate(this)" required>${event.description_event}</textarea>
+                    <textarea class="input--block" id="Description_event" rows="3" oninput="DescriptionValidate(this)" required>${event.description_event}</textarea>
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Программа</label>
-                    <textarea class="input--block" rows="4" oninput="programValidate(this)">${event.program_event}</textarea>
+                    <textarea class="input--block" id="program_event" rows="4" oninput="programValidate(this)">${event.program_event}</textarea>
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Организаторы</label>
-                    <textarea class="input--block" oninput="organizersValidate(this)">${event.organizers_event}</textarea>
+                    <textarea class="input--block" id="organizers_event" oninput="organizersValidate(this)">${event.organizers_event}</textarea>
                 </div>
 
                 <div class="add-event-blocks">
