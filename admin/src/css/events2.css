@@ -237,8 +237,9 @@ label {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: auto;
+    justify-content: space-between; 
+    width: 100%; 
 }
 #input-data{
-    margin: auto;
+    margin: 0;
 }
