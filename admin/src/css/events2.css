@@ -112,10 +112,10 @@ form {
 }
 
 .input--block-low{
-    width: 201px;
-    height: 44px;
-    border-width: 3px;
-    border: 3px solid var(--grey-stroke, #00000036)
+    width: 190px;
+    min-height: 47px;
+    background-color: #F2F2F2;
+    border: 0px solid;
 }
 
 .input--block-btn::file-selector-button{
