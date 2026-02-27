@@ -18,6 +18,7 @@ a {
     flex-wrap: wrap;
     align-content: center;
     width: 100%;
+    /* вопрос margin */
     background-color: #F6F6F6;
 
 }

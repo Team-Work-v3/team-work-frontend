@@ -89,8 +89,15 @@ async function RenderEvents() {
                     <img alt="picture" src="${event.images_events}" class="picture-event" >
                 </div>
 
+                <div class="add-event-blocks">
+                    <label>Количество мест</label>
+                    <input class="input--block" type="number" oninput="SeatsValidate(this)" value="${event.seats_event}">
                 </div>
-                // !!!!
+
+                </div>
+
+
+
                 <div class="add-event-secondBlock">
 
                 <div class="add-event-blocks">
@@ -111,11 +118,6 @@ async function RenderEvents() {
                 <div class="add-event-blocks">
                     <label>Организаторы</label>
                     <textarea class="input--block" id="organizers_event" oninput="organizersValidate(this)">${event.organizers_event}</textarea>
-                </div>
-
-                <div class="add-event-blocks">
-                    <label>Количество мест</label>
-                    <input class="input--block" type="number" oninput="SeatsValidate(this)" value="${event.seats_event}">
                 </div>
 
             </div>
