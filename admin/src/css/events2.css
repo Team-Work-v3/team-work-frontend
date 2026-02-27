@@ -85,7 +85,7 @@ form {
 }
 
 .input--block {
-    width: 400px;
+    width: 385px;
     height: 47px;
     background-color: #F2F2F2;
     border: 0px solid;
@@ -203,6 +203,7 @@ input{
     font-weight: 400;
     font-style: Regular;
     font-size: 14px;
+    padding-left: 15px
 }
 .error-event{
     color: red;
