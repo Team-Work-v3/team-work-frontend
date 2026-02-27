@@ -18,7 +18,7 @@ a {
     flex-wrap: wrap;
     align-content: center;
     width: 100%;
-    /* вопрос margin */
+    
     background-color: #F6F6F6;
 
 }
@@ -138,26 +138,22 @@ form {
 
 #fullDescription-event{
     width: 936px;
-    /* height: 280px; */
-    height: max-content;
+    height: 280px;
 }
 
 #description_event{
     width: 936px;
-    /* height: 203px; */
-    height: max-content;
+    height: 203px;
 }
 
 #program-event{
     width: 936px;
-    /* height: 319px; */
-    height: max-content;
+    height: 319px;
 }
 
 #organizers-event {
     width: 936px;
-    /* height: 121px; */
-    height: max-content;
+    height: 121px;
 }
 
 #images-events {
