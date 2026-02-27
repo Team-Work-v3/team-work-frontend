@@ -8,11 +8,7 @@ body {
     height: 100%;
     background-color: #F6F6F6;
 }
-label, input{
-    font-family: Inter;
-    font-weight: 300;
-    font-style: light;
-}
+
 a {
     text-decoration: none;
 }
@@ -193,13 +189,20 @@ form {
 
 label {
     font-family: Inter;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 20px;
+    font-weight: 300;
+    font-style: light;
+    font-size: 15px;
     line-height: 100%;
     letter-spacing: 0%;
-    margin-top: 22px;
-    margin-bottom: 3px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
 }
 .error-event{
     color: red;
