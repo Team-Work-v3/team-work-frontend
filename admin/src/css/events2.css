@@ -18,9 +18,9 @@ a {
     flex-wrap: wrap;
     align-content: center;
     width: 100%;
-    /* margin-left: 55px;
-    margin-right: 55px; */
+    margin-right: 40px;
     background-color: #F6F6F6;
+
 }
 
 form {
@@ -53,7 +53,7 @@ form {
 }
 
 .add-event-secondBlock {
-    width: 75%;
+    width: 110%;
 }
 
 .add-event-blocks {
