@@ -140,24 +140,32 @@ form {
     width: 936px;
     height: 265px;
     padding-top: 15px;
+    line-height: 1.2;
+    box-sizing: border-box; /* Удерживает размер 936x265 ровно */
 }
 
 #description_event{
     width: 936px;
     height: 188px;
     padding-top: 15px;
+    line-height: 1.2;
+    box-sizing: border-box; /* Удерживает размер 936x265 ровно */
 }
 
 #program-event{
     width: 936px;
     height: 304px;
     padding-top: 15px;
+    line-height: 1.2;
+    box-sizing: border-box; /* Удерживает размер 936x265 ровно */
 }
 
 #organizers-event {
     width: 936px;
     height: 106px;
     padding-top: 15px;
+    line-height: 1.2;
+    box-sizing: border-box; /* Удерживает размер 936x265 ровно */
 }
 
 #images-events {
