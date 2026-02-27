@@ -90,7 +90,7 @@ async function RenderEvents() {
                 </div>
 
                 </div>
-                // !!!!
+                
                 <div class="add-event-secondBlock">
 
                 <div class="add-event-blocks">
