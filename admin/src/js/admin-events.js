@@ -90,7 +90,7 @@ async function RenderEvents() {
                 </div>
 
                 </div>
-                ////!!!!
+                // !!!!
                 <div class="add-event-secondBlock">
 
                 <div class="add-event-blocks">
@@ -123,7 +123,6 @@ async function RenderEvents() {
     </div>
 </section>
 `;
-
 
       container.innerHTML += html;
     });

@@ -8,7 +8,11 @@ body {
     height: 100%;
     background-color: #F6F6F6;
 }
-
+label, input{
+    font-family: Inter;
+    font-weight: 300;
+    font-style: light;
+}
 a {
     text-decoration: none;
 }
@@ -85,10 +89,9 @@ form {
 }
 
 .input--block {
-    width: 331px;
-    height: 44px;
-    border-width: 3px;
-    border: 3px solid var(--grey-stroke, #00000036)
+    width: 400px;
+    height: 47px;
+    background-color: #F2F2F2;
 }
 
 #organizers_event{
