@@ -93,22 +93,26 @@ form {
 
 #organizers_event{
     width: 1035px;
-    min-height: 64px;
+    /* min-height: 64px; */
+    height: min-content;
 }
 
 #program_event{
     width: 1035px;
-    height: 404px;
+    /* height: 404px; */
+    height: min-content;
 }
 
 #fullDescription_event{
     width: 1035px;
-    height: 172px;
+    /* height: 172px; */
+    height: min-content;
 }
 
 #Description_event{
     width: 1035px;
-    height: 98px;
+    /* height: 98px; */
+    height: min-content;
 }
 
 .input--block-low{
