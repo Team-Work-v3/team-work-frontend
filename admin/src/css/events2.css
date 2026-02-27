@@ -49,11 +49,11 @@ form {
 }
 
 .add-event-firstBlock {
-    width: 35%;
+    width: 20%;
 }
 
 .add-event-secondBlock {
-    width: 65%;
+    width: 80%;
 }
 
 .add-event-blocks {
@@ -225,4 +225,10 @@ label {
 
 .event-invisible-information{
     margin-left: 55px;
+}
+
+.picture-event {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
 }

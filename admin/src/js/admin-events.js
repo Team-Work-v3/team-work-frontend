@@ -86,7 +86,7 @@ async function RenderEvents() {
 
                 <div class="add-event-blocks">
                     <label>Обложка мероприятия</label>
-                    <img alt="picture" src="${event.images_events}" class="picture-event">
+                    <img alt="picture" src="${event.images_events}" class="picture-event" >
                 </div>
 
                 </div>
