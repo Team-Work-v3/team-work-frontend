@@ -138,22 +138,26 @@ form {
 
 #fullDescription-event{
     width: 936px;
-    height: 280px;
+    /* height: 280px; */
+    height: max-content;
 }
 
 #description_event{
     width: 936px;
-    height: 203px;
+    /* height: 203px; */
+    height: max-content;
 }
 
 #program-event{
     width: 936px;
-    height: 319px;
+    /* height: 319px; */
+    height: max-content;
 }
 
 #organizers-event {
     width: 936px;
-    height: 121px;
+    /* height: 121px; */
+    height: max-content;
 }
 
 #images-events {
