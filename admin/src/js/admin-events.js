@@ -48,9 +48,50 @@ async function RenderEvents() {
                 </div>
 
                 <div class="add-event-blocks">
+                    <label>Количество мест</label>
+                    <input class="input--block" type="number" oninput="SeatsValidate(this)" value="${event.seats_event}">
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Категория</label> 
+                    <select class="input--block-select" disabled>
+                        ${categoryOptionsHtml}
+                    </select>
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Цена</label>
+                    <input class="input--block" type="number" step="0.01" oninput="PriceValidate(this)" value="${event.price_event}">
+                </div>
+
+                <div class="date-time">
+
+                  <div class="add-event-blocks">
+                    <label>Дата</label>
+                    <input class="input--block-low" type="date" onchange="DateValidate(this)" value="${event.date_event}" required 
+                    onfocus="this.min=new Date().toISOString().split('T')[0]">
+                  </div>
+
+                  <div class="add-event-blocks">
+                    <label>Время</label>
+                    <input class="input--block-low" type="time" required min="09:00" max="19:00" onblur="TimeValidate(this)" value="${event.time_event}">
+                  </div>
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Место проведения</label>
+                    <input class="input--block" type="text" oninput="LocationValidate(this)" value="${event.location_event}">
+                </div>
+
+
+                <div class="add-event-blocks">
                     <label>Обложка мероприятия</label>
                     <img alt="picture" src="${event.images_events}" class="picture-event">
                 </div>
+
+                </div>
+                ////!!!!
+                <div class="add-event-secondBlock">
 
                 <div class="add-event-blocks">
                     <label>Описание мероприятия (полное)</label>
@@ -73,36 +114,8 @@ async function RenderEvents() {
                 </div>
 
                 <div class="add-event-blocks">
-                    <label>Место проведения</label>
-                    <input class="input--block" type="text" oninput="LocationValidate(this)" value="${event.location_event}">
-                </div>
-
-                <div class="add-event-blocks">
-                    <label>Цена</label>
-                    <input class="input--block" type="number" step="0.01" oninput="PriceValidate(this)" value="${event.price_event}">
-                </div>
-
-                <div class="add-event-blocks">
-                    <label>Категория</label> 
-                    <select class="input--block-select" disabled>
-                        ${categoryOptionsHtml}
-                    </select>
-                </div>
-
-                <div class="add-event-blocks">
                     <label>Количество мест</label>
                     <input class="input--block" type="number" oninput="SeatsValidate(this)" value="${event.seats_event}">
-                </div>
-
-                <div class="add-event-blocks">
-                    <label>Дата</label>
-                    <input class="input--block-low" type="date" onchange="DateValidate(this)" value="${event.date_event}" required 
-                           onfocus="this.min=new Date().toISOString().split('T')[0]">
-                </div>
-
-                <div class="add-event-blocks">
-                    <label>Время</label>
-                    <input class="input--block-low" type="time" required min="09:00" max="19:00" onblur="TimeValidate(this)" value="${event.time_event}">
                 </div>
 
             </div>
