@@ -25,106 +25,92 @@ async function RenderEvents() {
           categoryOptionsHtml += `<option value="${cat.category_id}" ${isSelected}>${cat.category_name}</option>`;
       });
       const html = `
-            <section class="add-event">
-                <div class="event-container" id="event-container" data-event-id="${event.event_id}">
-                    <div class="event-visible-information">
-                        <div class="elements-event">
-                            <span class="arrow-event" id="arrow-event" data-event-id="${event.event_id}">⯆</span>
-                            <span class="name-event">${event.name_event}</span>
-                        </div>
-                        <div class="buttons-event">
-                            <button class="button-event" id="edit-event-button" onclick="window.location.href = '/admin/change-event/${event.event_id}'">Редактировать</button>
-                            <button class="button-event" id="delete-event-button" onclick="deleteEvent(${event.event_id})">Удалить</button>
-                        </div>
-                    </div>
-                    <div class="event-invisible-information" id="invisible-information-${event.event_id}">
-                        <div>
-                                    <div class="add-event-firstSecondBlock">
-          <div class="add-event-firstBlock">
-            <div class="add-event-blocks">
-              <label for="name-event">Название мероприятия</label>
-              <input class="input--block" id="name_event" name="name_event" type="text" oninput="NameValidate(this)"
-                value="${event.name_event}" required>
+<section class="add-event">
+    <div class="event-container" id="event-container" data-event-id="${event.event_id}">
+        
+        <div class="event-visible-information">
+            <div class="elements-event">
+                <span class="arrow-event" id="arrow-event" data-event-id="${event.event_id}">⯆</span>
+                <span class="name-event">${event.name_event}</span>
             </div>
-
-                        
-                            <div class="add-event-blocks">
-                            <label for="fullDescription-event">Обложка мероприятия</label>
-                            <img alt="picture" src="${event.images_events}" class="picture-event">
-                            </div>
-                        <div class="add-event-blocks">
-              <label for="fullDescription-event">Описание мероприятия (полное)</label>
-              <textarea class="input--block" id="fullDescription_event" name="fullDescriptionevent" rows="" type="text"
-                oninput="fullDescriptionValidate(this)">${event.fullDescription_event}</textarea>
-                      
-                            
+            <div class="buttons-event">
+                <button class="button-event" onclick="window.location.href='/admin/change-event/${event.event_id}'">Редактировать</button>
+                <button class="button-event" onclick="deleteEvent(${event.event_id})">Удалить</button>
             </div>
-
-            <div class="add-event-blocks">
-              <label for="description-event">Описание мероприятия (краткое)</label>
-              <textarea class="input--block" id="description_event" name="description_event" rows="3"
-                oninput="DescriptionValidate(this)" required>${event.description_event}</textarea>
-            </div>
-
-            <div class="add-event-blocks">
-              <label for="program-event">Программа</label>
-              <textarea class="input--block" id="program_event" name="program_event" rows="4" type="text"
-                oninput="programValidate(this)">${event.program_event}</textarea>
-            </div>
-
-            <div class="add-event-blocks">
-              <label for="organizers-event">Организаторы</label>
-              <textarea class="input--block" id="organizers_event" name="organizers_event" type="text"
-                oninput="organizersValidate(this)">${event.organizers_event}</textarea>
-            </div>
-
-                        <div class="add-event-blocks">
-              <label for="location-event">Место проведения</label>
-              <input class="input--block" id="location_event" name="location_event" type="text"
-                oninput="LocationValidate(this)" value="${event.location_event}">
-            </div>
-
-            <div class="add-event-blocks">
-              <label for="price-event">Цена</label>
-              <div class="price-container">
-                <input class="input--block" id="price_event" name="price_event" type="number" min="0" max="10000"
-                  step="0.01" inputmode="decimal" oninput="PriceValidate(this)" value="${event.price_event}">
-              </div>
-
-<div class="add-event-blocks">
-  <label for="event-category">Категория</label> 
-  <select id="event_category" name="event_category" class="input--block-select" disabled>
-    ${categoryOptionsHtml}
-  </select>
-</div>
-
-            <div class="add-event-blocks">
-              <label for="seats-event">Количество мест</label>
-              <input class="input--block" id="seats_event" name="seats_event" type="number" min="0" step="1"
-                inputmode="numeric" oninput="SeatsValidate(this)" value="${event.seats_event}">
-            </div>
-
-            <div class="add-event-blocks">
-              <label for="date-event">Дата</label>
-              <input class="input--block-low" id="date_event" name="date_event" type="date" onblur="DateValidate(this)"
-                onchange="DateValidate(this)" value="${event.date_event}" required onfocus="this.min=new Date().toISOString().split('T')[0]">
-            </div>
-
-            <div class="add-event-blocks">
-              <label for="time-event ">Время</label>
-              <input class="input--block-low" id="time_event" name="time_event" type="time" required min="09:00"
-                max="19:00" onblur="TimeValidate(this)" value="${event.time_event}">
-            </div>
-            </div>
-          </div>
-          <div class="add-event-secondBlock">
-          </div>
         </div>
-                        </div>
-                    </div>
+
+        <div class="event-invisible-information" id="invisible-information-${event.event_id}">
+            <div class="add-event-firstBlock">
+                
+                <div class="add-event-blocks">
+                    <label>Название мероприятия</label>
+                    <input class="input--block" type="text" oninput="NameValidate(this)" value="${event.name_event}" required>
                 </div>
-                </section>
-            `;
+
+                <div class="add-event-blocks">
+                    <label>Обложка мероприятия</label>
+                    <img alt="picture" src="${event.images_events}" class="picture-event">
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Описание мероприятия (полное)</label>
+                    <textarea class="input--block" oninput="fullDescriptionValidate(this)">${event.fullDescription_event}</textarea>
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Описание мероприятия (краткое)</label>
+                    <textarea class="input--block" rows="3" oninput="DescriptionValidate(this)" required>${event.description_event}</textarea>
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Программа</label>
+                    <textarea class="input--block" rows="4" oninput="programValidate(this)">${event.program_event}</textarea>
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Организаторы</label>
+                    <textarea class="input--block" oninput="organizersValidate(this)">${event.organizers_event}</textarea>
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Место проведения</label>
+                    <input class="input--block" type="text" oninput="LocationValidate(this)" value="${event.location_event}">
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Цена</label>
+                    <input class="input--block" type="number" step="0.01" oninput="PriceValidate(this)" value="${event.price_event}">
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Категория</label> 
+                    <select class="input--block-select" disabled>
+                        ${categoryOptionsHtml}
+                    </select>
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Количество мест</label>
+                    <input class="input--block" type="number" oninput="SeatsValidate(this)" value="${event.seats_event}">
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Дата</label>
+                    <input class="input--block-low" type="date" onchange="DateValidate(this)" value="${event.date_event}" required 
+                           onfocus="this.min=new Date().toISOString().split('T')[0]">
+                </div>
+
+                <div class="add-event-blocks">
+                    <label>Время</label>
+                    <input class="input--block-low" type="time" required min="09:00" max="19:00" onblur="TimeValidate(this)" value="${event.time_event}">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+`;
+
 
       container.innerHTML += html;
     });
