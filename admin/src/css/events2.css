@@ -232,3 +232,9 @@ label {
   max-height: 100px;
   object-fit: contain;
 }
+
+.date-time{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}

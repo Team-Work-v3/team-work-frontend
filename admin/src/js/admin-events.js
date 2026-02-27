@@ -76,6 +76,7 @@ async function RenderEvents() {
                     <label>Время</label>
                     <input class="input--block-low" type="time" required min="09:00" max="19:00" onblur="TimeValidate(this)" value="${event.time_event}">
                   </div>
+                  
                 </div>
 
                 <div class="add-event-blocks">
