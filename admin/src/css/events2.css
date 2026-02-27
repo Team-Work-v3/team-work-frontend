@@ -198,7 +198,7 @@ label {
     margin-bottom: 5px;
 }
 
-input{
+input, textarea{
     font-family: Inter;
     font-weight: 400;
     font-style: Regular;
