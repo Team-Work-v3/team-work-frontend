@@ -17,7 +17,7 @@ header {
   display: flex; 
   align-items: center; 
   padding-left: 30px; 
-  position:sticky;
+  position: fixed;
 }
 
 /*  Название в шапке */
