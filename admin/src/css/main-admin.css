@@ -44,8 +44,9 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: calc(100vh - 100px);
+            height: calc(100vh - 66px);
             position: fixed;
+            top: 66px;
         }
 
         .nav-menu {
