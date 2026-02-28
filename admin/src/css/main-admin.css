@@ -43,8 +43,8 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: calc(100vw - 66px);
-            position:fixed;
+            height: calc(100vw - 166px);
+            position: sticky;
         }
 
         .nav-menu {
