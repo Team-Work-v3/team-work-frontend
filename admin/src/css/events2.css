@@ -99,22 +99,22 @@ form {
 }
 
 #organizers_event{
-    width: 1035px;
+    width: 990px;
     min-height: 64px;
 }
 
 #program_event{
-    width: 1035px;
+    width: 990px;
     height: 404px;
 }
 
 #fullDescription_event{
-    width: 1035px;
+    width: 990px;
     height: 172px;
 }
 
 #Description_event{
-    width: 1035px;
+    width: 990px;
     height: 98px;
 }
 
