@@ -91,23 +91,30 @@ form {
     border: 0px solid;
 }
 
+.input--blockCAT {
+    width: 400px;
+    min-height: 47px;
+    background-color: #F2F2F2;
+    border: 0px solid;
+}
+
 #organizers_event{
-    width: 1035px;
+    width: 990px;
     min-height: 64px;
 }
 
 #program_event{
-    width: 1035px;
+    width: 990px;
     height: 404px;
 }
 
 #fullDescription_event{
-    width: 1035px;
+    width: 990px;
     height: 172px;
 }
 
 #Description_event{
-    width: 1035px;
+    width: 990px;
     height: 98px;
 }
 
@@ -130,33 +137,34 @@ form {
 }
 
 .input--block-select{
-    width: 185px;
+    width: 190px;
     height: 44px;
     border-width: 3px;
     border: 3px solid var(--grey-stroke, #00000036)
+
 }
 
 #fullDescription-event{
-    width: 936px;
+    width: 934px;
     height: 265px;
     padding-top: 15px;
     
 }
 
 #description_event{
-    width: 936px;
+    width: 934px;
     height: 188px;
     padding-top: 15px;
 }
 
 #program-event{
-    width: 936px;
+    width: 934px;
     height: 304px;
     padding-top: 15px;
 }
 
 #organizers-event {
-    width: 936px;
+    width: 934px;
     height: 106px;
     padding-top: 15px;
 }
@@ -215,6 +223,10 @@ label {
     font-size: 14px;
     padding-left: 15px
 }
+
+textarea{
+    padding: 15px;
+}
 .error-event{
     color: red;
     display: none;
@@ -244,6 +256,7 @@ label {
     flex-wrap: nowrap;
     justify-content: space-between; 
     width: 100%; 
+    gap: 20px;
 }
 #input-data{
     margin: 0;

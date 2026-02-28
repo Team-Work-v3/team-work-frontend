@@ -44,44 +44,44 @@ async function RenderEvents() {
                 
                 <div class="add-event-blocks">
                     <label>Название мероприятия</label>
-                    <input class="input--block" type="text" oninput="NameValidate(this)" value="${event.name_event}" required>
+                    <input class="input--block" type="text" oninput="NameValidate(this)" value="${event.name_event}" required readonly>
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Количество мест</label>
-                    <input class="input--block" type="number" oninput="SeatsValidate(this)" value="${event.seats_event}">
+                    <input class="input--block" type="number" oninput="SeatsValidate(this)" value="${event.seats_event}" readonly>
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Категория</label> 
-                    <select class="input--block">
+                    <select class="input--blockCAT" readonly>
                         ${categoryOptionsHtml}
                     </select>
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Цена</label>
-                    <input class="input--block" type="number" step="0.01" oninput="PriceValidate(this)" value="${event.price_event}">
+                    <input class="input--block" type="number" step="0.01" oninput="PriceValidate(this)" value="${event.price_event}" readonly>
                 </div>
 
                 <div class="date-time">
 
                   <div class="add-event-blocks">
                     <label>Дата</label>
-                    <input class="input--block-low" id="input-data" type="date" onchange="DateValidate(this)" value="${event.date_event}" required 
+                    <input class="input--block-low" id="input-data" type="date" onchange="DateValidate(this)" value="${event.date_event}" required readonly
                     onfocus="this.min=new Date().toISOString().split('T')[0]">
                   </div>
 
                   <div class="add-event-blocks">
                     <label>Время</label>
-                    <input class="input--block-low" type="time" required min="09:00" max="19:00" onblur="TimeValidate(this)" value="${event.time_event}">
+                    <input class="input--block-low" type="time" required min="09:00" max="19:00" onblur="TimeValidate(this)" value="${event.time_event}" readonly>
                   </div>
 
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Место проведения</label>
-                    <input class="input--block" type="text" oninput="LocationValidate(this)" value="${event.location_event}">
+                    <input class="input--block" type="text" oninput="LocationValidate(this)" value="${event.location_event}" readonly>
                 </div>
 
 
@@ -92,7 +92,7 @@ async function RenderEvents() {
 
                 <div class="add-event-blocks">
                     <label>Количество мест</label>
-                    <input class="input--block" type="number" oninput="SeatsValidate(this)" value="${event.seats_event}">
+                    <input class="input--block" type="number" oninput="SeatsValidate(this)" value="${event.seats_event}" readonly>
                 </div>
 
                 </div>
@@ -101,22 +101,22 @@ async function RenderEvents() {
 
                 <div class="add-event-blocks">
                     <label>Описание мероприятия (полное)</label>
-                    <textarea class="input--block" id="fullDescription_event" oninput="fullDescriptionValidate(this)">${event.fullDescription_event}</textarea>
+                    <textarea class="input--block" id="fullDescription_event" oninput="fullDescriptionValidate(this)" readonly>${event.fullDescription_event}</textarea>
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Описание мероприятия (краткое)</label>
-                    <textarea class="input--block" id="Description_event" rows="3" oninput="DescriptionValidate(this)" required>${event.description_event}</textarea>
+                    <textarea class="input--block" id="Description_event" rows="3" oninput="DescriptionValidate(this)" required readonly>${event.description_event}</textarea>
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Программа</label>
-                    <textarea class="input--block" id="program_event" rows="4" oninput="programValidate(this)">${event.program_event}</textarea>
+                    <textarea class="input--block" id="program_event" rows="4" oninput="programValidate(this)" readonly>${event.program_event}</textarea>
                 </div>
 
                 <div class="add-event-blocks">
                     <label>Организаторы</label>
-                    <textarea class="input--block" id="organizers_event" oninput="organizersValidate(this)">${event.organizers_event}</textarea>
+                    <textarea class="input--block" id="organizers_event" oninput="organizersValidate(this)" readonly>${event.organizers_event}</textarea>
                 </div>
 
             </div>

@@ -17,6 +17,7 @@ header {
   display: flex; 
   align-items: center; 
   padding-left: 30px; 
+  position: fixed;
 }
 
 /*  Название в шапке */
@@ -39,7 +40,13 @@ main {
 .left-categories {
             width: 300px; 
             background-color: #FFFFFF;
-            min-height: 100%;
+            /* min-height: 100%; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: calc(100vh - 66px);
+            position: fixed;
+            top: 66px;
         }
 
         .nav-menu {
@@ -111,4 +118,12 @@ main {
   cursor: pointer;
 }
 
-
+.volodya{
+  width: 75px;
+  height: 130px;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+#delete-event-button{
+  margin-left: 25px;
+}
