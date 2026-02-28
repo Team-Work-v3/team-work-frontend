@@ -40,6 +40,11 @@ main {
             width: 300px; 
             background-color: #FFFFFF;
             min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: calc(100vw - 66px);
+            position:fixed;
         }
 
         .nav-menu {
@@ -111,4 +116,12 @@ main {
   cursor: pointer;
 }
 
-
+.volodya{
+  width: 75px;
+  height: 130px;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+#delete-event-button{
+  margin-left: 25px;
+}
