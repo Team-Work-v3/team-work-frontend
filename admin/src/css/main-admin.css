@@ -43,7 +43,7 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: calc(100vw - 166px);
+            height: calc(100vw - 300px);
             position: sticky;
         }
 
