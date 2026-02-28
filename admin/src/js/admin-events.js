@@ -54,7 +54,7 @@ async function RenderEvents() {
 
                 <div class="add-event-blocks">
                     <label>Категория</label> 
-                    <select class="input--block">
+                    <select class="input--blockCAT">
                         ${categoryOptionsHtml}
                     </select>
                 </div>

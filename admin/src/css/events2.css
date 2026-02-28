@@ -91,6 +91,13 @@ form {
     border: 0px solid;
 }
 
+.input--blockCAT {
+    width: 400px;
+    min-height: 47px;
+    background-color: #F2F2F2;
+    border: 0px solid;
+}
+
 #organizers_event{
     width: 1035px;
     min-height: 64px;
@@ -130,7 +137,7 @@ form {
 }
 
 .input--block-select{
-    width: 200px;
+    width: 190px;
     height: 44px;
     border-width: 3px;
     border: 3px solid var(--grey-stroke, #00000036)
