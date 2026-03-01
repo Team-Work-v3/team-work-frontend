@@ -70,9 +70,9 @@ form {
 }
 
 /* Стили для объектов */
-.up-menu-name{
-    margin-left: 300px;
-}
+    .add-upMenu{
+        margin-left: 300px;
+    }
 
 .add-event-name {
     font-family: Inter;
