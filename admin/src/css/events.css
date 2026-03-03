@@ -15,10 +15,7 @@ a {
     text-decoration: none; /* Из главного кода */
 }
 
-.add-event {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+.add-event-form {
     width: 100%;
     background-color: #F6F6F6;
 }
