@@ -1,45 +1,286 @@
+/* ОБЪЕДИНЕННЫЙ КОД (ПРИОРЕТЕТ: ГЛАВНЫЙ КОД) */
+
+/* Шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Настройка отступов и структуры */
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    background-color: #F6F6F6;
+}
+
+a {
+    text-decoration: none; /* Из главного кода */
+}
+
+.add-event {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    background-color: #F6F6F6;
+}
+
+form {
+    width: 100%;
+}
+
+.add-upMenu {
+    flex-basis: 100%;
+}
+
+.add-event-nameDiv {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.add-event-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add-event-firstSecondBlock {
+    /* Приоритет главного кода (структура flex) + дополнения из второго */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 300px;
+    margin-top: 65px;
+}
+
+.add-event-firstBlock {
+    width: 25%;
+}
+
+.add-event-secondBlock {
+    width: 71.6%;
+}
+
+#special {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.add-event-buttons {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-basis: 100%;
+}
+
+/* Стили для объектов */
+
+.add-event-name {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: normal; /* Semi Bold через weight */
+    font-size: 36px;
+}
+
+.input--block {
+    width: 385px;
+    min-height: 47px;
+    background-color: #F2F2F2;
+    border: 0px solid;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.input--blockCAT {
+    width: 400px;
+    min-height: 47px;
+    background-color: #F2F2F2;
+    border: 0px solid;
+}
+
+#organizers_event {
+    width: 990px;
+    min-height: 64px;
+}
+
+#program_event {
+    width: 990px;
+    height: 404px;
+}
+
+#fullDescription_event {
+    width: 990px;
+    height: 172px;
+}
+
+#Description_event {
+    width: 990px;
+    height: 98px;
+}
+
+.input--block-low {
+    width: 190px;
+    height: 47px;
+    background-color: #F2F2F2;
+    border: 0px solid;
+}
+
+.input--block-btn::file-selector-button {
+    border-width: 2px;
+    width: 153px;
+    height: 39px;
+    border: 2px solid var(--grey-stroke, #00000036);
+    background-color: white;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.input--block-select {
+    width: 190px;
+    height: 44px;
+    border: 3px solid var(--grey-stroke, #00000036);
+}
+
+#fullDescription-event {
+    width: 934px;
+    height: 265px;
+    padding-top: 15px;
+}
+
+#description_event {
+    width: 934px;
+    height: 188px;
+    padding-top: 15px;
+}
+
+#program-event {
+    width: 934px;
+    height: 304px;
+    padding-top: 15px;
+}
+
+#organizers-event {
+    width: 934px;
+    height: 106px;
+    padding-top: 15px;
+}
+
+#images-events {
+    width: 153px;
+    height: 39px;
+    border-width: 3px;
+}
+
+#edit-event-button {
+    width: 163px;
+    height: 39px;
+    border: 0px solid;
+    background-color: #982520;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 10px;
+    color: #FFFFFF;
+}
+
+#delete-event-button {
+    width: 107px;
+    height: 39px;
+    border: 2px solid grey;
+    background-color: #FFFFFF;
+    font-family: Inter;
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 10px;
+    color: #000000;
+    margin-right: 25px;
+}
+
+#addBtn-event {
+    margin-right: 8px;
+}
+
+label {
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 15px;
+}
+
+.error-event {
+    color: red;
+    display: none;
+    max-width: 331px;
+}
+
+.picture-event {
+    width: auto;
+    max-width: 100px; /* Приоритет нижнего значения из главного */
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.event-invisible-information {
+    margin-left: 55px;
+}
+
+.date-time {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+#input-data {
+    margin: 0;
+}
+
+/* Стили из второго кода (уникальные) */
 
 .right-events {
-   
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* background-color: #F6F6F6; */
     margin: 0px;
     padding: 0px;
     margin-left: 300px;
     margin-top: 66px;
 }
-.add-event-firstSecondBlock{
-    margin-left: 300px;
-    margin-top: 65px;
-}
 
-/* Верхняя панель с заголовком и поиском */
 .up-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.up-menu-fix{
+.up-menu-fix {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 55px;
 }
 
-/* Заголовок */
 .up-menu-name {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 36px;
-    margin: 0;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin: 30px 0;
 }
 
-/* Поисковая строка */
 .fix-div {
     position: relative;
     display: flex;
@@ -57,7 +298,6 @@
     border: 2px solid #ccc;
     font-family: Inter;
     font-weight: 400;
-    font-size: 16px;
     color: #8E8E8E;
     background-color: #F2F2F2;
 }
@@ -65,46 +305,33 @@
 .search-icon {
     position: absolute;
     left: 19px;
-    align-items: center;
     width: 15px;
     height: 15px;
     pointer-events: none;
 }
 
 .add-menu {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .add-menu-bnt {
-  margin-left: 55px;
-  /* width: 195px;
-  height: 47px;
-  border: 2px solid var(--grey-stroke, #C7C7C7);
-  background-color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
+    margin-left: 55px;
 }
 
 .add-menu-btn {
-  font-weight: 600;
-  text-decoration: none; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 118px;
-  height: 39px;
-  border: 0px solid ;
-  background-color: #982520;
-  font-family: Inter;
-  font-size: 16px;
-  gap: 10px;
-  color: #FFFFFF;
-  margin-bottom: 15px;
-}
-
-
-a{
+    font-weight: 600;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 118px;
+    height: 39px;
+    border: 0px solid;
+    background-color: #982520;
+    font-family: Inter;
+    font-size: 16px;
+    gap: 10px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
 }
