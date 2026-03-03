@@ -1,8 +1,9 @@
-/* ОБЪЕДИНЕННЫЙ КОД (ВЕРСИЯ 3) */
+/* ОБЪЕДИНЕННЫЙ КОД (ПРИОРЕТЕТ: ГЛАВНЫЙ КОД) */
 
 /* Шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Настройка отступов и структуры */
 body {
     margin: 0px;
     padding: 0px;
@@ -11,17 +12,12 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* Из главного кода */
 }
 
-.add-event {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+.add-event-firstSecondBlock{
     width: 100%;
-    background-color: #F6F6F6;
-    margin-left: 55px; /* Из нового кода */
-    margin-top: 65px;  /* Из нового кода */
+    background-color: #FFFFFF;
 }
 
 form {
@@ -30,7 +26,6 @@ form {
 
 .add-upMenu {
     flex-basis: 100%;
-    margin-left: 300px; /* Из нового кода */
 }
 
 .add-event-nameDiv {
@@ -46,6 +41,7 @@ form {
 }
 
 .add-event-firstSecondBlock {
+    /* Приоритет главного кода (структура flex) + дополнения из второго */
     display: flex;
     flex-wrap: wrap;
     margin-left: 300px;
@@ -78,10 +74,10 @@ form {
 .add-event-name {
     font-family: Inter;
     font-weight: 600;
+    font-style: normal; /* Semi Bold через weight */
     font-size: 36px;
 }
 
-/* Приоритет главного кода для input */
 .input--block {
     width: 385px;
     min-height: 47px;
@@ -174,18 +170,6 @@ form {
     border-width: 3px;
 }
 
-/* Кнопки */
-button {
-    border-width: 2px;
-    padding: 9px 39px;
-    border: 2px solid var(--grey-stroke, #00000036);
-    background-color: white;
-    font-family: Inter;
-    font-weight: 600;
-    font-size: 24px;
-    margin-bottom: 37px;
-}
-
 #edit-event-button {
     width: 163px;
     height: 39px;
@@ -239,7 +223,8 @@ textarea {
 }
 
 .picture-event {
-    max-width: 100px;
+    width: auto;
+    max-width: 100px; /* Приоритет нижнего значения из главного */
     max-height: 100px;
     object-fit: contain;
 }
@@ -257,12 +242,18 @@ textarea {
     gap: 20px;
 }
 
-/* Дополнительные стили из второго кода */
+#input-data {
+    margin: 0;
+}
+
+/* Стили из второго кода (уникальные) */
 
 .right-events {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin: 0px;
+    padding: 0px;
     margin-left: 300px;
     margin-top: 66px;
 }
@@ -300,11 +291,12 @@ textarea {
     width: 450px;
     height: 56px;
     padding: 0 0 0 40px;
-    background-color: #F2F2F2;
+    font-size: 16px;
     border: 2px solid #ccc;
     font-family: Inter;
-    font-size: 16px;
+    font-weight: 400;
     color: #8E8E8E;
+    background-color: #F2F2F2;
 }
 
 .search-icon {
@@ -315,16 +307,28 @@ textarea {
     pointer-events: none;
 }
 
+.add-menu {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.add-menu-bnt {
+    margin-left: 55px;
+}
+
 .add-menu-btn {
     font-weight: 600;
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 118px;
     height: 39px;
+    border: 0px solid;
     background-color: #982520;
-    color: #FFFFFF;
     font-family: Inter;
     font-size: 16px;
+    gap: 10px;
+    color: #FFFFFF;
     margin-bottom: 15px;
 }
