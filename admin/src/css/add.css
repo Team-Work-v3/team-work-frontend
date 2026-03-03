@@ -48,13 +48,13 @@ form {
 
 }
 
-.add-event-firstBlock {
+/* .add-event-firstBlock {
     width: 35%;
 }
 
 .add-event-secondBlock {
     width: 65%;
-}
+} */
 
 .add-event-blocks {
     display: flex;
