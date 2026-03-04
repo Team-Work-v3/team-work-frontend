@@ -15,7 +15,7 @@ a {
     text-decoration: none; /* Из главного кода */
 }
 
-/* .add-event-secondBlock {
+.add-event-secondBlock {
     background-color: #ffffff;
 }
 .add-event-firstBlock {
@@ -23,11 +23,8 @@ a {
 }
 .add-event-buttons{
     background-color: #ffffff;
-} */
-
-.add-event-color{
-    background-color: #ffffff;
-} 
+}
+/* fix */
 
 form {
     width: 100%;
