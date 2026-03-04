@@ -21,6 +21,9 @@ a {
 .add-event-firstBlock {
     background-color: #ffffff;
 }
+.add-event-buttons{
+    background-color: #ffffff;
+}
 
 form {
     width: 100%;
