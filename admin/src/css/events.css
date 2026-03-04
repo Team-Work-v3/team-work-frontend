@@ -15,8 +15,10 @@ a {
     text-decoration: none; /* Из главного кода */
 }
 
-.add-event-firstSecondBlock {
-    width: 100%;
+.add-event-secondBlock {
+    background-color: #ffffff;
+}
+.add-event-firstBlock {
     background-color: #ffffff;
 }
 
