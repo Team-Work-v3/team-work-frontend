@@ -91,6 +91,7 @@
         </div>
       </div>
       <form action="#" method="POST" class="add-event-form" id="formedit" enctype="multipart/form-data">
+        <div class="add-event-firstSecondBlock">
           <div class="add-event-firstBlock">
             <div class="add-event-blocks">
               <label for="name-event">Название мероприятия</label>
@@ -108,7 +109,7 @@
 
             <div class="add-event-blocks">
               <label for="event-category">Категория</label>
-              <select id="event_category" name="event_category" class="input--blockCAT"
+              <select id="event_category" name="event_category" class="input--block-select"
                 oninput="CategoryValidate(this)">
                 <!-- <option value="." selected>Выберите категорию</option>
                 <option value="1">урок</option>
@@ -124,6 +125,7 @@
                 <!-- oninput используется для валидации в реальном времени при вводе цифр -->
                 <input class="input--block" id="price_event" name="price_event" type="number" min="0" max="10000"
                   step="0.01" inputmode="decimal" oninput="PriceValidate(this)">
+                <!-- onchange вызывает функцию конвертации и валидации -->
               </div>
               <span class="error-event" id="priceError">Неправильно введено поле</span><br>
             </div>
