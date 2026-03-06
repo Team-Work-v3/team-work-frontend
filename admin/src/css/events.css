@@ -154,6 +154,7 @@ form {
 
 #description_event {
     width: 1035px;
+    max-width: 1035px;
     height: 188px;
     padding-top: 15px;
 }
