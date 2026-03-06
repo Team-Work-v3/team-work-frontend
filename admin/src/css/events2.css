@@ -20,7 +20,10 @@ a {
     width: 100%;
     
     background-color: #F6F6F6;
+}
 
+.add-event-firstSecondBlock{
+    background-color: #F6F6F6;
 }
 
 form {
