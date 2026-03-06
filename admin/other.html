@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin other</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHIVE</title>
   <link rel="stylesheet" href="/admin/src/css/main-admin.css">
   <link rel="stylesheet" href="/admin/src/css/events.css">
   <link rel="stylesheet" href="/admin/src/css/events2.css">
@@ -11,14 +12,14 @@
   <script src="/admin/src/js/admin-events.js" defer></script>
   <link rel="stylesheet" href="/admin/src/css/admin-events.css">
   <script src="/admin/src/js/change-event.js" defer></script>
-    
-    
 </head>
+
 <body>
-    <header>
-        <p class="header-name">ITeen Academy</p>
-    </header>
-    <main>
+
+  <header>
+    <p class="header-name">ITeen Academy</p>
+  </header>
+  <main>
     <section class="left-categories">
       <nav class="nav-menu">
 
@@ -82,11 +83,27 @@
         </div>
 
       </nav>
+      <div>
+        <img class="volodya" src="./src/img/vvk.png">
+        <a class="add-menu-btn" id="delete-event-button" href="/admin/logout">Выйти</a>
+      </div>
+     
     </section>
-    <form>
-        <h1>ДРУГОЕ</h1>
-    </form>
-    <script src="/admin/src/js/archive.js"></script>
-    </main>
+    <section class="right-events">
+      <div class="up-menu-fix">
+        <h1 class="up-menu-name">Управление мероприятиями</h1>
+
+
+      </div>
+      <div class="add-menu">
+        <div class="add-menu-bnt">
+          <a class="add-menu-btn" href="/admin/add">Добавить</a>
+        </div>
+      </div>
+      <section class="events-container"></section>
+      <div class="last-div"></div>
+    </section>
+  </main>
 </body>
+
 </html>
