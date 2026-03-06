@@ -15,16 +15,6 @@ a {
     text-decoration: none; /* Из главного кода */
 }
 
-.add-event-secondBlock {
-    background-color: #ffffff;
-}
-.add-event-firstBlock {
-    background-color: #ffffff;
-}
-.add-event-buttons{
-    background-color: #ffffff;
-}
-/* fix */
 
 form {
     width: 100%;
