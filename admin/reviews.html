@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin analitic</title>
+    <link rel="stylesheet" href="/admin/src/css/reviewmessageadmin.css">
     <link rel="stylesheet" href="/admin/src/css/main-admin.css">
+    <script src="/admin/src/js/events.js"></script>
     <script src="/admin/src/js/events.js"></script>
 </head>
 <body>
@@ -55,7 +57,7 @@
                 stroke="#354052" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <span class="choose-event-text">Аналитика</span>
+          <span class="choose-event-text">Отзывы</span>
           <svg class="hover-triangle" width="23" height="36" viewBox="0 0 23 36" xmlns="www.w3.org">
             <path d="M23 36.1704V1.10275V0L0 18.0852L23 36.1704Z" fill="white" />
           </svg>
@@ -76,10 +78,64 @@
 
       </nav>
     </section>
+        <div class="container">
+  <h1>Добавление отзыва</h1>
 
-    <form>
-        <h1>АНАЛИТИКА</h1>
-    </form>
+  <form id="reviewForm">
+
+    <!-- ФИО -->
+    <label>Имя фамилия
+      <input type="text" id="fullname" placeholder="Иван Иванов">
+      <div class="error" id="nameError"></div>
+    </label>
+
+    <!-- Дата -->
+    <label>Дата
+      <input type="date" id="date">
+      <div class="error" id="dateError"></div>
+    </label>
+
+    <!-- Содержание -->
+    <label>Содержание
+      <textarea id="content"></textarea>
+      <div class="error" id="contentError"></div>
+    </label>
+
+    <!-- Мероприятие -->
+    <label>Мероприятие
+      <select id="event">
+        <option value="">Выберите мероприятие</option>
+        <option>Игры роблокс</option>
+        <option>IT-форум</option>
+        <option>Мастер-класс</option>
+      </select>
+      <div class="error" id="eventError"></div>
+    </label>
+
+    <!-- Иллюстрации -->
+    <div class="illustration-block">
+      <p>Выберите иллюстрацию</p>
+      <div class="icons">
+            <img src="svg/lemon.png" data-value="1" />
+            <img src="svg/brown.png" data-value="2" />
+            <img src="svg/swamp.png" data-value="3" />
+            <img src="svg/pink.png" data-value="4" />
+            <img src="svg/yellow.png" data-value="5" />
+            <img src="svg/yellow.png" data-value="6" />
+      </div>
+      <div class="error" id="iconError"></div>
+    </div>
+
+    <!-- Кнопки -->
+    <div class="buttons">
+      <button type="submit" class="save">Сохранить</button>
+      <button type="button" class="delete" id="clearBtn">Удалить</button>
+    </div>
+
+  </form>
+</div>
+
+<script src="/admin/src/js/reviewmessageadmin.js"></script>
     </main>
 </body>
 </html>
