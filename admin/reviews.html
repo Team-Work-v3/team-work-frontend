@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin отзывы</title>
+    <link rel="stylesheet" href="/admin/src/css/reviewmessageadmin.css">
+    <link rel="stylesheet" href="/admin/src/css/main-admin.css">
+    <script src="/admin/src/js/events.js"></script>
+    <script src="/admin/src/js/events.js"></script>
+</head>
+<body>
+    <header>
+        <p class="header-name">ITeen Academy</p>
+    </header>
+    <main>
+    <section class="left-categories">
+      <nav class="nav-menu">
+
+        <!-- Мероприятия -->
+        <div class="nav-item" onclick="location.href='/admin/events'">
+          <div class="choose-event-circle">
+            <svg xmlns="www.w3.org" width="22" height="25" viewBox="0 0 22 25" fill="none">
+              <path
+                d="M16 1V6M6 1V6M1 11H21M1 6C1 5.33696 1.26339 4.70107 1.73223 4.23223C2.20107 3.76339 2.83696 3.5 3.5 3.5H18.5C19.163 3.5 19.7989 3.76339 20.2678 4.23223C20.7366 4.70107 21 5.33696 21 6V21C21 21.663 20.7366 22.2989 20.2678 22.7678C19.7989 23.2366 19.163 23.5 18.5 23.5H3.5C2.83696 23.5 2.20107 23.2366 1.73223 22.7678C1.26339 22.2989 1 21.663 1 21V6ZM9.75 17.25C9.75 17.5815 9.8817 17.8995 10.1161 18.1339C10.3505 18.3683 10.6685 18.5 11 18.5C11.3315 18.5 11.6495 18.3683 11.8839 18.1339C12.1183 17.8995 12.25 17.5815 12.25 17.25C12.25 16.9185 12.1183 16.6005 11.8839 16.3661C11.6495 16.1317 11.3315 16 11 16C10.6685 16 10.3505 16.1317 10.1161 16.3661C9.8817 16.6005 9.75 16.9185 9.75 17.25Z"
+                stroke="#354052" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span class="choose-event-text">Мероприятия</span>
+          <svg class="hover-triangle" width="23" height="36" viewBox="0 0 23 36" xmlns="www.w3.org">
+            <path d="M23 36.1704V1.10275V0L0 18.0852L23 36.1704Z" fill="white" />
+          </svg>
+        </div>
+
+        <!-- Участники -->
+        <div class="nav-item" onclick="location.href='/admin/members'">
+          <div class="choose-event-circle">
+            <!-- Здесь можно вставить другую иконку или ту же самую -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+              <path
+                d="M1 23.5V21C1 19.6739 1.52678 18.4021 2.46447 17.4645C3.40215 16.5268 4.67392 16 6 16H11C12.3261 16 13.5979 16.5268 14.5355 17.4645C15.4732 18.4021 16 19.6739 16 21V23.5M17.25 1.16251C18.3255 1.43788 19.2788 2.06338 19.9595 2.94039C20.6403 3.81741 21.0098 4.89604 21.0098 6.00626C21.0098 7.11647 20.6403 8.19511 19.9595 9.07212C19.2788 9.94913 18.3255 10.5746 17.25 10.85M23.5 23.5V21C23.4937 19.8965 23.1224 18.826 22.4441 17.9555C21.7658 17.085 20.8185 16.4634 19.75 16.1875M3.5 6C3.5 7.32608 4.02678 8.59785 4.96447 9.53553C5.90215 10.4732 7.17392 11 8.5 11C9.82608 11 11.0979 10.4732 12.0355 9.53553C12.9732 8.59785 13.5 7.32608 13.5 6C13.5 4.67392 12.9732 3.40215 12.0355 2.46447C11.0979 1.52678 9.82608 1 8.5 1C7.17392 1 5.90215 1.52678 4.96447 2.46447C4.02678 3.40215 3.5 4.67392 3.5 6Z"
+                stroke="#354052" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span class="choose-event-text">Участники</span>
+          <svg class="hover-triangle" width="23" height="36" viewBox="0 0 23 36" xmlns="www.w3.org">
+            <path d="M23 36.1704V1.10275V0L0 18.0852L23 36.1704Z" fill="white" />
+          </svg>
+        </div>
+
+        <!-- Аналитика -->
+        <div class="nav-item" onclick="location.href='/admin/review'">
+          <div class="choose-event-circle">
+            <svg xmlns="www.w3.org" width="22" height="25" viewBox="0 0 22 25" fill="none">
+              <path
+                d="M16 1V6M6 1V6M1 11H21M1 6C1 5.33696 1.26339 4.70107 1.73223 4.23223C2.20107 3.76339 2.83696 3.5 3.5 3.5H18.5C19.163 3.5 19.7989 3.76339 20.2678 4.23223C20.7366 4.70107 21 5.33696 21 6V21C21 21.663 20.7366 22.2989 20.2678 22.7678C19.7989 23.2366 19.163 23.5 18.5 23.5H3.5C2.83696 23.5 2.20107 23.2366 1.73223 22.7678C1.26339 22.2989 1 21.663 1 21V6ZM9.75 17.25C9.75 17.5815 9.8817 17.8995 10.1161 18.1339C10.3505 18.3683 10.6685 18.5 11 18.5C11.3315 18.5 11.6495 18.3683 11.8839 18.1339C12.1183 17.8995 12.25 17.5815 12.25 17.25C12.25 16.9185 12.1183 16.6005 11.8839 16.3661C11.6495 16.1317 11.3315 16 11 16C10.6685 16 10.3505 16.1317 10.1161 16.3661C9.8817 16.6005 9.75 16.9185 9.75 17.25Z"
+                stroke="#354052" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span class="choose-event-text">Отзывы</span>
+          <svg class="hover-triangle" width="23" height="36" viewBox="0 0 23 36" xmlns="www.w3.org">
+            <path d="M23 36.1704V1.10275V0L0 18.0852L23 36.1704Z" fill="white" />
+          </svg>
+        </div>
+
+        <div class="nav-item" onclick="location.href='/admin/other'">
+          <div class="choose-event-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+              <path d="M1 1H3.5M16 1H18.5M8.5 1H11" stroke="#354052" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span class="choose-event-text">Другое</span>
+          <svg class="hover-triangle" width="23" height="36" viewBox="0 0 23 36" xmlns="www.w3.org">
+            <path d="M23 36.1704V1.10275V0L0 18.0852L23 36.1704Z" fill="white" />
+          </svg>
+        </div>
+
+      </nav>
+    </section>
+        <div class="container">
+  <h1>Добавление отзыва</h1>
+
+  <form id="reviewForm">
+
+    <!-- ФИО -->
+    <label>Имя фамилия
+      <input type="text" id="fullname" placeholder="Иван Иванов">
+      <div class="error" id="nameError"></div>
+    </label>
+
+    <!-- Дата -->
+    <label>Дата
+      <input type="date" id="date">
+      <div class="error" id="dateError"></div>
+    </label>
+
+    <!-- Содержание -->
+    <label>Содержание
+      <textarea id="content"></textarea>
+      <div class="error" id="contentError"></div>
+    </label>
+
+    <!-- Мероприятие -->
+    <label>Мероприятие
+      <select id="event">
+        <option value="">Выберите мероприятие</option>
+        <option>Игры роблокс</option>
+        <option>IT-форум</option>
+        <option>Мастер-класс</option>
+      </select>
+      <div class="error" id="eventError"></div>
+    </label>
+
+    <!-- Иллюстрации -->
+    <div class="illustration-block">
+      <p>Выберите иллюстрацию</p>
+      <div class="icons">
+            <img src="svg/lemon.png" data-value="1" />
+            <img src="svg/brown.png" data-value="2" />
+            <img src="svg/swamp.png" data-value="3" />
+            <img src="svg/pink.png" data-value="4" />
+            <img src="svg/yellow.png" data-value="5" />
+            <img src="svg/yellow.png" data-value="6" />
+      </div>
+      <div class="error" id="iconError"></div>
+    </div>
+
+    <!-- Кнопки -->
+    <div class="buttons">
+      <button type="submit" class="save">Сохранить</button>
+      <button type="button" class="delete" id="clearBtn">Удалить</button>
+    </div>
+
+  </form>
+</div>
+
+<script src="/admin/src/js/reviewmessageadmin.js"></script>
+    </main>
+</body>
+</html>
