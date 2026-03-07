@@ -5,6 +5,10 @@
     background-color: #fff;
 }
 
+main{
+    background-color: #F2F2F2;
+}
+
 .content-header {
     display: flex;
     justify-content: space-between;
