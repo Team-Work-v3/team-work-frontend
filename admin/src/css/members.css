@@ -9,7 +9,7 @@ main{
     background-color: #F2F2F2;
 }
 
-.content-header {
+header.content-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
