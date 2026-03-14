@@ -127,3 +127,7 @@ header.content-header {
     margin-top: 65px;
     margin-left: 55px;
 }
+
+.event-invisible-information{
+    display: none;
+}
