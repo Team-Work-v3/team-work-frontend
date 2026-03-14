@@ -270,13 +270,6 @@ textarea {
     margin-left: 55px;
 }
 
-.up-menu-name {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    margin: 30px 0;
-}
-
 .fix-div {
     position: relative;
     display: flex;
