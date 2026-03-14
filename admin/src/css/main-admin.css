@@ -141,3 +141,11 @@ main {
   color: #000000;
   margin-right:25px;
 }
+
+.add-menu-btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
