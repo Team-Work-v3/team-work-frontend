@@ -49,7 +49,7 @@ RenderUsersInEvents();
                         center += `
                         
                              <tr>
-                                <td>${count}</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td><button>Отменить</button></td>
+                                <td>${count}</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td><button onclick="deleteEvent(${event.event_id})">Удалить</button></td>
                                 </tr>          
                                        
                         `;
