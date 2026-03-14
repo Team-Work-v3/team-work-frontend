@@ -127,3 +127,17 @@ main {
 #delete-event-button{
   margin-left: 25px;
 }
+
+#delete-event-button {
+  width: 107px;
+  height: 39px;
+  border: 2px solid grey;
+  background-color: #FFFFFF;
+  font-family: Inter;
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 16px;
+  gap: 10px;
+  color: #000000;
+  margin-right:25px;
+}
