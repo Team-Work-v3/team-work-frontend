@@ -15,13 +15,13 @@ a {
     text-decoration: none; /* Из главного кода */
 }
 
-.add-event-secondBlock {
+.add-event-secondBlockCHANGEADD {
     background-color: #ffffff;
 }
-.add-event-firstBlock {
+.add-event-firstBlockCHANGEADD {
     background-color: #ffffff;
 }
-.add-event-buttons{
+.add-event-buttonsCHANGEADD{
     background-color: #ffffff;
 }
 /* fix */
