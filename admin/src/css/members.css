@@ -155,3 +155,16 @@ body {
         justify-content: flex-end;
     }
 }
+
+.right-eventss{
+    margin-left: 300px;
+    margin-top: 65px;
+}
+.events-list{
+    margin-top: 65px;
+    margin-left: 55px;
+}
+
+.event-invisible-information{
+    display: none;
+}
