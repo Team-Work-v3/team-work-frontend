@@ -1,0 +1,328 @@
+/* Шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #F6F6F6;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+    width: 100%;
+}
+
+/* ===== СТРУКТУРА СТРАНИЦЫ ===== */
+.add-event {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    margin-left: 55px;
+    background-color: #F6F6F6;
+    margin-top: 65px;
+}
+
+.add-upMenu {
+    flex-basis: 100%;
+    margin-left: 300px;
+}
+
+.add-event-nameDiv {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.add-event-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25px;
+}
+
+.add-event-firstSecondBlock {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 300px;
+    margin-top: 65px;
+}
+
+.add-event-firstBlock {
+    width: 25%;
+}
+
+.add-event-firstBlockCHANGEADD {
+    background-color: #ffffff;
+}
+
+.add-event-secondBlock {
+    width: 71.6%;
+}
+
+.add-event-secondBlockCHANGEADD {
+    background-color: #ffffff;
+}
+
+.add-event-buttons {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-basis: 100%;
+}
+
+.add-event-buttonsCHANGEADD {
+    background-color: #ffffff;
+}
+
+#special {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+/* ===== ТИПОГРАФИКА ===== */
+.add-event-name {
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+label {
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* ===== ПОЛЯ ВВОДА ===== */
+.input--block {
+    width: 385px;
+    min-height: 47px;
+    background-color: #F2F2F2;
+    border: 0;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.input--blockCAT {
+    width: 400px;
+    min-height: 47px;
+    background-color: #F2F2F2;
+    border: 0;
+}
+
+.input--block-low {
+    width: 190px;
+    height: 47px;
+    background-color: #F2F2F2;
+    border: 0;
+}
+
+.input--block-select {
+    width: 190px;
+    height: 44px;
+    border: 3px solid #00000036;
+}
+
+.input--block-btn::file-selector-button {
+    width: 153px;
+    height: 39px;
+    border: 2px solid #00000036;
+    background-color: white;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* ===== TEXTAREA ===== */
+textarea {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 15px;
+}
+
+#organizers_event,
+#organizers-event {
+    width: 1035px;
+    min-height: 106px;
+    padding-top: 15px;
+}
+
+#program_event,
+#program-event {
+    width: 1035px;
+    height: 404px;
+    padding-top: 15px;
+}
+
+#fullDescription_event,
+#fullDescription-event {
+    width: 1035px;
+    height: 265px;
+    padding-top: 15px;
+}
+
+#Description_event,
+#description_event {
+    width: 1035px;
+    max-width: 1035px;
+    height: 188px;
+    padding-top: 15px;
+}
+
+#images-events {
+    width: 153px;
+    height: 39px;
+    border-width: 3px;
+}
+
+/* ===== КНОПКИ ===== */
+button {
+    padding: 9px 39px;
+    border: 2px solid #00000036;
+    background-color: white;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 37px;
+}
+
+#addBtn-event {
+    margin-right: 8px;
+}
+
+#edit-event-button {
+    width: 163px;
+    height: 39px;
+    border: 0;
+    background-color: #982520;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    gap: 10px;
+}
+
+#delete-event-button {
+    width: 107px;
+    height: 39px;
+    border: 2px solid grey;
+    background-color: #FFFFFF;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    margin-right: 25px;
+    gap: 10px;
+}
+
+/* ===== ВСПОМОГАТЕЛЬНЫЕ ЭЛЕМЕНТЫ ===== */
+.error-event {
+    color: red;
+    display: none;
+    max-width: 331px;
+}
+
+.picture-event {
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.event-invisible-information {
+    margin-left: 55px;
+}
+
+.date-time {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+#input-data {
+    margin: 0;
+}
+
+/* ===== ВЕРХНЕЕ МЕНЮ И ПОИСК ===== */
+.up-menu,
+.up-menu-fix {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.up-menu-fix {
+    margin-left: 55px;
+}
+
+.fix-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-height: 56px;
+    margin-top: 31px;
+    margin-bottom: 100px;
+}
+
+.up-menu-search {
+    width: 450px;
+    height: 56px;
+    padding: 0 0 0 40px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    color: #8E8E8E;
+    background-color: #F2F2F2;
+}
+
+.search-icon {
+    position: absolute;
+    left: 19px;
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+}
+
+/* ===== КНОПКА ДОБАВЛЕНИЯ В МЕНЮ ===== */
+.add-menu {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.add-menu-bnt,
+.add-menu-btn {
+    margin-left: 55px;
+}
+
+.add-menu-btn {
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 118px;
+    height: 39px;
+    border: 0;
+    background-color: #982520;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    gap: 10px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
