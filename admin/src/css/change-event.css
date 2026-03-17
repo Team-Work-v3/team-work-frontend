@@ -122,10 +122,17 @@ label {
 }
 
 .input--block-low {
-    width: 190px;
+    /* Вместо width: 190px */
+    flex: 0 0 190px; /* Не растет, не сжимается, база 190px */
     height: 47px;
     background-color: #F2F2F2;
     border: 0;
+}
+
+/* Если второй элемент должен забирать остаток (400 - 190 - 20 = 190) */
+.input--block-low:last-child {
+    flex: 1 1 auto; /* Позволяем ему растягиваться */
+    max-width: none; /* Снимаем ограничение, если оно мешает */
 }
 
 .input--block-select {
@@ -247,9 +254,9 @@ button {
 
 .date-time {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start; 
+    justify-content: flex-start;  */
     width: 100%;
     gap: 20px;
 }
