@@ -123,7 +123,7 @@ label {
 
 .input--block-low {
     /* Вместо width: 190px */
-    max-width: 190px;
+    width: 190px;
     height: 47px;
     background-color: #F2F2F2;
     border: 0;
