@@ -258,7 +258,7 @@ button {
     gap: 0; 
     /* Прижимаем элементы вплотную друг к другу в начале контейнера */
     justify-content: flex-start; 
-    width: 400px;
+    width: 380px;
 }
 
 #input-data {
