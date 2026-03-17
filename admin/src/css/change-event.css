@@ -115,8 +115,7 @@ label {
 }
 
 .input--blockCAT {
-    width: 400px;
-    min-height: 47px;
+    height: 47px;
     background-color: #F2F2F2;
     border: 0;
 }
@@ -126,12 +125,13 @@ label {
     width: 190px; 
     height: 47px;
     background-color: #F2F2F2;
+    border: 0px;
 }
 
 /* Если второй элемент должен забирать остаток (400 - 190 - 20 = 190) */
 .input--block-low:last-child {
-    /* flex: 1 1 auto; 
-    max-width: none;  */
+    flex: 1 1 auto; 
+    max-width: none; 
 }
 
 .input--block-select {
