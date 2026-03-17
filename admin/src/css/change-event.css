@@ -123,16 +123,15 @@ label {
 
 .input--block-low {
     /* Вместо width: 190px */
-    width: 190px;
+    width: 190px; 
     height: 47px;
     background-color: #F2F2F2;
-    border: 0;
 }
 
 /* Если второй элемент должен забирать остаток (400 - 190 - 20 = 190) */
 .input--block-low:last-child {
-    flex: 1 1 auto; /* Позволяем ему растягиваться */
-    max-width: none; /* Снимаем ограничение, если оно мешает */
+    /* flex: 1 1 auto; 
+    max-width: none;  */
 }
 
 .input--block-select {
@@ -255,10 +254,11 @@ button {
 .date-time {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    /* Убираем все зазоры */
+    gap: 0; 
+    /* Прижимаем элементы вплотную друг к другу в начале контейнера */
     justify-content: flex-start; 
-    width: 100%;
-    gap: 20px;
+    width: 400px;
 }
 
 #input-data {
