@@ -1,133 +1,157 @@
-.main-content {
-    flex: 1;
-    padding: 30px;
-    overflow-y: auto;
-    background-color: #fff;
+/* ===== ОБЩИЕ СТИЛИ И ШРИФТЫ ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F4F6; /* Светло-серый фон страницы */
+    margin: 0;
+    padding: 20px;
 }
 
-main{
-    background-color: #F2F2F2;
-}
-
-header.content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Контейнер для событий (добавляется JS-ом) */
+#event-container {
+    width: 100%;
+    max-width: 1200px;
     margin-bottom: 40px;
-    background-color: #F2F2F2;
-    margin-left: 25px;
+    background-color: transparent;
 }
 
-.content-header h1 {
-    font-size: 24px;
+/* ===== ЗАГОЛОВОК СОБЫТИЯ (Верхняя часть) ===== */
+.event-visible-information {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.search-container input {
-    padding: 10px 15px;
-    width: 300px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+.event-visible-information:hover {
+    background-color: #f9fafb;
 }
 
-/* Список мероприятий (Аккордеон) */
-.event-item {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-.event-header {
+.elements-event {
     display: flex;
     align-items: center;
-    padding: 15px 0;
-    cursor: pointer;
-    position: relative;
+    gap: 12px;
 }
 
-.arrow {
-    margin-right: 15px;
-    font-size: 12px;
-    color: #666;
-}
-
-.event-title {
+/* Стрелочка */
+.arrow-event {
     font-size: 18px;
-    flex-grow: 1;
+    color: #374151;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    line-height: 1;
 }
 
-.event-actions {
-    display: flex;
-    gap: 10px;
+/* Название события */
+.name-event {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
 }
 
-.btn {
-    padding: 8px 20px;
-    border-radius: 8px;
-    border: 1px solid #333;
-    background: none;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
+/* ===== СКРЫТАЯ ИНФОРМАЦИЯ (Таблица) ===== */
+.event-invisible-information {
+    display: none; /* Скрыто по умолчанию */
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover {
-    background-color: #eee;
+/* Заголовок "Никто не зарегистрирован" */
+.container--h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #6B7280;
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* Таблица внутри */
-.event-body {
-    display: none;
-    padding: 10px 0 30px 30px;
-}
-
-.event-item.open .event-body {
-    display: block;
-}
-
+/* ===== ТАБЛИЦА УЧАСТНИКОВ ===== */
 .participants-table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
-    margin-bottom: 50px;
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Шапка таблицы */
+.participants-table thead tr {
+    background-color: #F9FAFB; /* Очень светлый серый фон шапки */
+    text-align: left;
+    border-bottom: 1px solid #E5E7EB;
 }
 
 .participants-table th {
-    background-color: #d9d9d9;
-    border: 1px solid #999;
-    padding: 10px;
-    font-size: 13px;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #111827;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+}
+
+/* Строки таблицы */
+.participants-table tbody tr {
+    border-bottom: 1px solid #F3F4F6;
+    transition: background-color 0.1s;
+}
+
+.participants-table tbody tr:nth-child(even) {
+    background-color: #F9FAFB; /* Чередование цветов строк (зебра) */
+}
+
+.participants-table tbody tr:hover {
+    background-color: #F3F4F6;
 }
 
 .participants-table td {
-    border: 1px solid #999;
-    padding: 10px;
-    height: 40px;
+    padding: 12px 16px;
+    vertical-align: middle;
 }
 
-.participants-table tr:nth-child(even) {
-    background-color: #efefef;
-}
-.event-title{
-    font-size: 36px;
-    font-weight: 400;
-    margin-top: 100px;
-}
-
-.container--h2{
-    font-size: 16px;
-    font-weight: 200;
-    margin-bottom: 50px;
-    color: #666;
+/* Кнопка "Удалить" в таблице */
+.participants-table td button {
+    background: none;
+    border: none;
+    color: #EF4444; /* Красный цвет текста */
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
 }
 
-.right-eventss{
-    margin-left: 300px;
-    margin-top: 65px;
-}
-.events-list{
-    margin-top: 65px;
-    margin-left: 55px;
+.participants-table td button:hover {
+    background-color: #FEF2F2; /* Светло-красный фон при наведении */
+    text-decoration: underline;
 }
 
-.event-invisible-information{
-    display: none;
+/* Адаптивность для мобильных (опционально) */
+@media (max-width: 768px) {
+    .participants-table thead {
+        display: none;
+    }
+    .participants-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #E5E7EB;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    .participants-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+    .participants-table td:last-child {
+        border-bottom: none;
+        justify-content: flex-end;
+    }
 }

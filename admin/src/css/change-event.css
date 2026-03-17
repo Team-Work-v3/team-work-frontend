@@ -129,14 +129,6 @@ label {
     margin-right: 15px;
 }
 
-/* Если второй элемент должен забирать остаток (400 - 190 - 20 = 190) */
-.input--block-low:last-child {
-    /* flex: 1 1 auto; 
-    max-width: none; 
-    margin-right: 15px;
-    padding-right: 15px; */
-}
-
 .input--block-select {
     width: 190px;
     height: 44px;
