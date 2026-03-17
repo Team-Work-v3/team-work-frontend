@@ -132,6 +132,7 @@ label {
 .input--block-low:last-child {
     flex: 1 1 auto; 
     max-width: none; 
+    margin-right: 15px;
 }
 
 .input--block-select {
