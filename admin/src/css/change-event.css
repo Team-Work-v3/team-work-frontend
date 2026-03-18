@@ -54,6 +54,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     margin-left: 355px;
+    margin-right: 55px;
     margin-top: 65px;
     justify-content: flex-start;
     gap: 0px;
