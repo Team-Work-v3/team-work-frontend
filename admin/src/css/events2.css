@@ -208,9 +208,9 @@ label {
 .input--block, textarea{
     font-family: Inter;
     font-weight: 400;
-    font-style: Regular;
     font-size: 14px;
-    padding-left: 15px
+    padding-left: 15px;
+    border: rgba(0, 0, 0, 0.4) 1px solid;
 }
 
 textarea{
