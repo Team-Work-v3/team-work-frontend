@@ -199,35 +199,6 @@ button {
     margin-bottom: 37px;
 }
 
-#addBtn-event {
-    margin-right: 8px;
-}
-
-#edit-event-button {
-    width: 163px;
-    height: 39px;
-    border: 0;
-    background-color: #982520;
-    font-family: Inter, sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #FFFFFF;
-    gap: 10px;
-}
-
-#delete-event-button {
-    width: 107px;
-    height: 39px;
-    border: 2px solid grey;
-    background-color: #FFFFFF;
-    font-family: Inter, sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #000000;
-    margin-right: 25px;
-    gap: 10px;
-}
-
 /* ===== ВСПОМОГАТЕЛЬНЫЕ ЭЛЕМЕНТЫ ===== */
 .error-event {
     color: red;
