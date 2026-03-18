@@ -202,7 +202,7 @@ button {
     width: 127px;
     height: 39px;
     gap: 7.5px;
-    background-color: red;
+    background-color: rgba(152, 37, 32, 1);
     font-family: Inter;
     font-weight: 600;
     font-size: 16px;
