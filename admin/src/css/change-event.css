@@ -213,7 +213,7 @@ button {
     width: 107px;
     height: 39px;
     gap: 7.5px;
-    border: 2px grey stroke solid;
+    border: 2px solid grey;
     background-color: #FFFFFF;
     font-family: Inter;
     font-weight: 600;
