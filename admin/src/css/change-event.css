@@ -8,6 +8,10 @@ body {
     height: 100%;
     background-color: #F6F6F6;
 }
+* {
+    box-sizing: border-box;
+}
+
 
 a {
     text-decoration: none;
@@ -51,6 +55,8 @@ form {
     flex-wrap: wrap;
     margin-left: 355px;
     margin-top: 65px;
+    justify-content: flex-start;
+    gap: 0px;
 }
 
 .add-event-firstBlock {
