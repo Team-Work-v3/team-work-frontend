@@ -122,7 +122,7 @@
       </div>
       
       <form action="/api/addEventsForm" method="post" class="add-event-form" enctype="multipart/form-data">
-        <div class="add-event-firstSecondBlockADD add-event-firstSecondBlockCHANGEADD">
+        <div class="add-event-firstSecondBlock add-event-firstSecondBlockCHANGEADD">
           <div class="add-event-firstBlock add-event-firstBlockCHANGEADD">
             <div class="add-event-blocks">
               <label for="name-event">Название мероприятия</label>
@@ -165,7 +165,7 @@
                 </select> -->
               </div>
               
-            <div class="date-time">
+              <div class="date-time">
               
             <div class="add-event-blocks">
               <label for="date-event">Дата</label>
@@ -188,6 +188,9 @@
               <input class="input--block" id="location_event" name="location_event" type="text"
                 onfocus="LocationValidate(this)">
               <span class="error-event" id="locationError">Неправильно введено поле</span><br>
+            </div>
+
+              <span class="error-event" id="priceError">Неправильно введено поле</span><br>
             </div>
 
             <form action="#" method="post">
