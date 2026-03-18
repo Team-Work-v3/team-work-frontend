@@ -216,15 +216,7 @@ textarea {
 }
 
 /* ===== КНОПКИ ===== */
-button {
-    /* padding: 9px 39px;
-    border: 2px solid #00000036;
-    background-color: white;
-    font-family: Inter, sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    margin-bottom: 37px; */
-}
+
 .change-button{
     width: 127px;
     height: 39px;
