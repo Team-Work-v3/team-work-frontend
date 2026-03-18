@@ -202,21 +202,20 @@ button {
     width: 127px;
     height: 39px;
     gap: 7.5px;
-    background-color: 5 red;
+    background-color: red;
     font-family: Inter;
     font-weight: 600;
-    font-style: Semi Bold;
     font-size: 16px;
+    border: 0px solid;
 }
 .delete-button{
     width: 107px;
     height: 39px;
     gap: 7.5px;
-    border-width: 2px grey stroke;
+    border: 2px grey stroke solid;
     background-color: #FFFFFF;
     font-family: Inter;
     font-weight: 600;
-    font-style: Semi Bold;
     font-size: 16px;
 }
 /* ===== ВСПОМОГАТЕЛЬНЫЕ ЭЛЕМЕНТЫ ===== */
