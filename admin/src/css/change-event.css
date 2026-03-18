@@ -27,6 +27,7 @@ form {
     flex-wrap: wrap;
     align-content: center;
     width: 100%;
+    margin-left: 55px;
     background-color: #F6F6F6;
     margin-top: 65px;
 }
@@ -57,7 +58,7 @@ form {
 .add-event-firstSecondBlock {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 355px;
+    margin-left: 300px;
     margin-right: 55px;
     margin-top: 65px;
     justify-content: flex-start;
