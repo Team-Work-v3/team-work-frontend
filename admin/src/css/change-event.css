@@ -54,7 +54,7 @@ form {
 }
 
 .add-event-firstBlock {
-    width: 25%;
+    width: 33.5%;
 }
 
 .add-event-firstBlockCHANGEADD {
@@ -62,7 +62,7 @@ form {
 }
 
 .add-event-secondBlock {
-    width: 71.6%;
+    width: 66.5%;
 }
 
 .add-event-secondBlockCHANGEADD {
@@ -108,7 +108,7 @@ label {
 /* ===== ПОЛЯ ВВОДА ===== */
 .input--block {
     width: 385px;
-    min-height: 47px;
+    height: 47px;
     background-color: #F2F2F2;
     border: rgba(0, 0, 0, 0.4) 1px solid;
     font-family: Inter, sans-serif;
