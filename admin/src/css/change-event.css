@@ -114,7 +114,7 @@ label {
 /* ===== ПОЛЯ ВВОДА ===== */
 .input--block {
     width: 385px;
-    height: 47px;
+    max-height: 47px;
     background-color: #F2F2F2;
     border: rgba(0, 0, 0, 0.4) 1px solid;
     font-family: Inter, sans-serif;
