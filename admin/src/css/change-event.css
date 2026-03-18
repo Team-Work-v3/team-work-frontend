@@ -74,6 +74,7 @@ form {
     justify-content: flex-start;
     width: 100%;
     flex-basis: 100%;
+    gap: 15px;
 }
 
 .add-event-buttonsCHANGEADD {
@@ -201,7 +202,6 @@ button {
 .change-button{
     width: 127px;
     height: 39px;
-    gap: 7.5px;
     background-color: rgba(152, 37, 32, 1);
     font-family: Inter;
     font-weight: 600;
@@ -212,7 +212,6 @@ button {
 .delete-button{
     width: 107px;
     height: 39px;
-    gap: 7.5px;
     border: 2px solid grey;
     background-color: #FFFFFF;
     font-family: Inter;
