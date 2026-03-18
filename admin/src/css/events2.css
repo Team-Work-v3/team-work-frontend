@@ -98,7 +98,7 @@ form {
     width: 400px;
     min-height: 47px;
     background-color: #F2F2F2;
-    border: 0px solid;
+    border: rgba(0, 0, 0, 0.4) 1px solid;
 }
 
 #organizers_event{
