@@ -20,7 +20,9 @@ header.content-header {
 }
 
 .content-header h1 {
-    font-size: 24px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 36px;
 }
 
 .search-container input {
