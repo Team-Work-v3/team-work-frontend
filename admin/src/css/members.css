@@ -98,7 +98,6 @@ header.content-header {
 .participants-table thead tr {
     background-color: white;
     text-align: left;
-    border-bottom: 1px solid #E5E7EB;
 }
 
 .participants-table th {
@@ -117,6 +116,9 @@ header.content-header {
 
 tr{
     background-color: (242, 242, 242, 1);
+    border-width: 2px 0px 2px 0px;
+    border-style: solid;
+    border-color: var(--grey-button, rgba(229, 229, 229, 1));
 }
 
 .participants-table tbody tr:nth-child(even) {
