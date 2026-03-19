@@ -2,6 +2,8 @@
 * {
     box-sizing: border-box;
 }
+
+
 .main-content {
     flex: 1;
     padding: 30px;
@@ -27,6 +29,7 @@ header.content-header {
     font-family: Inter;
     font-weight: 600;
     font-size: 36px;
+    padding: 0px;
 }
 
 .search-container input {
