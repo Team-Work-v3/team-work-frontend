@@ -34,9 +34,10 @@ RenderUsersInEvents();
                                     <thead>
                                         <tr>
                                             <th>№</th>
-                                            <th>Имя фамилия</th>
+                                            <th>ФИО</th>
                                             <th>Электронная почта</th>
                                             <th>Номер телефона</th>
+                                            <th>Места</th>
                                             <th></th>
                                         </tr>
                                     </thead>
