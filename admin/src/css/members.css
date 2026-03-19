@@ -23,13 +23,13 @@ header.content-header {
     margin-bottom: 30px;
     background-color: #F2F2F2;
     margin-left: 55px;
+    padding: 0px;
 }
 
 .content-header h1 {
     font-family: Inter;
     font-weight: 600;
     font-size: 36px;
-    padding: 0px;
 }
 
 .search-container input {
