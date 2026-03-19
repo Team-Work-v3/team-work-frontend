@@ -24,6 +24,7 @@ header.content-header {
     background-color: #F2F2F2;
     margin-left: 55px;
     padding: 0px;
+    position: static;
 }
 
 .content-header h1 {
@@ -80,7 +81,7 @@ header.content-header {
 .event-invisible-information {
     display: none; 
     margin-left: 55px;
-    /* margin-right: 55px; */
+    margin-right: 55px;
 }
 
 /* Заголовок "Никто не зарегистрирован" */
