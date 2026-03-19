@@ -37,9 +37,6 @@ header.content-header {
     padding: 15px 20px;
 }
 
-.event-visible-information:hover {
-    background-color: #f9fafb;
-}
 
 .elements-event {
     display: flex;
@@ -58,10 +55,10 @@ header.content-header {
 
 /* Название события */
 .name-event {
-    font-size: 24px;
-    font-weight: 700;
-    color: #111827;
-    margin: 0;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 32px;
 }
 
 /* ===== СКРЫТАЯ ИНФОРМАЦИЯ (Таблица) ===== */
