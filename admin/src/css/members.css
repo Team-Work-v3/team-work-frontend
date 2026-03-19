@@ -101,6 +101,7 @@ header.content-header {
     font-weight: 400;
     font-style: Regular;
     font-size: 20px;
+    background-color: rgba(0, 0, 0, 1);
 }
 
 /* Шапка таблицы */
@@ -145,14 +146,13 @@ tr{
 .participants-table td button {
     background: none;
     border: none;
-    color: #EF4444; /* Красный цвет текста */
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-family: Inter;
     font-weight: 500;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    font-style: Medium;
+    font-size: 16px;
+    text-decoration: underline;
+    text-decoration-style: solid;
 }
 
 .participants-table td button:hover {
