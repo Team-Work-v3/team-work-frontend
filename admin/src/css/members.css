@@ -3,7 +3,6 @@
     box-sizing: border-box;
 }
 
-
 .main-content {
     flex: 1;
     padding: 30px;
@@ -41,12 +40,6 @@ header.content-header {
     background-color: #f9f9f9;
 }
 
-.name-event{
-   
-}
-
-/* Список мероприятий (Аккордеон) */
-/* ===== ЗАГОЛОВОК СОБЫТИЯ (Верхняя часть) ===== */
 .event-visible-information {
     margin-left: 55px;
     margin-top: 30px;
@@ -60,7 +53,6 @@ header.content-header {
     gap: 12px;
 }
 
-/* Стрелочка */
 .arrow-event {
     font-size: 18px;
     color: #374151;
@@ -69,7 +61,6 @@ header.content-header {
     line-height: 1;
 }
 
-/* Название события */
 .name-event {
     font-family: Inter;
     font-weight: 500;
@@ -77,7 +68,7 @@ header.content-header {
     font-size: 32px;
 }
 
-/* ===== СКРЫТАЯ ИНФОРМАЦИЯ (Таблица) ===== */
+/* СКРЫТАЯ ИНФОРМАЦИЯ (Таблица)*/
 .event-invisible-information {
     display: none; 
     margin-left: 55px;
@@ -93,7 +84,7 @@ header.content-header {
     margin: 20px 0;
 }
 
-/* ===== ТАБЛИЦА УЧАСТНИКОВ ===== */
+/* ТАБЛИЦА УЧАСТНИКОВ */
 .participants-table {
     width: 100%;
     border-collapse: collapse;
@@ -142,7 +133,6 @@ tr{
     vertical-align: middle;
 }
 
-/* Кнопка "Удалить" в таблице */
 .participants-table td button {
     background: none;
     border: none;
@@ -156,7 +146,7 @@ tr{
 }
 
 .participants-table td button:hover {
-    background-color: #FEF2F2; /* Светло-красный фон при наведении */
+    background-color: #FEF2F2; 
     text-decoration: underline;
 }
 
