@@ -128,7 +128,7 @@ tr{
 }
 
 .participants-table tbody tr:nth-child(even) {
-    background-color: #F9FAFB; /* Чередование цветов строк (зебра) */
+    background-color: white;;
 }
 
 .participants-table tbody tr:hover {
