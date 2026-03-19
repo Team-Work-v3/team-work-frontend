@@ -33,11 +33,11 @@ RenderUsersInEvents();
                                  <table class="participants-table">
                                     <thead>
                                         <tr>
-                                            <th>№</th>
-                                            <th>ФИО</th>
-                                            <th>Электронная почта</th>
-                                            <th>Номер телефона</th>
-                                            <th>Места</th>
+                                            <th class="th-number">№</th>
+                                            <th class="th-FIO">ФИО</th>
+                                            <th class="th-email">Электронная почта</th>
+                                            <th class="th-phnumber">Номер телефона</th>
+                                            <th class="th-place>Места</th>
                                             <th></th>
                                         </tr>
                                     </thead>

@@ -109,6 +109,32 @@ header.content-header {
     
 }
 
+.th-number{
+    margin-left: 3px;
+    width: 65px;
+}
+
+.th-FIO{
+    margin-left: 3px;
+    width: 416px;
+}
+
+.th-email{
+    margin-left: 3px;
+    width: 447px;
+}
+
+.th-phnumber{
+    margin-left: 3px;
+    width: 306px;
+}
+
+.th-place{
+    margin-left: 3px;
+    width: 147px;
+}
+
+
 /* Строки таблицы */
 .participants-table tbody tr {
     border-bottom: 1px solid #F3F4F6;
