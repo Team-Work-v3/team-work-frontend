@@ -80,6 +80,7 @@ header.content-header {
 .event-invisible-information {
     display: none; 
     margin-left: 55px;
+    /* margin-right: 55px; */
 }
 
 /* Заголовок "Никто не зарегистрирован" */
@@ -107,7 +108,7 @@ header.content-header {
 }
 
 .participants-table th {
-    padding: 12px 16px;
+    padding: 12px 120px;
     font-weight: 600;
     color: #111827;
     text-transform: uppercase;
