@@ -110,27 +110,27 @@ header.content-header {
 }
 
 .th-number{
-    padding-left: 10px;
+    padding-left: 15px;
     width: 65px;
 }
 
 .th-FIO{
-    padding-left: 3px;
+    padding-left: 15px;
     width: 416px;
 }
 
 .th-email{
-    padding-left: 3px;
+    padding-left: 15px;
     width: 447px;
 }
 
 .th-phnumber{
-    padding-left: 3px;
+    padding-left: 15px;
     width: 306px;
 }
 
 .th-place{
-    padding-left: 3px;
+    padding-left: 15px;
     width: 147px;
 }
 
