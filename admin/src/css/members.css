@@ -40,6 +40,10 @@ header.content-header {
     background-color: #f9f9f9;
 }
 
+.name-event{
+    margin-right: 100px;
+}
+
 /* Список мероприятий (Аккордеон) */
 /* ===== ЗАГОЛОВОК СОБЫТИЯ (Верхняя часть) ===== */
 .event-visible-information {
