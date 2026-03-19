@@ -66,6 +66,7 @@ header.content-header {
     transition: transform 0.3s ease;
     display: inline-block;
     line-height: 1;
+    margin-right: 100px;
 }
 
 /* Название события */
