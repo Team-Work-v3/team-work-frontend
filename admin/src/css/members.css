@@ -97,7 +97,10 @@ header.content-header {
 .participants-table {
     width: 100%;
     border-collapse: collapse;
-    color: #374151;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
 }
 
 /* Шапка таблицы */
