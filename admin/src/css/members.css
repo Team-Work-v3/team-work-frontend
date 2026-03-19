@@ -166,12 +166,6 @@ tr{
     text-decoration: underline;
 }
 
-.participants-table td button:hover {
-    background-color: #FEF2F2; 
-    text-decoration: underline;
-}
-
-
 .right-eventss{
     margin-left: 300px;
     margin-top: 65px;
