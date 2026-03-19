@@ -129,6 +129,11 @@ label {
 .up-menu-name{
     margin-top: 37px;
     margin-bottom: 30px;
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 36px;
+
 }
 
 /* ===== ПОЛЯ ВВОДА ===== */
