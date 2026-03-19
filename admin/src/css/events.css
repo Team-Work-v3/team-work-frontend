@@ -1,9 +1,7 @@
-/* ОБЪЕДИНЕННЫЙ КОД (ПРИОРЕТЕТ: ГЛАВНЫЙ КОД) */
-
+/* Настройка отступов и структуры */
 /* Шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* Настройка отступов и структуры */
 body {
     margin: 0px;
     padding: 0px;
@@ -12,19 +10,29 @@ body {
 }
 
 a {
-    text-decoration: none; /* Из главного кода */
+    text-decoration: none;
 }
 
-.add-event-secondBlockCHANGEADD {
+/* Уникальные фоновые стили из первого кода */
+.add-event-secondBlockCHANGEADD,
+.add-event-firstBlockCHANGEADD,
+.add-event-buttonsCHANGEADD {
     background-color: #ffffff;
 }
-.add-event-firstBlockCHANGEADD {
-    background-color: #ffffff;
+
+.add-event {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    background-color: #F6F6F6;
 }
-.add-event-buttonsCHANGEADD{
-    background-color: #ffffff;
+
+.add-event-firstSecondBlock {
+    background-color: #F6F6F6;
+    display: flex;
+    flex-wrap: wrap;
 }
-/* fix */
 
 form {
     width: 100%;
@@ -42,16 +50,9 @@ form {
 
 .add-event-blocks {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.add-event-firstSecondBlock {
-    /* Приоритет главного кода (структура flex) + дополнения из второго */
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 300px;
-    margin-top: 65px;
 }
 
 .add-event-firstBlock {
@@ -80,7 +81,7 @@ form {
 .add-event-name {
     font-family: Inter;
     font-weight: 600;
-    font-style: normal; /* Semi Bold через weight */
+    font-style: Semi Bold;
     font-size: 36px;
 }
 
@@ -89,17 +90,12 @@ form {
     min-height: 47px;
     background-color: #F2F2F2;
     border: 0px solid;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 14px;
-    padding-left: 15px;
 }
 
 .input--blockCAT {
     width: 400px;
     min-height: 47px;
     background-color: #F2F2F2;
-    border: 0px solid;
     border: rgba(0, 0, 0, 0.4) 1px solid;
 }
 
@@ -127,7 +123,7 @@ form {
     width: 190px;
     height: 47px;
     background-color: #F2F2F2;
-    border: 0px solid;
+    border: rgba(0, 0, 0, 0.4) 1px solid;
 }
 
 .input--block-btn::file-selector-button {
@@ -148,26 +144,25 @@ form {
 }
 
 #fullDescription-event {
-    width: 1035px;
+    width: 934px;
     height: 265px;
     padding-top: 15px;
 }
 
 #description_event {
-    width: 1035px;
-    max-width: 1035px;
+    width: 934px;
     height: 188px;
     padding-top: 15px;
 }
 
 #program-event {
-    width: 1035px;
+    width: 934px;
     height: 304px;
     padding-top: 15px;
 }
 
 #organizers-event {
-    width: 1035px;
+    width: 934px;
     height: 106px;
     padding-top: 15px;
 }
@@ -191,6 +186,7 @@ form {
 }
 
 #delete-event-button {
+    /* Уникальный стиль из первого кода */
     width: 107px;
     height: 39px;
     border: 2px solid grey;
@@ -211,16 +207,24 @@ form {
 label {
     font-family: Inter;
     font-weight: 300;
+    font-style: light;
     font-size: 15px;
     line-height: 100%;
+    letter-spacing: 0%;
     margin-top: 15px;
     margin-bottom: 5px;
 }
 
+.input--block,
 textarea {
     font-family: Inter;
     font-weight: 400;
     font-size: 14px;
+    padding-left: 15px;
+    border: rgba(0, 0, 0, 0.4) 1px solid;
+}
+
+textarea {
     padding: 15px;
 }
 
@@ -231,8 +235,10 @@ textarea {
 }
 
 .picture-event {
+    /* Объединённые стили: предпочтительные значения + background */
+    background-color: antiquewhite;
     width: auto;
-    max-width: 100px; /* Приоритет нижнего значения из главного */
+    max-width: 100px;
     max-height: 100px;
     object-fit: contain;
 }
@@ -254,9 +260,7 @@ textarea {
     margin: 0;
 }
 
-/* Стили из второго кода (уникальные) */
-
-
+/* ===== Уникальные стили из первого кода (не конфликтующие) ===== */
 
 .up-menu {
     display: flex;
