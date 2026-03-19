@@ -103,7 +103,7 @@ header.content-header {
 
 /* Шапка таблицы */
 .participants-table thead tr {
-    background-color: #F9FAFB; /* Очень светлый серый фон шапки */
+    background-color: white;
     text-align: left;
     border-bottom: 1px solid #E5E7EB;
 }
@@ -121,6 +121,10 @@ header.content-header {
 .participants-table tbody tr {
     border-bottom: 1px solid #F3F4F6;
     transition: background-color 0.1s;
+}
+
+tr{
+    background-color: (242, 242, 242, 1);
 }
 
 .participants-table tbody tr:nth-child(even) {
