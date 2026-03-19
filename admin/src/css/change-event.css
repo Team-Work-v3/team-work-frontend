@@ -60,7 +60,6 @@ form {
     flex-wrap: wrap;
     margin-left: 300px;
     margin-right: 55px;
-    margin-top: 65px;
     justify-content: flex-start;
     gap: 0px;
 }
@@ -128,7 +127,8 @@ label {
 }
 
 .up-menu-name{
-    margin: 0px;
+    margin-top: 37px;
+    margin-bottom: 30px;
 }
 
 /* ===== ПОЛЯ ВВОДА ===== */
