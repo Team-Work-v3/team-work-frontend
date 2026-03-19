@@ -20,6 +20,8 @@ header.content-header {
 
 .content-header h1 {
     font-size: 24px;
+    margin-top: 37px;
+    margin-bottom: 30px;
 }
 
 .search-container input {
