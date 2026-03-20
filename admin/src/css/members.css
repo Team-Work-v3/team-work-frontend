@@ -178,6 +178,7 @@ tr{
 .add-menu {
     display: flex;
     justify-content: flex-start;
+    margin-left: 55px;
 }
 
 .add-menu-btn {
