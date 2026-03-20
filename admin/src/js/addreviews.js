@@ -37,6 +37,7 @@ RenderUsersInEvents();
                                             <th class="th-FIO">ФИ</th>
                                             <th class="th-email">Содержание</th>
                                             <th class="th-phnumber">Дата</th>
+                                            <th class="th-place"></th>
                                             <th></th>
                                         </tr>
                                     </thead>
