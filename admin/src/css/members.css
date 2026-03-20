@@ -30,6 +30,7 @@ header.content-header {
     font-family: Inter;
     font-weight: 600;
     font-size: 36px;
+    margin: 0px;
 }
 
 .search-container input {
