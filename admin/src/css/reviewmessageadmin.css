@@ -23,11 +23,9 @@ label {
 
 input, textarea, select {
   width: 100%;
-  padding-right: 8px;
+  padding: 8px;
   margin-top: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  width: 400px;
-  height: 47px;
+  border: 1px solid #ccc;
 }
 
 textarea {
