@@ -34,10 +34,9 @@ RenderUsersInEvents();
                                     <thead>
                                         <tr>
                                             <th class="th-number">№</th>
-                                            <th class="th-FIO">ФИО</th>
-                                            <th class="th-email">Электронная почта</th>
-                                            <th class="th-phnumber">Номер телефона</th>
-                                            <th class="th-place">Места</th>
+                                            <th class="th-FIO">ФИ</th>
+                                            <th class="th-email">Содержание</th>
+                                            <th class="th-phnumber">Дата</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -51,7 +50,7 @@ RenderUsersInEvents();
                         
                              <tr>
                             
-                                <td>${count}</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td>-</td><td><button onclick="">Удалить</button></td>
+                                <td>${count}</td><td>-</td><td>-</td><td>-</td><td><button onclick="">Принять</button></td><td><button onclick="">Удалить</button></td>
                                 </tr>          
                                        
                         `;
