@@ -19,13 +19,21 @@ h1 {
 label {
   display: block;
   margin-bottom: 15px;
+  font-family: Inter;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 15px;
 }
 
 input, textarea, select {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--grey-transparent, rgba(0, 0, 0, 0.4));
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
 }
 
 textarea {
