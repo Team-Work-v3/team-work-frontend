@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Управление отзывами на мероприятия</title>
+    <title>Добавление отзыва</title>
+    <link rel="stylesheet" href="/admin/src/css/reviewmessageadmin.css">
     <link rel="stylesheet" href="/admin/src/css/main-admin.css">
-    <link rel="stylesheet" href="/admin/src/css/members.css">
-    <!-- <script src="/admin/src/js/events.js"></script> -->
+    <script src="/admin/src/js/events.js"></script>
+    <script src="/admin/src/js/events.js"></script>
+    <link rel="stylesheet" href="/admin/src/css/events2.css">
 </head>
 <body>
     <header>
@@ -101,23 +103,65 @@
           <img class="volodya" src="/admin/src/img/vvk.png">
           <a class="add-menu-btn" id="delete-event-button" href="/admin/logout">Выйти</a>
         </div>
-       
+      
       </section>
-    <section class="right-eventss right-events" >
-            <header class="content-header">
-                <h1>Управление отзывами на мероприятия</h1>
-            </header>
-                      <div class="add-menu">
-            <div class="add-menu-bnt">
-            <a class="add-menu-btn" href="/admin/reviews">Добавить</a>
-            </div>
-          </div>
+      
+        <div class="container">
+  <form id="reviewForm">
 
-            <div class="events-list">
-                
-            </div>
-            </section>
+    <!-- ФИО -->
+    <label>Имя фамилия
+      <input type="text" id="fullname" placeholder="Иван Иванов">
+      <div class="error" id="nameError"></div>
+    </label>
+
+    <!-- Дата -->
+    <label>Дата
+      <input type="date" id="date">
+      <div class="error" id="dateError"></div>
+    </label>
+
+    <!-- Содержание -->
+    <label>Содержание
+      <textarea id="content"></textarea>
+      <div class="error" id="contentError"></div>
+    </label>
+
+    <!-- Мероприятие -->
+    <label>Мероприятие
+      <select id="event">
+        <option value="">Выберите мероприятие</option>
+        <option>Игры роблокс</option>
+        <option>IT-форум</option>
+        <option>Мастер-класс</option>
+      </select>
+      <div class="error" id="eventError"></div>
+    </label>
+
+    <!-- Иллюстрации -->
+    <div class="illustration-block">
+      <p>Выберите иллюстрацию</p>
+      <div class="icons">
+            <img src="svg/lemon.png" data-value="1" />
+            <img src="svg/brown.png" data-value="2" />
+            <img src="svg/swamp.png" data-value="3" />
+            <img src="svg/pink.png" data-value="4" />
+            <img src="svg/yellow.png" data-value="5" />
+            <img src="svg/yellow.png" data-value="6" />
+      </div>
+      <div class="error" id="iconError"></div>
+    </div>
+
+    <!-- Кнопки -->
+    <div class="buttons">
+      <button type="submit" class="save">Сохранить</button>
+      <button type="button" class="delete" id="clearBtn">Удалить</button>
+    </div>
+
+  </form>
+</div>
+
+<script src="/admin/src/js/reviewmessageadmin.js"></script>
     </main>
-    <script src="/admin/src/js/addreviews.js"></script>
 </body>
 </html>
