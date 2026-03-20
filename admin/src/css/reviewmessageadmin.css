@@ -27,7 +27,7 @@ label {
 
 input, textarea, select {
   width: 100%;
-  padding: 8px;
+  /* padding: 8px; */
   margin-top: 5px;
   border: 1px solid var(--grey-transparent, rgba(0, 0, 0, 0.4));
   font-family: Inter;
@@ -37,9 +37,25 @@ input, textarea, select {
   background-color: rgba(242, 242, 242, 1);
 }
 
+.fullname{
+  width: 400px;
+  height: 47px;
+}
+
+.date{
+  width: 190px;
+  height: 47px;
+}
+
 textarea {
-  height: 120px;
+  width: 400px;
+  height: 217px;
   resize: none;
+}
+
+select{
+  width: 400px;
+  height: 47px;
 }
 
 .error {
