@@ -20,11 +20,11 @@ function addReview(id, icon, name, text, date){
   try {
     const info = {
         'event_id': id,
-        'img': icon,
+        // 'img': icon,
         'user_name' : name,
         'review_text' : text,
         'is_approved' : 0,
-        'created_at': date
+        // 'created_at': date
     };
     let inf = JSON.stringify(info);
     console.log("Отправка add rew:", id);
