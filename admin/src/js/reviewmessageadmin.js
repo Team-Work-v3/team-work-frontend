@@ -88,3 +88,32 @@ clearBtn.addEventListener("click", () => {
 
   document.querySelectorAll(".error").forEach(e => e.textContent = "");
 });
+
+
+
+
+
+RenderEvents();
+
+async function RenderEvents() {
+  const container = document.querySelector("#event");
+
+  const response = await fetch("http://62.109.16.129:5000/api/getEvents?state=back");
+  const data = await response.json();
+  console.log(data.events);
+  if (!container) {
+    console.error("No data");
+    return;
+  }
+
+  Object.values(data).forEach(events => {
+    Object.values(events).forEach(event => {
+      const html = `
+
+      <option value="${event.event_id}">${event.name_event}</option>`;
+
+      container.innerHTML += html;
+    });
+  });
+
+}
