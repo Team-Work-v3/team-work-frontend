@@ -161,7 +161,7 @@
                 
               <div class="add-event-blocks">
                 <label for="date-event">Дата</label>
-                <input class="input--block-low" id="input-data" name="date_event" type="date" onblur="DateValidate(this)"
+                <input class="input--block-low" id="date_event" name="date_event" type="date" onblur="DateValidate(this)"
                   onchange="DateValidate(this)" required onfocus="this.min=new Date().toISOString().split('T')[0]">
                 <span class="error-event" id="dateError">Неправильно введено поле</span><br>
               </div>
