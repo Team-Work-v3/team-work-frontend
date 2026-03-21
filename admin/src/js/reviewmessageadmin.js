@@ -94,13 +94,10 @@ form.addEventListener("submit", function(e) {
         console.log("Отправка add rew:", id);
 
         const response = await fetch(`http://62.109.16.129:5000/api/addReview`, {
-          method: "POST", 
-          headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(inf) // Превращаем объект в JSON-строку
-});
-
+            method: "POST", 
+            headers: {"Content-Type": "application/json"},
+            body: inf
+        });
 
         const result = await response.json();
 
