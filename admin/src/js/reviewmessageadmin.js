@@ -16,6 +16,41 @@ const icons = document.querySelectorAll(".icons img");
 
 let selectedIcon = null;
 
+function addReview(id, icon, name, text, date){
+  try {
+    const info = {
+        'event_id': id,
+        'img': icon,
+        'user_name' : name,
+        'review_text' : text,
+        'is_approved' : 0,
+        'created_at': date
+    };
+    let inf = JSON.stringify(info);
+    console.log("Отправка add rew:", id);
+
+    const response = await fetch(`http://62.109.16.129:5000/api/addReview`, {
+        method: "POST", 
+        headers: {"Content-Type": "application/json"},
+        body: inf
+    });
+
+    const result = await response.json();
+
+    console.log("Результат:", result);
+
+    if (response.ok) {
+        console.log(`rew add`);
+        window.location.reload();
+    } else {
+        console.error(`Ошибка `, result.message || response.statusText);
+    }
+} catch (error) {
+    console.error("Ошибка при отправке запроса :", error);
+}
+}
+
+
 /* Выбор иллюстрации */
 icons.forEach(icon => {
   icon.addEventListener("click", () => {
@@ -73,6 +108,8 @@ form.addEventListener("submit", function(e) {
   }
 
   if (isValid) {
+    addReview(eventSelect.value, selectedIcon,  fullname.value.trim(), content.value.trim(), date.value);
+
     alert("Отзыв успешно сохранён!");
     form.reset();
     icons.forEach(i => i.classList.remove("active"));
@@ -81,37 +118,7 @@ form.addEventListener("submit", function(e) {
 
     // on api        /api/addReview
 
-
-      try {
-        const info = {
-            'event_id': selectedIcon,
-            'user_name' : fullname.value.trim(),
-            'review_text' : content.value.trim(),
-            'is_approved' : 0,
-            'created_at': new Date().toISOString().slice(0, 19).replace('T', ' ')
-        };
-        let inf = JSON.stringify(info);
-        console.log("Отправка add rew:", id);
-
-        const response = await fetch(`http://62.109.16.129:5000/api/addReview`, {
-            method: "POST", 
-            headers: {"Content-Type": "application/json"},
-            body: inf
-        });
-
-        const result = await response.json();
-
-        console.log("Результат:", result);
-
-        if (response.ok) {
-            console.log(`rew add`);
-            window.location.reload();
-        } else {
-            console.error(`Ошибка `, result.message || response.statusText);
-        }
-    } catch (error) {
-        console.error("Ошибка при отправке запроса :", error);
-    }
+   
 
 
   }
