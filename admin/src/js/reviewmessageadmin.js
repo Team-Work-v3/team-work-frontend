@@ -27,7 +27,7 @@ function addReview(id, icon, name, text, date){
         // 'created_at': date
     };
     let inf = JSON.stringify(info);
-    console.log("Отправка add rew:", id);
+    // console.log("Отправка add rew:", id);
 
     const response = await fetch(`http://62.109.16.129:5000/api/addReview`, {
         method: "POST", 
