@@ -1,7 +1,7 @@
 async function deleteEvent(id) { 
     try {
         const info = {
-            'registration_id': id
+            'id_registration': id
         };
         let inf = JSON.stringify(info);
         console.log("Отправка запроса на удаление ID:", id);
