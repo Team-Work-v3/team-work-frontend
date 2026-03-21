@@ -51,7 +51,7 @@ RenderUsersInEvents();
                         
                              <tr>
                             
-                                <td>${count}</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td>-</td><td><button onclick="">Удалить</button></td>
+                                <td>${count}</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td>${user.ticket_amount}</td><td><button onclick="">Удалить</button></td>
                                 </tr>          
                                        
                         `;
