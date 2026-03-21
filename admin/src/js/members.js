@@ -52,7 +52,7 @@ RenderUsersInEvents();
                              <tr>
                             
                                 <td>${count}</td><td>${user.full_name}</td><td>${user.email}</td><td>${user.phone_number}</td><td>${user.ticket_amount}</td><td>
-                                <button onclick="if(confirm('Удалить это мероприятие?')) { deleteEvent(${user.id_registration})  }">Удалить</button></td>
+                                <button onclick="if(confirm('Удалить бронь?')) { deleteEvent(${user.id_registration})  }">Удалить</button></td>
                                 </tr>          
                                        
                         `;
