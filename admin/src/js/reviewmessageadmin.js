@@ -80,19 +80,6 @@ form.addEventListener("submit", function(e) {
   }
 });
 
-/* Кнопка удалить */
-clearBtn.addEventListener("click", () => {
-  form.reset();
-  icons.forEach(i => i.classList.remove("active"));
-  selectedIcon = null;
-
-  document.querySelectorAll(".error").forEach(e => e.textContent = "");
-});
-
-
-
-
-
 RenderEvents();
 
 async function RenderEvents() {
