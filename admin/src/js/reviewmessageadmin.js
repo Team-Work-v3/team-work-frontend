@@ -16,24 +16,24 @@ const icons = document.querySelectorAll(".icons img");
 
 let selectedIcon = null;
 
-function addReview(id, icon, name, text, date){
-  try {
-    const info = {
-        'event_id': id,
-        // 'img': icon,
-        'user_name' : name,
-        'review_text' : text,
-        'is_approved' : 0,
-        // 'created_at': date
-    };
-    let inf = JSON.stringify(info);
-    // console.log("Отправка add rew:", id);
+// function addReview(id, icon, name, text, date){
+//   try {
+//     const info = {
+//         'event_id': id,
+//         // 'img': icon,
+//         'user_name' : name,
+//         'review_text' : text,
+//         'is_approved' : 0,
+//         // 'created_at': date
+//     };
+//     let inf = JSON.stringify(info);
+//     // console.log("Отправка add rew:", id);
 
-    const response = await fetch(`http://62.109.16.129:5000/api/addReview`, {
-        method: "POST", 
-        headers: {"Content-Type": "application/json"},
-        body: inf
-    });
+//     const response = await fetch(`http://62.109.16.129:5000/api/addReview`, {
+//         method: "POST", 
+//         headers: {"Content-Type": "application/json"},
+//         body: inf
+//     });
 
     const result = await response.json();
 
