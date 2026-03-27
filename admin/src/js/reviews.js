@@ -8,7 +8,7 @@ RenderUsersInEvents();
             const response = await fetch("http://62.109.16.129:5000/api/getEvents?state=back");
             const data = await response.json();
             console.log(data.events);
-
+            i=0;
             for (const events of Object.values(data)) {
                 for (const event of Object.values(events)) {
                     id = event.event_id;
@@ -16,10 +16,14 @@ RenderUsersInEvents();
                     const response2 = await fetch(`http://62.109.16.129:5000/api/getAllReviews?id=${id}`);
                     const data2 = await response2.json();
                     console.log(data2.reviews);
+
+                    data.events[i]['vfg']  = data2.reviews;
+                    i++;
                 }
                
                 
             }
+            console.log(data.events);
             // const response = await fetch("http://62.109.16.129:5000/api/getAllReviews");
             // const data = await response.json();
             // console.log(data.events);
