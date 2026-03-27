@@ -108,7 +108,7 @@ form.addEventListener("submit", function(e) {
   }
 
   if (isValid) {
-    addReview(eventSelect.value, selectedIcon,  fullname.value.trim(), content.value.trim(), date.value);
+    // addReview(eventSelect.value, selectedIcon,  fullname.value.trim(), content.value.trim(), date.value);
 
     alert("Отзыв успешно сохранён!");
     form.reset();
