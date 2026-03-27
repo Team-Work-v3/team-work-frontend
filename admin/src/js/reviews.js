@@ -44,7 +44,7 @@ RenderUsersInEvents();
                             <div class="event-visible-information">
                                 <div class="elements-event">
                                     <span class="arrow-event arrow" id="arrow-event" data-event-id="${event.event_id}">⯆</span>
-                                    <span class="name-event event-title">${event.description_event}</span>
+                                    <span class="name-event event-title">${event.name_event}</span>
                                 </div>
                             </div>
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
