@@ -87,7 +87,7 @@ RenderUsersInEvents();
                  inner_content += (html_center_head + center + html_end);
                 }
                 else{
-                    inner_content += '<h2 class="container--h2">no rev</h2>';
+                    inner_content += '<h2 class="container--h2">На данное мероприятие нет отзывов</h2>';
                 }
                     
                     content = html_start + inner_content +' </div> </div>';
