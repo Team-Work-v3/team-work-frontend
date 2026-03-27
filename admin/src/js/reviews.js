@@ -3,7 +3,7 @@ RenderUsersInEvents();
         async function RenderUsersInEvents() {
             const container = document.querySelector(".events-list");
 
-            const response = await fetch("http://62.109.16.129:5000/api/getUsersInEvents");
+            const response = await fetch("http://62.109.16.129:5000/api/getAllReviews");
             const data = await response.json();
             console.log(data.events);
 
@@ -51,7 +51,7 @@ RenderUsersInEvents();
                         
                              <tr>
                             
-                                <td>${count}</td><td>-</td><td>-</td><td>-</td><td><button onclick="">Принять</button></td><td><button onclick="">Удалить</button></td>
+                                <td>${count}</td><td>${user_name}</td><td>${review_text}</td><td>${created_at}</td><td><button onclick="">Принять</button></td><td><button onclick="">Удалить</button></td>
                                 </tr>          
                                        
                         `;
