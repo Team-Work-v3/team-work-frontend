@@ -66,7 +66,7 @@ RenderUsersInEvents();
                                         
                         var center = ""; 
                         var count = 0;
-                        Object.values(event.users).forEach(user => {
+                        Object.values(event.revs).forEach(user => {
                             count++;
                         center += `
                         
