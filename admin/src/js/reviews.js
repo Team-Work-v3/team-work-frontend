@@ -35,7 +35,7 @@ RenderUsersInEvents();
 
             Object.values(data).forEach(events => {
                 Object.values(events).forEach(event => {
-                    console.log(events);
+                    console.log(event);
                     var content = '';
                     var inner_content = '';
                     var html_start = `
@@ -49,7 +49,7 @@ RenderUsersInEvents();
                             </div>
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
 
-                        if(event.users.length > 0){
+                        if(event.revs.length > 0){
                          var html_center_head = `
                                  <table class="participants-table">
                                     <thead>
