@@ -35,20 +35,20 @@ let selectedIcon = null;
 //         body: inf
 //     });
 
-    const result = await response.json();
+//     const result = await response.json();
 
-    console.log("Результат:", result);
+//     console.log("Результат:", result);
 
-    if (response.ok) {
-        console.log(`rew add`);
-        window.location.reload();
-    } else {
-        console.error(`Ошибка `, result.message || response.statusText);
-    }
-} catch (error) {
-    console.error("Ошибка при отправке запроса :", error);
-}
-}
+//     if (response.ok) {
+//         console.log(`rew add`);
+//         window.location.reload();
+//     } else {
+//         console.error(`Ошибка `, result.message || response.statusText);
+//     }
+// } catch (error) {
+//     console.error("Ошибка при отправке запроса :", error);
+// }
+// }
 
 
 /* Выбор иллюстрации */
