@@ -13,7 +13,7 @@ RenderUsersInEvents();
                 for (const event of Object.values(events)) {
                     id = event.event_id;
                     console.log(id);
-                    const response2 = await fetch(`http://62.109.16.129:5000/api/getAllReviews?ad=${id}`);
+                    const response2 = await fetch(`http://62.109.16.129:5000/api/getAllReviews?id=${id}`);
                     const data2 = await response2.json();
                     console.log(data2.reviews);
                 }
