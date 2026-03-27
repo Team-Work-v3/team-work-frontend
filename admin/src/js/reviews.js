@@ -44,7 +44,7 @@ RenderUsersInEvents();
                             <div class="event-visible-information">
                                 <div class="elements-event">
                                     <span class="arrow-event arrow" id="arrow-event" data-event-id="${event.event_id}">⯆</span>
-                                    <span class="name-event event-title">${event.event_name}</span>
+                                    <span class="name-event event-title">${event.description_event}</span>
                                 </div>
                             </div>
                             <div class="event-invisible-information" id="invisible-information-${event.event_id}">`;
@@ -87,7 +87,7 @@ RenderUsersInEvents();
                  inner_content += (html_center_head + center + html_end);
                 }
                 else{
-                    inner_content += '<h2 class="container--h2">На это мероприятие ещё никто не зарегистировался</h2>';
+                    inner_content += '<h2 class="container--h2">no rev</h2>';
                 }
                     
                     content = html_start + inner_content +' </div> </div>';
