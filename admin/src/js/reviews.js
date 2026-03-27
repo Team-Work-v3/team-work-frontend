@@ -12,11 +12,12 @@ RenderUsersInEvents();
             for (const events of Object.values(data)) {
                 for (const event of Object.values(events)) {
                     console.log(event);
+                    const response2 = await fetch("http://62.109.16.129:5000/api/getAllReviews?ad=2");
+                    const data2 = await response2.json();
+                    console.log(data2.reviews);
                 }
                
-                const response2 = await fetch("http://62.109.16.129:5000/api/getAllReviews?ad=2");
-                const data2 = await response2.json();
-                console.log(data2.reviews);
+                
             }
             // const response = await fetch("http://62.109.16.129:5000/api/getAllReviews");
             // const data = await response.json();
