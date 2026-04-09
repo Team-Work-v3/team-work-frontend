@@ -144,3 +144,46 @@ async function RenderEvents() {
   });
 
 }
+
+// Ждем загрузки документа
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('reviewForm');
+    const saveBtn = document.querySelector('.save');
+    let selectedIcon = null;
+
+    // 1. Логика выбора иконки (визуальный выбор)
+    const icons = document.querySelectorAll('.icons img');
+    icons.forEach(icon => {
+        icon.addEventListener('click', () => {
+            // Убираем выделение у всех иконок
+            icons.forEach(img => img.style.border = 'none');
+            // Выделяем текущую
+            icon.style.border = '2px solid #007bff';
+            icon.style.borderRadius = '50%';
+            // Сохраняем значение из data-value
+            selectedIcon = icon.getAttribute('data-value');
+        });
+    });
+
+    // 2. Обработка нажатия на кнопку "Сохранить"
+    saveBtn.addEventListener('click', async (e) => {
+        e.preventDefault(); // Предотвращаем перезагрузку страницы
+
+        // Собираем значения из полей
+        const name = document.getElementById('fullname').value;
+        const date = document.getElementById('date').value;
+        const text = document.getElementById('content').value;
+        const eventId = document.getElementById('event').value;
+
+        // Простая валидация
+        if (!name || !text || !eventId) {
+            alert("Пожалуйста, заполните все обязательные поля!");
+            return;
+        }
+
+        // Вызываем вашу функцию (которую мы исправили ранее)
+        // Передаем параметры: id, icon, name, text, date
+        await addReview(eventId, selectedIcon, name, text, date);
+    });
+});
+
