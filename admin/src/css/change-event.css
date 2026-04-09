@@ -266,6 +266,14 @@ textarea {
     width: 380px;
 }
 
+.date-timeCREATE {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    justify-content: flex-start; 
+    width: 380px;
+}
+
 #input-data {
     margin: 0;
 }
