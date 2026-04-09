@@ -348,7 +348,6 @@ textarea {
 }
 
 .delete-event-button {
-    /* Ваши исходные стили */
     width: 107px;
     height: 39px;
     border: 2px solid grey;
@@ -359,11 +358,9 @@ textarea {
     color: #000000;
     margin-right: 25px;
     gap: 10px;
-
-    /* Новые свойства для выравнивания текста ссылки */
-    display: inline-flex;    /* Делает ссылку блочной и позволяет центровать содержимое */
-    align-items: center;     /* Центрирует текст по вертикали */
-    justify-content: center; /* Центрирует текст по горизонтали */
-    text-decoration: none;   /* Убирает стандартное подчеркивание ссылки */
-    box-sizing: border-box;  /* Чтобы границы (border) не увеличивали размер кнопки */
+    display: inline-flex;  
+    align-items: center;   
+    justify-content: center;
+    text-decoration: none;   
+    box-sizing: border-box;  
 }
