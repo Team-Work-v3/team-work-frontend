@@ -16,7 +16,6 @@ const icons = document.querySelectorAll(".icons img");
 
 let selectedIcon = null;
 
-// Добавлено слово async в начале
 async function addReview(id, icon, name, text, date) {
     try {
         const info = {
@@ -47,8 +46,6 @@ async function addReview(id, icon, name, text, date) {
         console.error("Ошибка при отправке запроса :", error);
     }
 }
-
-
 
 /* Выбор иллюстрации */
 icons.forEach(icon => {
