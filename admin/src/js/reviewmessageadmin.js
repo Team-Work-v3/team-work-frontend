@@ -150,7 +150,7 @@ async function RenderEvents() {
  * Отправляет данные на сервер согласно вашей спецификации
  */
 async function sendReviewToServer(id, icon, name, text, date) {
-    const url = 'http://62.109.16';
+    const url = 'http://62.109.16.129:5000/api/addReviewForm';
     
     const bodyData = {
         'id_event': parseInt(id), // int
