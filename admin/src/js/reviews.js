@@ -72,7 +72,7 @@ RenderUsersInEvents();
                         
                              <tr>
                             
-                                <td>${count}</td><td>${user.user_name}</td><td>${user.review_text}</td><td>${user.created_at}</td><td><button onclick="">Принять</button></td><td><button onclick="">Удалить</button></td>
+                                <td>${count}</td><td>${user.user_name}</td><td>${user.review_text}</td><td>${new Date(user.created_at).toLocaleString('ru-RU')}</td><td><button onclick="">Принять</button></td><td><button onclick="">Удалить</button></td>
                                 </tr>          
                                        
                         `;
