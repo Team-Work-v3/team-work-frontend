@@ -110,3 +110,7 @@ button {
   font-size: 24px;
   color: #FFFFFF;
 }
+
+.error-text{
+  color: rgba(152, 37, 32, 1);
+}
