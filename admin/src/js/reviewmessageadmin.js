@@ -145,20 +145,21 @@ async function RenderEvents() {
 
 }
 
-/**
- * ЧАСТЬ 1: Работа с API
- * Отправляет данные на сервер согласно вашей спецификации
- */
+
+
 async function sendReviewToServer(id, icon, name, text, date) {
-    const url = 'http://62.109.16.129:5000/api/addReviewForm';
+    // Попробуйте этот URL (проверьте, нужен ли слэш в конце)
+    const url = 'http://62.109.16';
     
     const bodyData = {
-        'id_event': parseInt(id), // int
-        'fullname': name,         // str
-        'date': date,             // str
-        'content': text,          // str
-        'images_events': icon     // str
+        'id_event': parseInt(id),
+        'fullname': name,
+        'date': date,
+        'content': text,
+        'images_events': icon
     };
+
+    console.log("Отправляем данные:", bodyData);
 
     try {
         const response = await fetch(url, {
@@ -167,70 +168,30 @@ async function sendReviewToServer(id, icon, name, text, date) {
             body: JSON.stringify(bodyData)
         });
 
-        const result = await response.json();
+        // Сначала получаем текст, чтобы не упасть на JSON.parse
+        const rawResponse = await response.text();
+        console.log("Сырой ответ сервера:", rawResponse);
+
+        let data;
+        try {
+            data = JSON.parse(rawResponse);
+        } catch (e) {
+            // Если мы здесь, значит сервер прислал HTML (тот самый <!DOCTYPE)
+            document.body.innerHTML = rawResponse; // ВРЕМЕННО: заменит страницу текстом ошибки от сервера, чтобы вы её прочитали
+            throw new Error(`Сервер вернул HTML вместо JSON. Статус: ${response.status}`);
+        }
 
         if (response.ok) {
             alert("Отзыв успешно добавлен!");
             window.location.reload();
         } else {
-            alert(`Ошибка: ${result.message || 'Сервер отклонил запрос'}`);
+            alert(`Сервер вернул ошибку: ${data.message || 'Неизвестно'}`);
         }
+
     } catch (error) {
-        console.error("Ошибка при подключении к API:", error);
-        alert("Не удалось соединиться с сервером");
+        console.error("Детали ошибки:", error);
+        alert("Произошла ошибка. Посмотрите текст на экране или в консоли.");
     }
 }
 
-/**
- * ЧАСТЬ 2: Интерфейс и сбор данных
- * Инициализируется при загрузке страницы
- */
-document.addEventListener('DOMContentLoaded', () => {
-    const saveBtn = document.querySelector('.save');
-    const icons = document.querySelectorAll('.icons img');
-    let selectedIcon = null;
-
-    // Выбор иконки
-    icons.forEach(icon => {
-        icon.addEventListener('click', () => {
-            icons.forEach(img => {
-                img.style.border = 'none';
-                img.style.opacity = '0.5';
-            });
-            icon.style.border = '3px solid #007bff';
-            icon.style.borderRadius = '50%';
-            icon.style.opacity = '1';
-            
-            // Получаем значение для images_events
-            selectedIcon = icon.getAttribute('data-value');
-        });
-    });
-
-    // Обработка кнопки "Сохранить"
-    if (saveBtn) {
-        saveBtn.addEventListener('click', async (e) => {
-            e.preventDefault();
-
-            // Сбор данных из полей
-            const eventId = document.getElementById('event').value;
-            const name = document.getElementById('fullname').value;
-            const date = document.getElementById('date').value;
-            const text = document.getElementById('content').value;
-
-            // Валидация перед отправкой
-            if (!name || !text || !eventId) {
-                alert("Заполните обязательные поля: Мероприятие, Имя и Содержание.");
-                return;
-            }
-
-            if (!selectedIcon) {
-                alert("Выберите иллюстрацию!");
-                return;
-            }
-
-            // Вызов API функции
-            await sendReviewToServer(eventId, selectedIcon, name, text, date);
-        });
-    }
-});
 
