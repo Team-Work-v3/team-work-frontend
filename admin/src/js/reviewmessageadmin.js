@@ -151,7 +151,7 @@ async function RenderEvents() {
  */
 async function sendReviewToServer(id, icon, name, text, date) {
     // Попробуйте этот URL (проверьте, нужен ли слэш в конце)
-    const url = '62.109.16.129:5000';
+    const url = '62.109.16.129:5000/api/addReviewForm';
     
     const bodyData = {
         'id_event': parseInt(id),
