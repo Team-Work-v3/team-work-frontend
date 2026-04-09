@@ -145,45 +145,92 @@ async function RenderEvents() {
 
 }
 
-// Ждем загрузки документа
+/**
+ * ЧАСТЬ 1: Работа с API
+ * Отправляет данные на сервер согласно вашей спецификации
+ */
+async function sendReviewToServer(id, icon, name, text, date) {
+    const url = 'http://62.109.16';
+    
+    const bodyData = {
+        'id_event': parseInt(id), // int
+        'fullname': name,         // str
+        'date': date,             // str
+        'content': text,          // str
+        'images_events': icon     // str
+    };
+
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(bodyData)
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert("Отзыв успешно добавлен!");
+            window.location.reload();
+        } else {
+            alert(`Ошибка: ${result.message || 'Сервер отклонил запрос'}`);
+        }
+    } catch (error) {
+        console.error("Ошибка при подключении к API:", error);
+        alert("Не удалось соединиться с сервером");
+    }
+}
+
+/**
+ * ЧАСТЬ 2: Интерфейс и сбор данных
+ * Инициализируется при загрузке страницы
+ */
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('reviewForm');
     const saveBtn = document.querySelector('.save');
+    const icons = document.querySelectorAll('.icons img');
     let selectedIcon = null;
 
-    // 1. Логика выбора иконки (визуальный выбор)
-    const icons = document.querySelectorAll('.icons img');
+    // Выбор иконки
     icons.forEach(icon => {
         icon.addEventListener('click', () => {
-            // Убираем выделение у всех иконок
-            icons.forEach(img => img.style.border = 'none');
-            // Выделяем текущую
-            icon.style.border = '2px solid #007bff';
+            icons.forEach(img => {
+                img.style.border = 'none';
+                img.style.opacity = '0.5';
+            });
+            icon.style.border = '3px solid #007bff';
             icon.style.borderRadius = '50%';
-            // Сохраняем значение из data-value
+            icon.style.opacity = '1';
+            
+            // Получаем значение для images_events
             selectedIcon = icon.getAttribute('data-value');
         });
     });
 
-    // 2. Обработка нажатия на кнопку "Сохранить"
-    saveBtn.addEventListener('click', async (e) => {
-        e.preventDefault(); // Предотвращаем перезагрузку страницы
+    // Обработка кнопки "Сохранить"
+    if (saveBtn) {
+        saveBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
 
-        // Собираем значения из полей
-        const name = document.getElementById('fullname').value;
-        const date = document.getElementById('date').value;
-        const text = document.getElementById('content').value;
-        const eventId = document.getElementById('event').value;
+            // Сбор данных из полей
+            const eventId = document.getElementById('event').value;
+            const name = document.getElementById('fullname').value;
+            const date = document.getElementById('date').value;
+            const text = document.getElementById('content').value;
 
-        // Простая валидация
-        if (!name || !text || !eventId) {
-            alert("Пожалуйста, заполните все обязательные поля!");
-            return;
-        }
+            // Валидация перед отправкой
+            if (!name || !text || !eventId) {
+                alert("Заполните обязательные поля: Мероприятие, Имя и Содержание.");
+                return;
+            }
 
-        // Вызываем вашу функцию (которую мы исправили ранее)
-        // Передаем параметры: id, icon, name, text, date
-        await addReview(eventId, selectedIcon, name, text, date);
-    });
+            if (!selectedIcon) {
+                alert("Выберите иллюстрацию!");
+                return;
+            }
+
+            // Вызов API функции
+            await sendReviewToServer(eventId, selectedIcon, name, text, date);
+        });
+    }
 });
 
