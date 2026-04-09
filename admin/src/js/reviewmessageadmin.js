@@ -145,8 +145,10 @@ async function RenderEvents() {
 
 }
 
-
-
+/**
+ * ЧАСТЬ 1: Работа с API
+ * Отправляет данные на сервер согласно вашей спецификации
+ */
 async function sendReviewToServer(id, icon, name, text, date) {
     // Попробуйте этот URL (проверьте, нужен ли слэш в конце)
     const url = 'http://62.109.16';
@@ -194,4 +196,57 @@ async function sendReviewToServer(id, icon, name, text, date) {
     }
 }
 
+
+/**
+ * ЧАСТЬ 2: Интерфейс и сбор данных
+ * Инициализируется при загрузке страницы
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const saveBtn = document.querySelector('.save');
+    const icons = document.querySelectorAll('.icons img');
+    let selectedIcon = null;
+
+    // Выбор иконки
+    icons.forEach(icon => {
+        icon.addEventListener('click', () => {
+            icons.forEach(img => {
+                img.style.border = 'none';
+                img.style.opacity = '0.5';
+            });
+            icon.style.border = '3px solid #007bff';
+            icon.style.borderRadius = '50%';
+            icon.style.opacity = '1';
+            
+            // Получаем значение для images_events
+            selectedIcon = icon.getAttribute('data-value');
+        });
+    });
+
+    // Обработка кнопки "Сохранить"
+    if (saveBtn) {
+        saveBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+
+            // Сбор данных из полей
+            const eventId = document.getElementById('event').value;
+            const name = document.getElementById('fullname').value;
+            const date = document.getElementById('date').value;
+            const text = document.getElementById('content').value;
+
+            // Валидация перед отправкой
+            if (!name || !text || !eventId) {
+                alert("Заполните обязательные поля: Мероприятие, Имя и Содержание.");
+                return;
+            }
+
+            if (!selectedIcon) {
+                alert("Выберите иллюстрацию!");
+                return;
+            }
+
+            // Вызов API функции
+            await sendReviewToServer(eventId, selectedIcon, name, text, date);
+        });
+    }
+});
 
