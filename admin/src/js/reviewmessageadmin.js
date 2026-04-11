@@ -94,6 +94,10 @@ form.addEventListener("submit", function(e) {
   } else {
     eventError.textContent = "";
   }
+  if (nameInput.name === "") { 
+
+  }
+  
 
   // Иллюстрация
   if (!selectedIcon) {
