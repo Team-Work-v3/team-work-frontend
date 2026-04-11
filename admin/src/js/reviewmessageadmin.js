@@ -97,12 +97,12 @@ form.addEventListener("submit", function(e) {
   
 
   // Иллюстрация
-  if (!selectedIcon) {
-    iconError.textContent = "Выберите иллюстрацию";
-    isValid = false;
-  } else {
-    iconError.textContent = "";
-  }
+  // if (!selectedIcon) {
+  //   iconError.textContent = "Выберите иллюстрацию";
+  //   isValid = false;
+  // } else {
+  //   iconError.textContent = "";
+  // }
 
   if (isValid) {
     // addReview(eventSelect.value, selectedIcon,  fullname.value.trim(), content.value.trim(), date.value);
