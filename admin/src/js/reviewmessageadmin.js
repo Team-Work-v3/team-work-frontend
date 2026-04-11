@@ -138,7 +138,7 @@ async function RenderEvents() {
   const container = document.querySelector("#event");
 
   const response = await fetch("http://62.109.16.129:5000/api/getEvents?state=back");
-  const data = await response.text();
+  const data = await response.json();
   console.log(data.events);
   if (!container) {
     console.error("No data");
