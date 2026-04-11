@@ -97,13 +97,26 @@ form.addEventListener("submit", async function(e) { // Добавили async
   
   // Отправка данных
   if (isValid) {
-    // Вызываем функцию, которую ты определил выше
+    // Собираем данные в объект для проверки
+    const dataToSubmit = {
+      id: eventSelect.value,
+      icon: selectedIcon,
+      name: fullname.value.trim(),
+      text: content.value.trim(),
+      date: date.value
+    };
+
+    // --- ПРОВЕРКА В КОНСОЛИ ---
+    console.table(dataToSubmit); 
+    // ---------------------------
+
+    // Вызываем функцию отправки
     await addReview(
-      eventSelect.value, 
-      selectedIcon, 
-      fullname.value.trim(), 
-      content.value.trim(), 
-      date.value
+      dataToSubmit.id, 
+      dataToSubmit.icon, 
+      dataToSubmit.name, 
+      dataToSubmit.text, 
+      dataToSubmit.date
     );
 
     alert("Отзыв успешно отправлен!");
@@ -113,6 +126,7 @@ form.addEventListener("submit", async function(e) { // Добавили async
     icons.forEach(i => i.classList.remove("active"));
     selectedIcon = null;
   }
+
 });
 
 
