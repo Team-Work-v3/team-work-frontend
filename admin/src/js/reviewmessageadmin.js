@@ -94,9 +94,6 @@ form.addEventListener("submit", function(e) {
   } else {
     eventError.textContent = "";
   }
-  if (nameInput.name === "") { 
-
-  }
   
 
   // Иллюстрация
@@ -139,9 +136,11 @@ async function RenderEvents() {
 
   Object.values(data).forEach(events => {
     Object.values(events).forEach(event => {
-      const html = `
+    const html = `
+  <option value="${event.event_id}" data-name="${event.name_event}">
+    ${event.name_event}
+  </option>`;
 
-      <option value="${event.event_id}">${event.name_event}</option>`;
 
       container.innerHTML += html;
     });
