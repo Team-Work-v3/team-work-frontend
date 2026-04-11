@@ -18,24 +18,24 @@ let selectedIcon = null;
 
 async function addReview(id, icon, name, text, date) {
   try {
-      const info = {
-          'event_id': id,
-          'user_name': name,
-          'review_text': text,
-          'review_date': date, 
-          'icon_id': icon,     
-          'is_approved': 0,
-      };
+      // Создаем объект FormData
+      const formData = new FormData();
+      formData.append('event_id', id);
+      formData.append('user_name', name);
+      formData.append('review_text', text);
+      formData.append('review_date', date);
+      formData.append('icon_id', icon); // Передаст путь к картинке или файл
+      formData.append('is_approved', '0');
 
       const response = await fetch(`http://62.109.16.129:5000/api/addReviewForm`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(info)
+          // Заголовок Content-Type указывать НЕ НУЖНО, браузер поставит его сам
+          body: formData
       });
 
       if (response.ok) {
-          console.log("Отзыв успешно добавлен");
-          // window.location.reload(); // Можно включить для обновления списка
+          console.log("Отзыв успешно добавлен через FormData");
+          // window.location.reload();
       } else {
           const result = await response.json();
           console.error("Ошибка сервера:", result.message);
@@ -44,6 +44,7 @@ async function addReview(id, icon, name, text, date) {
       console.error("Сетевая ошибка:", error);
   }
 }
+
 
 
 /* Выбор иллюстрации */
@@ -61,7 +62,6 @@ icons.forEach(icon => {
 
 
 /* Валидация */
-/* Валидация и отправка */
 form.addEventListener("submit", async function(e) { // Добавили async
   e.preventDefault();
 
@@ -97,7 +97,6 @@ form.addEventListener("submit", async function(e) { // Добавили async
   
   // Отправка данных
   if (isValid) {
-    // Собираем данные в объект для проверки
     const dataToSubmit = {
       id: eventSelect.value,
       icon: selectedIcon,
@@ -106,11 +105,8 @@ form.addEventListener("submit", async function(e) { // Добавили async
       date: date.value
     };
 
-    // --- ПРОВЕРКА В КОНСОЛИ ---
     console.table(dataToSubmit); 
-    // ---------------------------
 
-    // Вызываем функцию отправки
     await addReview(
       dataToSubmit.id, 
       dataToSubmit.icon, 
