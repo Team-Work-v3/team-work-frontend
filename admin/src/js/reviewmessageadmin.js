@@ -34,7 +34,7 @@ async function addReview(id, icon, name, text, date) {
       });
 
       if (response.ok) {
-          console.log("Отзыв успешно добавлен через FormData");
+          console.log("Отзыв добавл");
           // window.location.reload();
       } else {
           const result = await response.json();
