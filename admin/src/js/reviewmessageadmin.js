@@ -18,18 +18,16 @@ let selectedIcon = null;
 
 async function addReview(id, icon, name, text, date) {
   try {
-      // Создаем объект FormData
       const formData = new FormData();
-      formData.append('event_id', id);
-      formData.append('user_name', name);
-      formData.append('review_text', text);
-      formData.append('review_date', date);
-      formData.append('icon_id', icon); // Передаст путь к картинке или файл
-      formData.append('is_approved', '0');
+      formData.append('id_event', id);
+      formData.append('fullname', name);
+      formData.append('content', text);
+      formData.append('date', date);
+      formData.append('images_events', icon); 
+      // formData.append('is_approved', '0');
 
       const response = await fetch(`http://62.109.16.129:5000/api/addReviewForm`, {
           method: "POST",
-          // Заголовок Content-Type указывать НЕ НУЖНО, браузер поставит его сам
           body: formData
       });
 
