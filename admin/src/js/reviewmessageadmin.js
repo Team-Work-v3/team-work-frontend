@@ -35,7 +35,7 @@ async function addReview(id, icon, name, text, date) {
           console.log("Отзыв добавл");
           // window.location.reload();
       } else {
-          const result = await response.json();
+          const result = await response.text();
           console.error("Ошибка сервера:", result.message);
       }
   } catch (error) {
