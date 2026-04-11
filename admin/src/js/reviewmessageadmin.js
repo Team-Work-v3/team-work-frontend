@@ -27,7 +27,7 @@ async function addReview(id, icon, name, text, date) {
           'is_approved': 0,
       };
 
-      const response = await fetch(`http://62.109.16.129:5000/api/addReview`, {
+      const response = await fetch(`http://62.109.16.129:5000/api/addReviewForm`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(info)
