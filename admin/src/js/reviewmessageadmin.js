@@ -137,7 +137,7 @@ async function RenderEvents() {
   Object.values(data).forEach(events => {
     Object.values(events).forEach(event => {
     const html = `
-  <option value="${event.event_id}" data-name="${event.name_event}">
+  <option value="${event.event_id}" name="${event.event_id}">
     ${event.name_event}
   </option>`;
 
