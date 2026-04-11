@@ -119,7 +119,7 @@
 
     <!-- Дата -->
     <label>Дата
-      <input type="date" id="date" class="date">
+      <input type="date" id="date" class="date" onfocus="this.max=new Date().toISOString().split('T')[0]">
       <div class="error" id="dateError"></div>
     </label>
 
