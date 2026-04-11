@@ -51,10 +51,14 @@ icons.forEach(icon => {
   icon.addEventListener("click", () => {
     icons.forEach(i => i.classList.remove("active"));
     icon.classList.add("active");
-    selectedIcon = icon.dataset.id;
+    
+    // Берем путь к картинке из атрибута src
+    selectedIcon = icon.getAttribute("src"); 
+    
     iconError.textContent = "";
   });
 });
+
 
 /* Валидация */
 /* Валидация и отправка */
@@ -84,6 +88,13 @@ form.addEventListener("submit", async function(e) { // Добавили async
     isValid = false;
   } else { eventError.textContent = ""; }
 
+  if (!selectedIcon) {
+    iconError.textContent = "Выберите иллюстрацию";
+    isValid = false;
+  } else {
+    iconError.textContent = "";
+  }
+  
   // Отправка данных
   if (isValid) {
     // Вызываем функцию, которую ты определил выше
