@@ -153,3 +153,34 @@ main {
   justify-content: center;
   margin-bottom: 15px;
 }
+
+/* Общий класс для всех кнопок на сайте */
+.btn-standard {
+    /* Размеры и форма */
+    width: 107px; 
+    height: 39px;
+    box-sizing: border-box; /* Важно: чтобы рамка не увеличивала размер */
+    
+    /* Центрирование текста */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Оформление (как на фото "Выйти") */
+    background-color: #FFFFFF;
+    border: 1px solid #808080; /* Тонкая серая рамка */
+    border-radius: 2px;        /* Легкое скругление, как в браузере */
+    
+    /* Текст */
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1;
+    
+    /* Курсор и плавность */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
