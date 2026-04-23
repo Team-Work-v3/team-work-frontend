@@ -182,5 +182,7 @@ main {
     /* Курсор и плавность */
     cursor: pointer;
     transition: all 0.2s ease;
+
+    margin-bottom: 25px;
 }
 
