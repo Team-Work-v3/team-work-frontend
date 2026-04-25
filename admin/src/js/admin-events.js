@@ -3,7 +3,7 @@ RenderEvents();
 async function RenderEvents() {
   const container = document.querySelector(".events-container");
 
-  const response = await fetch("http://62.109.16.129:5000/api/getEvents?state=back");
+  const response = await fetch("http://62.109.16.129:5000/api/getEvents?state=next");
   const data = await response.json();
   console.log(data.events);
 
